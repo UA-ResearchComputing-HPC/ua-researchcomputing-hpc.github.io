@@ -8,3 +8,4 @@ relative_links:
 include:
   - PBS-Scripts/Array-and-Parallel/README.md
   - PBS-Scripts/Array-and-Parallel/Basic_Array_Job.md
+  - PBS-Scripts/Array-and-Parallel/Basic_Array_Job.pbs
