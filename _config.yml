@@ -15,6 +15,7 @@ include:
   - PBS-Scripts/Array-and-Parallel/Array-Read-Filenames/InputFiles
   - PBS-Scripts/Array-and-Parallel/Array-Read-Parameters/Sample_Array_Input_Parameters.md
   - PBS-Scripts/Array-and-Parallel/Array-Read-Parameters/Sample_Array_Input_Parameters.pbs
+  - PBS-Scripts/Array-and-Parallel/Array-Read-Parameters/input_parameters
   - PBS-Scripts/Array-and-Parallel/Basic-Parallel-Job/Basic_Parallel_Job.md
   - PBS-Scripts/Array-and-Parallel/Basic-Parallel-Job/Basic_Parallel_Job.pbs
   - PBS-Scripts/Array-and-Parallel/Array-and-Parallel/Sample_Array_with_GNUParallel.md
