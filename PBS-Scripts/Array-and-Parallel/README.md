@@ -32,35 +32,16 @@ An array job is a way to easily submit multiple jobs using the same PBS script w
 ### [Basic Array Job](Basic-Array-Job/Basic_Array_Job.md)
 If you have never used array jobs before, start here.
 
-#### Problem
-
-A user wants to submit multiple jobs using the same script with different input.
-
-#### Solution
-
-Using an array job can run multiple tasks and differentiate them using array indices. Only one ```qsub``` command is necessary.
+Submit multiple jobs using the same script with only one ```qsub``` command.
 
 
-### Sample_Array_Read_Filenames
+### [Array Jobs with Text Filenames](Sample_Array_Read_Filenames/Sample_Array_Read_Filenames.md)
 
-
-#### Problem
-
-A user wants to run multiple jobs where each opens a different file but the naming scheme isn't conducive to automating the process using simple array indices as shown in Basic_Array_Job (i.e. 1.txt, 2.txt, ...).
-
-#### Solution
-
-The user can create an input file with one filename per line. One filename is read in per array job using array indices. 
+Run multiple jobs where each opens a different file but the naming scheme isn't conducive to automating the process using simple array indices as shown in Basic_Array_Job (i.e. 1.txt, 2.txt, ...). Better for smaller array jobs (to reduce IO load).
 
 ### Sample_Array_Input_Parameters
 
-#### Problem
-
-A user wants to run multiple jobs where each uses a distinct combination of input parameters. 
-
-#### Solution
-
-Very similar to Sample_Array_Read_Filenames, the user may generate an input file with the relevant parameter combinations and read individual lines into their array jobs using the array indices.
+Run multiple jobs where each uses a distinct combination of input parameters. Very similar to reading text filenames above.
 
 
 
