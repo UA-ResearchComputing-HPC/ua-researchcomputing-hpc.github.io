@@ -6,4 +6,5 @@ relative_links:
   enabled: true
   collections: true
 include:
-  - Ocelote/test.md
+  - PBS-Scripts/Array-and-Parallel/README.md
+  - PBS-Scripts/Array-and-Parallel/Basic_Array_Job.md
