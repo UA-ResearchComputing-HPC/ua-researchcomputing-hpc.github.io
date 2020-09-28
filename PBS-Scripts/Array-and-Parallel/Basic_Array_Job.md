@@ -1,44 +1,48 @@
-# Walkthrough
+# Basic Array Job
 
 Basic_Array_Job is designed to demonstrate how to use an array job to execute the same script multiple times with different input.
 
-_This script was written and executed on elgato, but can be run with minor modifications to the resource requests on ocelote as well_
+_This script was written and executed on elgato, but can be run on Ocelote with minor modifications to the resource requests_
 
-## What problem does this help fix?
-Without an array job, a user may be tempted to submit multiple jobs with a for loop, e.g.:
+## What problem does an array job help fix?
+Without an array job, a user may be tempted to submit multiple jobs with a scripted loop, e.g.:
 
 ```
 $ for i in $( seq 1 10 ); do qsub script.pbs <submission options> ; done
 ```
-This is *not* a good way to submit scripts. This submits too many jobs too quickly and overloads the system. Instead, an array job can be used to achive the same ends. 
 
-## Script Breakdown
+This is **not** a good way to run multiple jobs. This submits too many too quickly and overloads the scheduler. Instead, an array job can be used to achive the same ends. 
 
-Standard PBS Directives:
+## Script Example
+
 ```
-#!/bin/bash
-
 #PBS -q standard
 #PBS -W group_list=<group_name>
 #PBS -N Basic_Array_Job
 #PBS -l select=1:ncpus=1:mem=4gb:pcmem=4gb
 #PBS -l walltime=00:00:30
 #PBS -j oe
+#PBS -J 1-10
+
+echo "Job Name: $PBS_JOBID, Reading File: input_file_${PBS_ARRAY_INDEX}.txt"
 ```
 
-The option ```-J``` tells PBS that you're running an array job. The ```1-10``` will count as the array indices which can be used to differentiate subjobs. In this case, we're running 10 jobs.
+## Script Breakdown
+
+What differentiates the script above from a standard script is the use of the ```-J``` directive. This is what tells PBS that you're running an array job. The ```1-10``` are the number of jobs to submit (inclusive). In this case, we're running 10:
+
 ```
 #PBS -J 1-10
 ```
 
-To demonstrate how we can use each array index to read in a different file:
+Each job in the array has its own array index that's stored as the environment variable ```PBS_ARRAY_INDEX```. These variables can be used to differentiate subjobs. To demonstrate how we can use each array index to read in a different file, we print a sample command:
 ```
 echo "Job Name: $PBS_JOBID, Reading File: input_file_${PBS_ARRAY_INDEX}.txt"
 ```
 
 ## Script Submission Command
 ```
-$ qsub Basic_Array_Job
+$ qsub Basic_Array_Job.pbs
 ```
 
 ## Output Files
@@ -47,21 +51,21 @@ Each of the subjobs in the array will output its own file of the form ```<job_na
 ```
 ls -lh
 total 0
--rw------- 1 sarawillis sarawillis  62 Feb 18 10:00 Basic_Array_Job.o87274.1
--rw------- 1 sarawillis sarawillis  64 Feb 18 10:00 Basic_Array_Job.o87274.10
--rw------- 1 sarawillis sarawillis  62 Feb 18 10:00 Basic_Array_Job.o87274.2
--rw------- 1 sarawillis sarawillis  62 Feb 18 10:00 Basic_Array_Job.o87274.3
--rw------- 1 sarawillis sarawillis  62 Feb 18 10:00 Basic_Array_Job.o87274.4
--rw------- 1 sarawillis sarawillis  62 Feb 18 10:00 Basic_Array_Job.o87274.5
--rw------- 1 sarawillis sarawillis  62 Feb 18 10:00 Basic_Array_Job.o87274.6
--rw------- 1 sarawillis sarawillis  62 Feb 18 10:00 Basic_Array_Job.o87274.7
--rw------- 1 sarawillis sarawillis  62 Feb 18 10:00 Basic_Array_Job.o87274.8
--rw------- 1 sarawillis sarawillis  62 Feb 18 10:00 Basic_Array_Job.o87274.9
+-rw------- 1 netid netid  62 Feb 18 10:00 Basic_Array_Job.o87274.1
+-rw------- 1 netid netid  64 Feb 18 10:00 Basic_Array_Job.o87274.10
+-rw------- 1 netid netid  62 Feb 18 10:00 Basic_Array_Job.o87274.2
+-rw------- 1 netid netid  62 Feb 18 10:00 Basic_Array_Job.o87274.3
+-rw------- 1 netid netid  62 Feb 18 10:00 Basic_Array_Job.o87274.4
+-rw------- 1 netid netid  62 Feb 18 10:00 Basic_Array_Job.o87274.5
+-rw------- 1 netid netid  62 Feb 18 10:00 Basic_Array_Job.o87274.6
+-rw------- 1 netid netid  62 Feb 18 10:00 Basic_Array_Job.o87274.7
+-rw------- 1 netid netid  62 Feb 18 10:00 Basic_Array_Job.o87274.8
+-rw------- 1 netid netid  62 Feb 18 10:00 Basic_Array_Job.o87274.9
 ```
 
 ## File Contents
 
-The file included in this repository is a concatenation of all the job's output files as shown by the command below.
+Below is a concatenation of all the job's output files. Notice how the array indices function to differentiate the input files in the sample command. 
 
 ```
 $ cat Basic_Array_Job.o87274.*
