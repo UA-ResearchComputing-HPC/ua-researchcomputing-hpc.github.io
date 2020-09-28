@@ -1,7 +1,7 @@
 theme: jekyll-theme-slate
 
 title: UA Research Computing
-description: Example HPC Scripts
+description: HPC Examples
 relative_links:
   enabled: true
   collections: true
