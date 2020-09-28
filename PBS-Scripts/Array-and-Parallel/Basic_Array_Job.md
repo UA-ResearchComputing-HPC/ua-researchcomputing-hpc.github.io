@@ -1,6 +1,6 @@
 # Basic Array Job
 
-Basic_Array_Job demonstrates how to use an array job to execute the same script multiple times with different input.
+Array jobs are used to execute the same script multiple times with different input.
 
 ## What problem does this help fix?
 To execute multiple analyses, a user may be tempted to submit jobs with a scripted loop, e.g.:
@@ -28,13 +28,13 @@ echo "Job Name: $PBS_JOBID, Reading File: input_file_${PBS_ARRAY_INDEX}.txt"
 
 ## Script Breakdown
 
-What differentiates the script above from a standard script is the use of the ```-J``` directive. This is what tells PBS that you're running an array job. The ```1-10``` are the number of jobs to submit (inclusive). In this case, we're running 10:
+What differentiates the script above is the use of the ```-J``` directive. This is what tells PBS that you're submitting an array. Following this flag, you will specify the number of jobs you wish to run. In this case, we're running 10:
 
 ```
 #PBS -J 1-10
 ```
 
-Each job in the array has its own array index that's stored as the environment variable ```PBS_ARRAY_INDEX```. These variables can be used to differentiate subjobs. To demonstrate how we can use each array index to read in a different file, we print a sample command:
+Each job in the array has its own associated environment variable ```$PBS_ARRAY_INDEX``` that can be used to differentiate subjobs. To demonstrate how we can use each these to read in different input files, we'll print a sample command:
 ```
 echo "Job Name: $PBS_JOBID, Reading File: input_file_${PBS_ARRAY_INDEX}.txt"
 ```
@@ -45,7 +45,7 @@ $ qsub Basic_Array_Job.pbs
 ```
 
 ## Output Files
-Each of the subjobs in the array will output its own file of the form ```<job_name>.o<job_ID>.<array_index>``` as seen below:
+Each of the subjobs in the array will produce its own output file of the form ```<job_name>.o<job_ID>.<array_index>``` as seen below:
 
 ```
 ls -lh
