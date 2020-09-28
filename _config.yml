@@ -6,6 +6,7 @@ relative_links:
   enabled: true
   collections: true
 include:
+  - .images/BlackHoleMashup_TextOverlap.png
   - PBS-Scripts/Array-and-Parallel/README.md
   - PBS-Scripts/Array-and-Parallel/Basic-Array-Job/Basic_Array_Job.md
   - PBS-Scripts/Array-and-Parallel/Basic-Array-Job/Basic_Array_Job.pbs
