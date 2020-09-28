@@ -9,7 +9,7 @@ If you're unfamiliar with array jobs, it's recommended you read [Basic Array Job
 ## Script Example
 
 #### PBS File
-[Click to download PBS file](Sample_Array_Read_Filenames.pbs)
+[Click here to download](Sample_Array_Read_Filenames.pbs)
 ```
 #!/bin/bash
 #PBS -q standard
@@ -25,7 +25,8 @@ echo "JOB NAME: $PBS_JOBID, EXAMPLE COMMAND: ./executable -o output${PBS_ARRAY_I
 ```
 
 #### Input File
-[Click here to download sample input file](InputFiles)
+[Click here to download](InputFiles)
+
 For this example, you will want to have a file called InputFiles in your PBS working directory. This will contain one filename per line. Contents:
 ```
 SRR2309587.fastq
