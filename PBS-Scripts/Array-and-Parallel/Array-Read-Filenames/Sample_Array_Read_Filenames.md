@@ -1,16 +1,6 @@
-# Walkthrough
+# Array Jobs With Text Filenames
 
-Array_Job_Input_Parameters shows how to feed parameters to different subjobs in an array by pulling them from an input file. 
-
-## What problem does this help fix?
-
-If a user wants to submit multiple jobs with differing input parameters, e.g.
-
-* job 1: ```./executable job1_variable1 job1_variable2 job1_variable3```
-* job 2: ```./executable job2_variable1 job2_variable2 job2_variable3```
-* etc...
-
-they might be initially tempted to write something like a nested for loop to submit their jobs, depending on their specific situation, which is bad practice. Instead, users can have their array jobs read in an input file to pass the arguments.
+Run multiple jobs where each opens a different file but the naming scheme isn't conducive to automating the process using simple array indices as shown in Basic_Array_Job (i.e. 1.txt, 2.txt, ...).
 
 ## Script Breakdown
 
