@@ -1,8 +1,6 @@
 # Basic Array Job
 
-Basic_Array_Job is designed to demonstrate how to use an array job to execute the same script multiple times with different input.
-
-_This script was written and executed on elgato, but can be run on Ocelote with minor modifications to the resource requests_
+Basic_Array_Job demonstrates how to use an array job to execute the same script multiple times with different input.
 
 ## What problem does an array job help fix?
 Without an array job, a user may be tempted to submit multiple jobs with a scripted loop, e.g.:
@@ -14,6 +12,7 @@ $ for i in $( seq 1 10 ); do qsub script.pbs <submission options> ; done
 This is **not** a good way to run multiple jobs. This submits too many too quickly and overloads the scheduler. Instead, an array job can be used to achive the same ends. 
 
 ## Script Example
+_This script was written and executed on elgato, but can be run on Ocelote with minor modifications to the resource requests_
 
 ```
 #PBS -q standard
