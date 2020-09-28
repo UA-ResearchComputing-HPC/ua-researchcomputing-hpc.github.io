@@ -1,2 +1,2 @@
-![](.images/BlackHoleMashup_TextOverlap.png)
+![](images/BlackHoleMashup_TextOverlap.png)
 
