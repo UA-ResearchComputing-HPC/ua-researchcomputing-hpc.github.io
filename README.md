@@ -1,3 +1,6 @@
+![](https://github.com/UA-ResearchComputing-HPC/ua-researchcomputing-hpc.github.io/blob/master/.images/BlackHoleMashup_TextOverlap.png)
+
+
 ## Welcome to GitHub Pages
 
 You can use the [editor on GitHub](https://github.com/UA-ResearchComputing-HPC/ua-researchcomputing-hpc.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
