@@ -43,7 +43,7 @@ Run multiple jobs where each uses a distinct combination of input parameters. Ve
 
 ## Parallel Jobs
 
-### [Basic GNU Parallel Job]()
+### [Basic GNU Parallel Job](Basic_Parallel_Job)
 
 Run multiple tasks on a single node without using an array job. Tasks that are not run immediately due to space restrictions are queued behind the running jobs and are automatically executed as space becomes available.
 
