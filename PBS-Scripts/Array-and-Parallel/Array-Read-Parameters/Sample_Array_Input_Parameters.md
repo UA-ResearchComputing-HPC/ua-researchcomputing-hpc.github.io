@@ -8,7 +8,7 @@ Demonstration of how to feed parameters to different subjobs in an array by pull
 
 
 ## Script Example
-[Click here to download example](Sample_Array_Input_Parameters.tar.gz
+[Click here to download example](Sample_Array_Input_Parameters.tar.gz)
 
 #### PBS File
 ```
