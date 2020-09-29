@@ -35,7 +35,7 @@ Submit multiple jobs using the same script with only one ```qsub``` command.
 
 Run multiple jobs where each opens a different file but the naming scheme isn't conducive to automating the process using simple array indices as shown in Basic_Array_Job (i.e. 1.txt, 2.txt, ...). This technique is better for smaller array jobs (to reduce IO load).
 
-### [Sample Array With Input Parameters]()
+### [Sample Array With Input Parameters](Array-Read-Parameters/Sample_Array_Input_Parameters.md)
 
 Run multiple jobs where each uses a distinct combination of input parameters. Very similar to reading text filenames above. This technique is better for smaller array jobs (to reduce IO load).
 
