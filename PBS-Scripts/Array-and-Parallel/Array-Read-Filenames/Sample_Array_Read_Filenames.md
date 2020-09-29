@@ -7,7 +7,7 @@ If you want to run multiple jobs where each opens a different file to analyze bu
 If you're unfamiliar with array jobs, it's recommended you read [Basic Array Jobs](../Basic-Array-Job/Basic_Array_Job.md) first.
 
 ## Script Example
-[Click here to download example files](Sample_Array_Read_Filenames.tar.gz)
+[Click here to download example](Sample_Array_Read_Filenames.tar.gz)
 
 #### PBS File
 
