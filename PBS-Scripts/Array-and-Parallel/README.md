@@ -31,11 +31,11 @@ If you have never used array jobs before, start here.
 Submit multiple jobs using the same script with only one ```qsub``` command.
 
 
-### [Array Jobs with Text Filenames](Array-Read-Filenames/Sample_Array_Read_Filenames.md)
+### [Array Jobs with Text Filenames](Array-Read-Filenames)
 
 Run multiple jobs where each opens a different file but the naming scheme isn't conducive to automating the process using simple array indices as shown in Basic_Array_Job (i.e. 1.txt, 2.txt, ...). This technique is better for smaller array jobs (to reduce IO load).
 
-### [Sample Array With Input Parameters](Array-Read-Parameters/Sample_Array_Input_Parameters.md)
+### [Sample Array With Input Parameters](Array-Read-Parameters)
 
 Run multiple jobs where each uses a distinct combination of input parameters. Very similar to reading text filenames above. This technique is better for smaller array jobs (to reduce IO load).
 
@@ -43,12 +43,12 @@ Run multiple jobs where each uses a distinct combination of input parameters. Ve
 
 ## Parallel Jobs
 
-### [Basic GNU Parallel Job](Basic-Parallel-Job/Basic_Parallel_Job.md)
+### [Basic GNU Parallel Job](Basic-Parallel-Job)
 
 Run multiple tasks on a single node without using an array job. Tasks that are not run immediately due to space restrictions are queued behind the running jobs and are automatically executed as space becomes available.
 
 ## Combining Parallel and Array Jobs
 
-### [Array Job with GNU Parallel](Array-and-Parallel/Sample_Array_with_GNUParallel.md)
+### [Array Job with GNU Parallel](Array-and-Parallel)
 
 This script is roughly an extension of Sample_Array_Job.pbs, but with the additional step of parallelizing tasks within each subjob. The parallelization was accomplished using GNU Parallel (https://www.gnu.org/software/parallel/). This allows for running a tremendous number of tasks.
