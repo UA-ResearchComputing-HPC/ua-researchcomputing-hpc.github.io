@@ -3,5 +3,5 @@
 
 ![](/Images/general-examples-button.png) [![](/Images/parallel-and-array.png)](Array-and-Parallel)
 
-![](/Images/life-sciences-button.png)
+![](/Images/life-sciences-button.png) ![](/Images/singularity-button.png)
 
