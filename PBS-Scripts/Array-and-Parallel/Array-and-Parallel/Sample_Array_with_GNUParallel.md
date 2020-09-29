@@ -8,7 +8,7 @@ Sometimes you need to run a _lot_ of jobs. More than can be reasonably accomplis
 
 ## Script Example
 
-[Click here to download example](Sample_Array_with_GNUParallel.tar.gz)
+[Click here to download example](Sample_Array_GNUParallel.tar.gz)
 ```
 #!/bin/bash
 #PBS -q standard
