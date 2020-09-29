@@ -25,7 +25,7 @@ This can lead to low/nonexistent system performance and unhappy users. This is d
 An array job is a way to easily submit multiple jobs using the same PBS script with a single ```qsub```. When an array job is submitted, it will create multiple subjobs, each using the same PBS directives and same commands as written in the main script.
 
 
-### [Basic Array Job](Basic-Array-Job/Basic_Array_Job.md)
+### [Basic Array Job](Basic-Array-Job)
 If you have never used array jobs before, start here.
 
 Submit multiple jobs using the same script with only one ```qsub``` command.
