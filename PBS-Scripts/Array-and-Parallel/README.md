@@ -49,6 +49,6 @@ Run multiple tasks on a single node without using an array job. Tasks that are n
 
 ## Combining Parallel and Array Jobs
 
-### [Array Job with GNU Parallel]()
+### [Array Job with GNU Parallel](Array-and-Parallel/Sample_Array_with_GNUParallel.md)
 
 This script is roughly an extension of Sample_Array_Job.pbs, but with the additional step of parallelizing tasks within each subjob. The parallelization was accomplished using GNU Parallel (https://www.gnu.org/software/parallel/). This allows for running a tremendous number of tasks.
