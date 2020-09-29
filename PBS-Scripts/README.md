@@ -1,12 +1,9 @@
 # PBS Scripts
 ## Ocelote and ElGato
 
-### General Examples
 ![](/Images/general-examples-button.png)
 
-### Array and Parallel Examples
-![](/Images/parallel-and-array.png)
+[![](/Images/parallel-and-array.png)](Array-and-Parallel)
 
-### Life Sciences Examples
 ![](/Images/life-sciences-button.png)
 
