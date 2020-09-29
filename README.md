@@ -9,4 +9,4 @@ This repository contains script examples for University of Arizona’s three HPC
 
 ---
 
-![Click here for SLURM script examples (Puma)](Images/slurm-works-logo.png)
+![Click here for SLURM script examples (Puma)](Images/slurm-logo.png)
