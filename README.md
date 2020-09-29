@@ -4,4 +4,4 @@ This repository contains script examples for University of Arizona’s three HPC
 
 
 
-[![](Images/pbs-works-logo.png)](PBS-Scripts) Click here for PBS script examples (Ocelote and ElGato)
+[![Click here for PBS script examples (Ocelote and ElGato)](Images/pbs-works-logo.png)](PBS-Scripts)
