@@ -18,5 +18,5 @@ Below are some helpful references on running jobs with HPC. These are good place
 ## Scripts
 ![](/Images/general-examples-button.png) [![](/Images/parallel-and-array.png)](Array-and-Parallel)
 
-![](/Images/life-sciences-button.png) ![](/Images/singularity-button.png)
+[![](/Images/life-sciences-button.png)](Life-Sciences) ![](/Images/singularity-button.png)
 
