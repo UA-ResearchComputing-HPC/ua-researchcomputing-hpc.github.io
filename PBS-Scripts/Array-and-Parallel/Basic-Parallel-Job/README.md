@@ -14,6 +14,8 @@ This example demonstrates how to parallelize multiple tasks within one job.
 
 #PBS -l select=1:ncpus=28:mem=168gb:pcmem=6gb
 #PBS -l walltime=00:02:00
+module load parallel
+seq 1 100 | parallel 'DATE=$( date +"%T" ) && sleep 0.{} && echo "Host: $HOSTNAME ; Date: $DATE; {}"'
 ```
 
 ## Script Breakdown
