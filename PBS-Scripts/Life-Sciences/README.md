@@ -2,4 +2,4 @@
 
 # Scripts
 
-### BLAST
+### [BLAST](blast)
