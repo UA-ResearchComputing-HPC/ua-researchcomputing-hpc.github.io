@@ -5,7 +5,7 @@ PBS is the scheduling software used on HPC clusters Ocelote and ElGato. The scri
 
 ## References
 
-* [PBS Quick Start](https://public.confluence.arizona.edu/display/UAHPC/Ocelote+Quick+Start).
+* [PBS Quick Start](https://public.confluence.arizona.edu/display/UAHPC/Ocelote+Quick+Start)
 
 * [Running Jobs with PBS](https://public.confluence.arizona.edu/pages/viewpage.action?pageId=86409309)
 
