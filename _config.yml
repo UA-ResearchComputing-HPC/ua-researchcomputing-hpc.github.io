@@ -13,5 +13,6 @@ include:
   - PBS-Scripts/Array-and-Parallel/Array-Read-Parameters/README.md
   - PBS-Scripts/Array-and-Parallel/Basic-Parallel-Job/README.md
   - PBS-Scripts/Array-and-Parallel/Array-and-Parallel/README.md
+  - PBS-Scripts/Life-Sciences/README.md
   - PBS-Scripts/Life-Sciences/blast/README.md
  
