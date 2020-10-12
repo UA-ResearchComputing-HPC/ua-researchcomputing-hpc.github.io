@@ -15,7 +15,7 @@ A simple example of how to run three serial jobs in a single job using four core
 Script to run an mpi job using 28 cores or fewer using only a single 28-core node. Example executable included. 
 
 ### [Multi-node MPI job](multi-node-mpi-job)
-Script to run an mpi job using three cluster compute nodes for a total of 85 cores and 504 GB of memory.
+Script to run an mpi job using three cluster compute nodes for a total of 84 cores and 504 GB of memory.
 
 ### [Large memory node job](large-memory-node-job)
 Script to run a single job using 256 GB of RAM on Ocelote using the large memory node. 
