@@ -10,7 +10,7 @@ HPC users should be able to run each script with minor modifications (i.e. addin
 
 ### Why use Arrays?
 
-Submitting lots of jobs on HPC can sometimes lead to unintended consequences. Some common things that can wreak havoc:
+Submitting lots of jobs on HPC can sometimes lead to unintended consequences such as bringing down the whole system. Some common things that can wreak havoc:
 
 1. Submitting individual jobs with for loops    -- Too many jobs/Jobs submitted too quickly
 2. Submitting a tremendous number of array jobs -- Too many jobs for the scheduler to keep track of
