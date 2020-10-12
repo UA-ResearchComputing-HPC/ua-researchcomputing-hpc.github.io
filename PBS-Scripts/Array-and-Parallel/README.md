@@ -1,7 +1,7 @@
 # Array Jobs and Parallel Tasks
 
 ## About
-Figuring out effective ways to submit large numbers of jobs can be frustrating. The script examples below are is designed to help implement different techniques to run jobs as arrays or in parallel. They are written for submission with PBS scheduling software on University of Arizona's HPC. 
+Figuring out effective ways to submit large numbers of jobs can be frustrating. The script examples below are is designed to help implement different techniques to run jobs as arrays or in parallel.
 
 Each script is designed to print commands and information specific to that job for better visualization/demonstration purposes. 
 
@@ -10,12 +10,11 @@ HPC users should be able to run each script with minor modifications (i.e. addin
 
 ### Why use Arrays?
 
-Submitting lots of jobs on HPC can sometimes lead to unintended consequences. Some common things that can wreak havoc on HPC are submissions that overload our scheduling software:
+Submitting lots of jobs on HPC can sometimes lead to unintended consequences. Some common things that can wreak havoc:
 
 1. Submitting individual jobs with for loops    -- Too many jobs/Jobs submitted too quickly
 2. Submitting a tremendous number of array jobs -- Too many jobs for the scheduler to keep track of
 
-This can lead to low/nonexistent system performance and unhappy users. This is designed to be an expanding repo of techniques that will run jobs more efficiently and with fewer risks to HPC's scheduling software. 
 
 
 # Scripts
@@ -33,11 +32,11 @@ Submit multiple jobs using the same script with only one ```qsub``` command.
 
 ### [Array Jobs with Text Filenames](Array-Read-Filenames)
 
-Run multiple jobs where each opens a different file but the naming scheme isn't conducive to automating the process using simple array indices as shown in Basic_Array_Job (i.e. 1.txt, 2.txt, ...). This technique is better for smaller array jobs (to reduce IO load).
+Run multiple jobs where each opens a different file but the naming scheme isn't conducive to automating the process using simple array indices as shown in Basic_Array_Job (i.e. 1.txt, 2.txt, ...). This technique is better for smaller array jobs.
 
 ### [Sample Array With Input Parameters](Array-Read-Parameters)
 
-Run multiple jobs where each uses a distinct combination of input parameters. Very similar to reading text filenames above. This technique is better for smaller array jobs (to reduce IO load).
+Run multiple jobs where each uses a distinct combination of input parameters. Very similar to reading text filenames above. This technique is better for smaller array jobs.
 
 
 
