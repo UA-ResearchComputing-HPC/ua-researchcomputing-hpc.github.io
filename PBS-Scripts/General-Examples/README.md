@@ -6,7 +6,7 @@
 ## Scripts
 
 ### [Single serial job requesting two cores](two-core-serial-job)
-A basic example script that requests two cores on a single node. Includes 
+A basic example script that requests two cores on a single node.
 
 ### [Three serial jobs requesting four cores](three-serial-jobs-four-cores)
 A simple example of how to run three serial jobs in a single job using four cores.
