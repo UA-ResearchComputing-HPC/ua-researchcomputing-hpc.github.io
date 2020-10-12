@@ -23,9 +23,9 @@ date
 
 ## Companion MPI Script
 
-The following C script was used to create the executable for this example. This is included in the example archive available for download above. 
+The following C script was used to create the executable for this example. This is included in the example available for download above. 
 
-C script:
+#### C script:
 ```
 #include <mpi.h>
 #include <stdio.h>
