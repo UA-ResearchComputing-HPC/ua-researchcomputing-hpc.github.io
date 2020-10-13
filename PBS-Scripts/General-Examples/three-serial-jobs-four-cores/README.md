@@ -2,7 +2,7 @@
 Script to run three independent serial jobs requesting four cores on a single node. 
 
 ## Script Example
-[Click here to download example]()
+[Click here to download example](four_core_three_serial_job.tar.gz)
 
 The following script runs three independent R scripts simultaneously by running two as background processes. Any executable can be used with this method. Do not assign more resources than the node has. 
 ```
