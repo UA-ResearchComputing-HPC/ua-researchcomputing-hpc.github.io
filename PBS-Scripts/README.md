@@ -17,3 +17,5 @@ Below are some helpful guides for writing, submitting, monitoring, or deleting j
 
 [![](/Images/life-sciences-button.png)](Life-Sciences) ![](/Images/singularity-button.png)
 
+---
+[back](../)
