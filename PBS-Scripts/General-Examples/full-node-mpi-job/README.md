@@ -49,3 +49,4 @@ To compile:
 module load openmpi
 mpicc -o hello_world hello_world.c
 ```
+[back](../)
