@@ -11,3 +11,6 @@ Below are some helpful guides for writing, submitting, monitoring, or deleting j
 * [Software on HPC](https://public.confluence.arizona.edu/display/UAHPC/Accessing+Software)
 * [Compute resources](https://public.confluence.arizona.edu/display/UAHPC/Compute+Resources)
 
+## Scripts
+
+![](/Images/general-examples-button.png) ![](/Images/parallel-and-array.png)
