@@ -15,6 +15,7 @@ The following script runs three independent R scripts simultaneously by running 
 #PBS -l walltime=01:00:00
 
 cd $PBS_O_WORKDIR
+### Any executable can be run below. The R code is used only as an example.
 module load R/3.6.1
 date
 Rscript second_job.r &
