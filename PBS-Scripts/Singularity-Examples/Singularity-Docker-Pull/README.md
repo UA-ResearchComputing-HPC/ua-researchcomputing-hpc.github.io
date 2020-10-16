@@ -19,7 +19,7 @@ INFO:    Creating SIF file...
 ```
 #!/bin/bash
 
-#PBS -W group_list=hpcteam
+#PBS -W group_list=<YOUR_GROUP>
 #PBS -q standard
 #PBS -N singularity-docker-pull
 #PBS -l select=1:ncpus=1:mem=6gb:pcmem=6gb
