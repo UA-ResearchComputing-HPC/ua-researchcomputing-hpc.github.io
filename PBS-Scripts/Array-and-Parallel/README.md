@@ -7,16 +7,6 @@ Each script is designed to print commands and information specific to that job f
 
 HPC users should be able to run each script with minor modifications (i.e. adding their PI's group name) to experiment.
 
-
-### Why use Arrays?
-
-Submitting lots of jobs on HPC can sometimes lead to unintended consequences such as bringing down the whole system. Some common things that can wreak havoc:
-
-1. Submitting individual jobs with for loops    -- Too many jobs/Jobs submitted too quickly
-2. Submitting a tremendous number of array jobs -- Too many jobs for the scheduler to keep track of
-
-
-
 # Scripts
 
 ## Array Jobs
@@ -51,3 +41,6 @@ Run multiple tasks on a single node without using an array job. Tasks that are n
 ### [Array Job with GNU Parallel](Array-and-Parallel)
 
 This script is roughly an extension of Sample_Array_Job.pbs, but with the additional step of parallelizing tasks within each subjob. The parallelization was accomplished using GNU Parallel (https://www.gnu.org/software/parallel/). This allows for running a tremendous number of tasks.
+
+---
+[back](../)
