@@ -31,3 +31,7 @@ date
 raxmlHPC-PTHREADS-AVX2 -T 8 -s phylip_sample.phy -n output_tree.tre -f a -m PROTCATBLOSUM62 -x 12345 -p 12345 -N 1000
 date
 ```
+
+To run this example, click the download link at the top of this page and unpack the archive. Inside is a submission script, sample data, and sample output. To run the submission script, use: ```qsub <script_name>```.
+
+[back](../)
