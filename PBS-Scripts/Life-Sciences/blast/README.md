@@ -29,3 +29,4 @@ time blastp -db ./human.1.protein.faa -query query.faa -out sample_blast_run.out
 ```
 Top run this example, click the link above to download the tar file and unpack it in your HPC account. Inside, you will find blast_example.pbs. This script requires minimal edits to run. Replace ```group_name``` above with your own group's name (this can be found running the command ```va``` if you are unsure). To submit the job, run ```qsub blast_example.pbs```. 
 
+[back](../)
