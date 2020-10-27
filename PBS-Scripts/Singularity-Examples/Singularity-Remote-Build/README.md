@@ -13,7 +13,7 @@ From: nersc/ubuntu-mpi:14.04
 ```
 
 ## Build Instructions
-1.  Log into https://cloud.sylabs.io
+1.  Log into [https://cloud.sylabs.io](https://cloud.sylabs.io)
 2. Generate an access token (API key)
 3. From your working directory: module load singularity
 4. ```singularity remote login``` and paste in the API key
