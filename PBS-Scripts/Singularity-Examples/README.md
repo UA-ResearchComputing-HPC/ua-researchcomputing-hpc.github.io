@@ -11,6 +11,9 @@ A basic example of how to pull and run pre-built Singularity images from Singula
 ### [Singularity Docker Pull](Singularity-Docker-Pull)
 A basic example of how to use Singularity to pull and run Docker images. 
 
+### [Singularity Remote Build](Singularity-Remote-Build)
+An example of how to remotely build a Singularity image file from a recipe without needing root access. 
+
 
 ## Machine Learning Examples
 ### [Simple Tensorflow Example](Tensorflow-Example)
