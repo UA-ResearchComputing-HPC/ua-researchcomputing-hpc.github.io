@@ -19,5 +19,14 @@ An example of how to remotely build a Singularity image file from a recipe witho
 ### [Simple Tensorflow Example](Tensorflow-Example)
 A machine learning example that shows how to run a Tensorflow script on an Ocelote Centos 7 GPU node with a Singularity container. 
 
+### Example Build: CentOS7, Tensorflow1.4.1, Keras, Python3.5, Cuda8.0, cuDNN6
+Build a CentOS 7-based container that can successfully run Keras with the Tensorflow backend and GPU support
+
+### Example Build: CentOS7, Tensorflow1.2, Python3.5, Cuda8.0, cuDNN5.1 
+Build a CentOS 7-based container that can successfully run tensorflow with GPU support
+
+### Example Build: CentOS7, Theano0.9, Python3.4, Cuda7.5, cuDNN5.1
+Build a CentOS 7-based container that can successfully run Theano with GPU support
+
 ---
 [back](../)
