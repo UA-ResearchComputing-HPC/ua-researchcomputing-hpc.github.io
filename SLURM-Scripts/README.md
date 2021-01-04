@@ -13,7 +13,7 @@ Below are some helpful guides for writing, submitting, monitoring, or deleting j
 
 ## Scripts
 
-[![](/Images/general-examples-button.png)](General-Examples) ![](/Images/parallel-and-array.png)
+[![](/Images/general-examples-button.png)](General-Examples) [![](/Images/parallel-and-array.png)](Array-and-Parallel)
 
 ---
 [back](../)
