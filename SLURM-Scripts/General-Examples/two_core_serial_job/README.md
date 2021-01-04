@@ -1,7 +1,7 @@
 # Two Core Serial Job
 
 ## About
-This script runs a two-core serial job using the standard queue. A three pound/hash character start to a line indicates a comment. Any line beginning with #SBATCH issues a SLURM command/directive.
+This script runs a two-core serial job using the standard queue. A three pound/hash character start to a line indicates a comment. Any line beginning with ```#SBATCH``` issues a SLURM command/directive.
 
 ## Script
 [Click here to download example](two_core_serial_job.tar.gz)
@@ -28,3 +28,5 @@ python3 --version
 [netid@wentletrap ~]$ sbatch two_core_serial_job.slurm 
 Submitted batch job 202142
 ```
+------
+[back](../_
