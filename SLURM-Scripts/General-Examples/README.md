@@ -5,7 +5,8 @@ These scripts are designed to be examples for how to run jobs and request resour
 
 ## Scripts
 
-[Single serial job requesting two cores](two_core_serial_job)
+### [Single serial job requesting two cores](two_core_serial_job)
+Runs a two-core serial job.
 
 ---
 [back](../)
