@@ -10,4 +10,7 @@ HPC users should be able to run each script with minor modifications (i.e. addin
 ## Array Jobs
 An array job is a way to easily submit multiple jobs using the same SLURM script with a single ```sbatch```. When an array job is submitted, it will create multiple subjobs, each using the same SLURM directives and same commands as written in the main script.
 
-### Basic Array Job
+### [Basic Array Job](Basic-Array-Job)
+
+-------------
+[back](../)
