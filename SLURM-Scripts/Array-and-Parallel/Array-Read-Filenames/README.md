@@ -67,3 +67,5 @@ JOB ID: 898782, EXAMPLE COMMAND: ./executable -o output2 SRR2309587.fastq
 JOB ID: 898781, EXAMPLE COMMAND: ./executable -o output1 SRR2309587.fastq
 JOB ID: 898783, EXAMPLE COMMAND: ./executable -o output3 SRR2309587.fastq
 ```
+--------
+[back](../)
