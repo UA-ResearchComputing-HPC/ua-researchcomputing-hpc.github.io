@@ -5,6 +5,7 @@ description: HPC Examples
 relative_links:
   enabled: true
   collections: true
+  markdown: kramdown
   highlighter: rouge
 
  
