@@ -33,7 +33,7 @@ What differentiates the script above is the use of the ```--array``` directive. 
  ```
  #SBATCH --array 1-5
  ```
- Each job in the array has its own associated environment variable ```$SLURM_ARRAY_TASK_ID``` that is used to differentiate the submjobs. To demonstrate how we can use each of these to read in different input files, we'll print a sample command:
+ Each job in the array has its own associated environment variable ```$SLURM_ARRAY_TASK_ID``` that is used to differentiate the subjobs. To demonstrate how we can use each of these to read in different input files, we'll print a sample command:
  ```
  echo "./sample_command input_file_${SLURM_ARRAY_TASK_ID}.in"
  ```
@@ -58,7 +58,7 @@ What differentiates the script above is the use of the ```--array``` directive. 
 
 You may also omit the option to name your output files and SLURM with automatically generate names of the form ```slurm-<job_id>-<array_id>.out```. For more information on SLURM naming schemes, see our [Online Documentation](https://public.confluence.arizona.edu/pages/viewpage.action?pageId=93160866#RunningJobswithSLURM(Puma)-SLURMOutputFilenamePatterns). 
 
-In our case:
+In our case, the output files generated are:
 ```
 $ ls -lh *.out
 -rw-r--r-- 1 netid group 33 Jan  4 16:01 Sample_SLURM_Job-1.out
