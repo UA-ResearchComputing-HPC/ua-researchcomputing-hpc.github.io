@@ -27,7 +27,7 @@ This is *not* a good solution because it submits too many jobs too quickly and c
 echo "./sample_command input_file_${SLURM_ARRAY_TASK_ID}.in"
  ```
  
-# Script Breakdown
+## Script Breakdown
 
 What differentiates the script above is the use of the ```--array``` directive. This is what tells SLURM that you're submitting an array. Following this flag, you will specify the number of jobs you wish to run. In this case, we're running 5:
  ```bash
@@ -38,13 +38,13 @@ What differentiates the script above is the use of the ```--array``` directive. 
  echo "./sample_command input_file_${SLURM_ARRAY_TASK_ID}.in"
  ```
  
- ## Script Submission Command
+## Script Submission Command
  ```shell
  $ sbatch basic_array_job.slurm
  Submitted batch job 361951
  ```
  
- ## Output Files
+## Output Files
 *Important:* When submitting jobs with named output files (i.e. with the line #SBATCH -o=Job.out) as arrays, SLURM will write every array element to that filename leaving you with only the output of the last completed job in the array. Use one of the following SLURM directives in your script to prevent this behavior:
 
 1. Differentiate output files using array indices. Similar to PBS default. For example:
