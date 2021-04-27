@@ -5,5 +5,6 @@ description: HPC Examples
 relative_links:
   enabled: true
   collections: true
+  highlighter: rouge
 
  
