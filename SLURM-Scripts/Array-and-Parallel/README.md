@@ -16,5 +16,8 @@ Submit multiple jobs using the same script with only one ```sbatch``` command.
 ### [Array Jobs with Text Filenames](Array-Read-Filenames)
 Run multiple jobs where each opens a different file but the naming scheme isn't conducive to automating the process using simple array indices as shown in Basic_Array_Job (i.e. 1.txt, 2.txt, ...).
 
+### [Sample Array with Input Parameters](Array-Read-Parameters)
+Run multiple jobs where each uses a distinct combination of input parameters. Very similar to reading text filenames above.
+
 -------------
 [back](../)
