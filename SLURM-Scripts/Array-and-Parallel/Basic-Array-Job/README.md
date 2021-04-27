@@ -28,7 +28,8 @@ echo "./sample_command input_file_${SLURM_ARRAY_TASK_ID}.in"
  ```
  
  ## Script Breakdown
- What differentiates the script above is the use of the ```--array``` directive. This is what tells SLURM that you're submitting an array. Following this flag, you will specify the number of jobs you wish to run. In this case, we're running 5:
+
+What differentiates the script above is the use of the ```--array``` directive. This is what tells SLURM that you're submitting an array. Following this flag, you will specify the number of jobs you wish to run. In this case, we're running 5:
  ```
  #SBATCH --array 1-5
  ```
