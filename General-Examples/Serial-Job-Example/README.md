@@ -1,5 +1,7 @@
 # Serial Job
 
+[Click here to download example](Serial-Job-Example.tar.gz)
+
 This script runs a serial, single-CPU job using the standard queue.
 
 Any line beginning with #SBATCH issues a SLURM directive that controls aspects of your job such as job name, output filename, memory requirements, number of CPUs, number of nodes, etc.
