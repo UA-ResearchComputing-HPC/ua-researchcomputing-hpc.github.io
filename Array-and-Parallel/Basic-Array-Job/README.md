@@ -8,6 +8,7 @@ for i in $( seq 1 10 ); do sbatch script.slurm <submission options> ; done
  This isn't a good solution because it submits too many jobs too quickly and overloads the scheduler. Instead, an array job can be used to achieve the same ends.
  
  ## Script Example
+ [Click here to download example](Basic-Array-Job.tar.gz)
  ```
 #!/bin/bash
 #SBATCH --ntasks=1
