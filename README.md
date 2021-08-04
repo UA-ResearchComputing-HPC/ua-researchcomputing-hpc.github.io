@@ -13,3 +13,4 @@ Our clusters use the scheduling software SLURM. Below are some helpful guides fo
 
 ![](/Images/general-examples-button.png)![](/Images/parallel-and-array.png)
 ![](/Images/life-sciences-button.png)![](/Images/singularity-button.png)
+![](/Images/gpu-button.png)![](/Images/mpi-button.png)
