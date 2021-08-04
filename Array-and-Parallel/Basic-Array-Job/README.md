@@ -6,8 +6,8 @@ To execute multiple analyses, a user may be tempted to submit jobs with a script
 for i in $( seq 1 10 ); do sbatch script.slurm <submission options> ; done
 ```
  This isn't a good solution because it submits too many jobs too quickly and overloads the scheduler. Instead, an array job can be used to achieve the same ends.
- 
- ## Script Example
+
+## Script Example
  
  [Click here to download example](Basic-Array-Job.tar.gz)
  ```
@@ -22,7 +22,7 @@ for i in $( seq 1 10 ); do sbatch script.slurm <submission options> ; done
 echo "./sample_command input_file_${SLURM_ARRAY_TASK_ID}.in"
  ```
  
- ## Script Breakdown
+## Script Breakdown
  
 What differentiates the script above from standard submissions is the ```--array``` directive. This is what tells SLURM  that you're submitting an array. Following this flag, you will specify the number of jobs you wish to run. In this case, we're running 5:
 ```
