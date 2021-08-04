@@ -27,7 +27,7 @@ This is **not** a good solution. This submits too many too quickly and overloads
 echo "Job Name: $PBS_JOBID, Reading File: input_file_${PBS_ARRAY_INDEX}.txt"
 ```
 
-## Script Breakdown
+##  Script Breakdown
 
 What differentiates the script above is the use of the ```-J``` directive. This is what tells PBS that you're submitting an array. Following this flag, you will specify the number of jobs you wish to run. In this case, we're running 10:
 
