@@ -19,7 +19,7 @@ To run this example, click the link above to download the tar file and unpack it
 #SBATCH --nodes=1             
 #SBATCH --time=00:01:00   
 #SBATCH --partition=standard
-#SBATCH --account=hpcteam
+#SBATCH --account=YOUR_GROUP
 module load blast
 
 makeblastdb -in human.1.protein.faa  -dbtype prot
