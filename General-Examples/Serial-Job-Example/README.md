@@ -31,9 +31,6 @@ import os
 print("Hello world! I'm running on compute node: %s"%os.environ["HOSTNAME"])
 ```
 
-*****
-[back](../)
-
 ### Example Job Submission
 ```
 (ocelote) [netid@junonia ~]$ ls
@@ -51,3 +48,6 @@ Hello world! I'm running on compute node: i4n0
 Detailed performance metrics for this job will be available at https://metrics.hpc.arizona.edu/#job_viewer?action=show&realm=SUPREMM&resource_id=5&local_job_id=73224 by 8am on 2021/08/05.
 (ocelote) [netid@junonia ~]$ 
 ```
+
+*****
+[back](../)
