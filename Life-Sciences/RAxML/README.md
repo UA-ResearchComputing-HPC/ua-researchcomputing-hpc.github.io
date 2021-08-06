@@ -4,7 +4,7 @@
 For information on RAxML, see [the RAxML documentation](https://cme.h-its.org/exelixis/web/software/raxml/#documentation)
 
 ## Script Example
-
+[Click here to download example](RAxML.tar.gz)
 ```
 #!/bin/bash
 #SBATCH --job-name=RAxML-Example
