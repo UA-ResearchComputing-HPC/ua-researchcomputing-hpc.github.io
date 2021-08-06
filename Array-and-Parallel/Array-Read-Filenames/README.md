@@ -63,3 +63,6 @@ JOB NAME: Array-Read-Filenames, JOB ID: 1694073, EXAMPLE COMMAND: ./executable -
 JOB NAME: Array-Read-Filenames, JOB ID: 1694074, EXAMPLE COMMAND: ./executable -o output3 SRR305356.fastq
 JOB NAME: Array-Read-Filenames, JOB ID: 1694071, EXAMPLE COMMAND: ./executable -o output4 SRR305p0982.fastq
 ```
+
+*****
+[back](../)
