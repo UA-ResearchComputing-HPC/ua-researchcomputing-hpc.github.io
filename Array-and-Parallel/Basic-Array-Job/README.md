@@ -16,7 +16,7 @@ for i in $( seq 1 10 ); do sbatch script.slurm <submission options> ; done
 #SBATCH --nodes=1             
 #SBATCH --time=00:01:00   
 #SBATCH --partition=standard
-#SBATCH --account=hpcteam
+#SBATCH --account=YOUR_GROUP
 #SBATCH --array 1-5
 
 echo "./sample_command input_file_${SLURM_ARRAY_TASK_ID}.in"
