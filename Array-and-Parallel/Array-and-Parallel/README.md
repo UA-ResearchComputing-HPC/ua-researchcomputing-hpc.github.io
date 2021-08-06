@@ -48,7 +48,7 @@ Submitted batch job 1693973
 slurm-1693973_1.out  slurm-1693973_2.out
 ```
 
-# File Contents
+## File Contents
 A total of 400 tasks were executed using an array job with two subjobs on two nodes, r2u07n1 and r2u13n2. To view the full contents of the output file, download the example above. 
 ```
 (puma) [netid@junonia ~]$ head *.out
