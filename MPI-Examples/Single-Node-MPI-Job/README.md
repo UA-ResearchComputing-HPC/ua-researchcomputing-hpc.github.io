@@ -5,6 +5,7 @@ Script that compiles and runs an MPI job using 30 CPUs on a single node.
 Note: the C file can also be compiled manually in an interactive session.
 
 ## Script Example
+[Click here to download example](Single-Node-MPI-Job.tar.gz)
 ```
 #!/bin/bash
 #SBATCH --job-name=Single-Node-MPI-Job
