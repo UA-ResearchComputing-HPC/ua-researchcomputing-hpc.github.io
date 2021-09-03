@@ -37,3 +37,6 @@ Submitted batch job 1996576
 [netid@r1u03n2 ~]$ cat slurm-1996576.out 
 RaawwWWWWWRRRR!! Avocado!
 ```
+
+----------
+[back](../)
