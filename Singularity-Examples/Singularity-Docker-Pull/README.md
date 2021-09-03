@@ -24,7 +24,7 @@ INFO:    Creating SIF file...
 #SBATCH --mem=1gb                    
 #SBATCH --time=00:01:00   
 #SBATCH --partition=standard
-#SBATCH --account=hpcteam
+#SBATCH --account=YOUR_GROUP
 
 singularity run lolcow.sif
 ```
