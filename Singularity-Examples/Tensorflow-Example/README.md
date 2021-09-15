@@ -11,6 +11,7 @@ tensorflow is aliased to `singularity exec --nv /contrib/singularity/nvidia/nvid
 ```
 
 ## Submission Script
+[Click here to download example](Tensorflow-Example.tar.gz)
 ```
 #!/bin/bash
 #SBATCH --output=Sample-tensorflow-example-%a.out
@@ -120,3 +121,6 @@ step: 950, loss: 0.079677, W: 0.281356, b: 0.588090
 step: 1000, loss: 0.079363, W: 0.279605, b: 0.600505
 Detailed performance metrics for this job will be available at https://metrics.hpc.arizona.edu/#job_viewer?action=show&realm=SUPREMM&resource_id=73&local_job_id=2069594 by 8am on 2021/09/16.
 ```
+
+*****
+[back](../)
