@@ -10,5 +10,9 @@ A basic example script that requests a single CPU on one node.
 ### [High Memory Node Job](High-Memory-Node-Job)
 A basic example demonstrating how to request a high memory node on either Ocelote or Puma.
 
+### [Job Using Scratch](Using-Scratch-Space)
+
+
+
 *****
 [back](../)
