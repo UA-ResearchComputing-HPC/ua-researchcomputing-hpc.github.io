@@ -11,7 +11,7 @@ A basic example script that requests a single CPU on one node.
 A basic example demonstrating how to request a high memory node on either Ocelote or Puma.
 
 ### [Job Using Scratch](Using-Scratch-Space)
-
+Example of using a compute node's local storage, or scratch space, during a job's execution.
 
 
 *****
