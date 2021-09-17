@@ -9,4 +9,5 @@ The blastp script uses 4 threads to blast inputs against a protein database and 
 Uses the MPI version of RAxML.
 
 *****
-[back](../)
+[![](/Images/home.png)](https://ua-researchcomputing-hpc.github.io/) 
+[![](/Images/back.png)](../)
