@@ -59,5 +59,5 @@ Below is a concatenation of the job's output files. Notice how the array indices
 ```
 
 *************
-[back](../)
-
+[![](/Images/home.png)](https://ua-researchcomputing-hpc.github.io/) 
+[![](/Images/back.png)](../)
