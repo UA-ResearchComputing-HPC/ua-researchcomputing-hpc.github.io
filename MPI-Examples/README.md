@@ -8,4 +8,5 @@ Script that runs an MPI job using 30 CPUs on a single node.
 Very similar to the Single Node MPI Job above, except the 30 tasks are distributed across 3 nodes.
 
 *****
-[back](../)
+[![](/Images/home.png)](https://ua-researchcomputing-hpc.github.io/) 
+[![](/Images/back.png)](../)
