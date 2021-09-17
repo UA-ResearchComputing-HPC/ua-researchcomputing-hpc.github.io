@@ -3,15 +3,17 @@
 ## Overview
 [Click here to download example](Using-Virtualenv.tar.gz)
 
-Have you ever wanted to install custom Python packages on a cluster but received permission denied errors when you tried? Or maybe you want to create separate environments for different workflows don't interfere with one another. A good solution to these issues is to use ```virtualenv```. This is a way to create an isolated environment that can be turned off and on allowing you to add local packages and create unique development environments. For more in-depth information, see our [online Python documentation](https://public.confluence.arizona.edu/display/UAHPC/Using+and+Installing+Python).
+Have you ever wanted to install custom Python packages on a cluster but received permission denied errors when you tried? Or maybe you want to create separate environments for different workflows so they don't interfere with one another. A good solution is to use ```virtualenv```. This is a way to create a local, unique environment that can be activated and deactivated as needed. For more in-depth information, see our [online Python documentation](https://public.confluence.arizona.edu/display/UAHPC/Using+and+Installing+Python).
 
 In this example, we'll set up a virtual environment, activate it, install a non-standard package, and use it in a job submission.
 
 
 ## Environment Creation
-> NOTE: This example uses python 3.6 to create the virtual environment. Python 3.7 uses different syntax. For more information, see our docs linked in the Overview.
+> NOTE: This example uses python 3.6 to create the virtual environment. Python 3.8 uses different syntax. For more in-depth information, see our docs linked in the Overview.
 
-To begin, start an interactive session. Once it's ready, load your desired version of python and create your virtual environment. Once it's created, it will show up as a directory with its own nested bin and lib directories. In the bin, there's a script called ```activate``` you can source to turn on your environment. Once your environment is active, you can pip install and use your packages. In this example, we'll install the emoji package.
+To begin, start an interactive session. This can be easily done by running ```interactive``` from one of the login nodes. Once it's ready, load your desired version of python and create your virtual environment using ```virtualenv --system-site-packages /path/to/env```. The environment will be given the name included in the path. If only a name is provided without a path, the working directory will be used. 
+
+Once the process is complete, a directory with its own nested bin and lib directories will be available in the path specified. In the bin, there's a script called ```activate``` that you can source to load the environment. Once your environment is active, you can pip install custom packages. Once they're installed, they will only be available while the environment is active. In this example, we'll install the emoji package for demonstration purposes.
 
 ```
 [netid@r2u05n1 ~]$ module load python/3.6
@@ -21,6 +23,7 @@ To begin, start an interactive session. Once it's ready, load your desired versi
 ```
 
 ## Python Script
+A simple python script that tests whether a virtual environment is active and reports back to the user. 
 ```
 #!/usr/bin/env python3
 
@@ -49,6 +52,7 @@ else:
 ```
 
 ## Submission Script
+In this SLURM script, we'll try running our python script with and without our virtual environment activated.
 ```
 #!/bin/bash
 #SBATCH --job-name=Sample_venv_Job
