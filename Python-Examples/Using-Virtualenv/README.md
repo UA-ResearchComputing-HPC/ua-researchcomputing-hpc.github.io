@@ -13,6 +13,8 @@ In this example, we'll set up a virtual environment, activate it, install a non-
 
 To begin, start an interactive session. This can be easily done by running ```interactive``` from one of the login nodes. Once it's ready, load your desired version of python and create your virtual environment using ```virtualenv --system-site-packages /path/to/env```. The environment will be given the name included in the path. If only a name is provided without a path, the working directory will be used. 
 
+> NOTE: to run this example in your account, you'll either want to create your virtual environment in the same directory where your python and SLURM scripts are located, or change the SLURM script to point to the correct location.
+
 Once the process is complete, a directory with its own nested bin and lib directories will be available in the path specified. In the bin, there's a script called ```activate``` that you can source to load the environment. Once your environment is active, you can pip install custom packages. Once they're installed, they will only be available while the environment is active. In this example, we'll install the emoji package for demonstration purposes.
 
 ```
