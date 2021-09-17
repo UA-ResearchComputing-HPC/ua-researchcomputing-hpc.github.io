@@ -14,4 +14,5 @@ The python multiprocessing package is a popular way to spread a workflow over mu
 Sometimes jobs use more memory than they've been allotted and are killed by the job scheduler. Python has different methods for detecting memory usage that can help profile a workflow as part of the testing process, or kill a task once a memory threshold is met. This example provides an example of how to kill a python process that exceeds a threshold set by the user. 
 
 *****
-[back](../)
+[![](/Images/home.png)](https://ua-researchcomputing-hpc.github.io/) 
+[![](/Images/back.png)](../)
