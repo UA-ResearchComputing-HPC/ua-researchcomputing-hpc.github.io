@@ -74,4 +74,5 @@ Hello world from node r1u06n1.puma.hpc.arizona.edu. My rank is 14 out of 30 proc
 ```
 
 *****
-[back](..)
+[![](/Images/home.png)](https://ua-researchcomputing-hpc.github.io/) 
+[![](/Images/back.png)](../)
