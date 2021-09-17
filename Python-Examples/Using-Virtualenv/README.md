@@ -10,6 +10,7 @@ In this example, we'll set up a virtual environment, activate it, install a non-
 
 ## Environment Creation
 > NOTE: This example uses python 3.6 to create the virtual environment. Python 3.7 uses different syntax. For more information, see our docs linked in the Overview.
+
 To begin, start an interactive session. Once it's ready, load your desired version of python and create your virtual environment. Once it's created, it will show up as a directory with its own nested bin and lib directories. In the bin, there's a script called ```activate``` you can source to turn on your environment. Once your environment is active, you can pip install and use your packages. In this example, we'll install the emoji package.
 
 ```
