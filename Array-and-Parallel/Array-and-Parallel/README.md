@@ -77,4 +77,5 @@ JOB ID: 1693973 HOST NODE: r2u07n1 EXAMPLE COMMAND: ./executable input_209
 JOB ID: 1693973 HOST NODE: r2u07n1 EXAMPLE COMMAND: ./executable input_210
 ```
 *****
-[back](../)
+[![](/Images/home.png)](https://ua-researchcomputing-hpc.github.io/) 
+[![](/Images/back.png)](../)
