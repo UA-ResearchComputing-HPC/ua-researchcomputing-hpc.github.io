@@ -90,5 +90,5 @@ Detailed performance metrics for this job will be available at https://metrics.h
 ```
 
 *****
-[![](/Images/home.png)](~) 
+[![](/Images/home.png)](https://ua-researchcomputing-hpc.github.io/) 
 [![](/Images/back.png)](../)
