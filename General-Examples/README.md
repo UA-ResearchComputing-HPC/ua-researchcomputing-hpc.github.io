@@ -15,4 +15,5 @@ Example of using a compute node's local storage, or scratch space, during a job'
 
 
 *****
-[back](../)
+[![](/Images/home.png)](https://ua-researchcomputing-hpc.github.io/) 
+[![](/Images/back.png)](../)
