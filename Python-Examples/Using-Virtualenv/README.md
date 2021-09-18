@@ -11,7 +11,7 @@ In this example, we'll set up a virtual environment, activate it, install a non-
 ## Environment Creation
 > NOTE: This example uses python 3.6 to create the virtual environment. Python 3.8 uses different syntax. For more in-depth information, see our docs linked in the Overview.
 
-To begin, start an interactive session. This can be easily done by running ```interactive``` from one of the login nodes. Once it's ready, load your desired version of python and create your virtual environment using ```virtualenv --system-site-packages /path/to/env```. The environment will be given the name included in the path. If only a name is provided without a path, the working directory will be used. 
+To begin, start an interactive session. This can be easily done by running ```interactive``` from one of the login nodes. Once it's ready, load your desired version of python and create your virtual environment using ```virtualenv --system-site-packages /path/to/env```. The environment will be given the name included in the path. If only a name is provided without a path, your environment will be saved to your working directory. 
 
 > NOTE: to run this example in your account, you'll either want to create your virtual environment in the same directory where your python and SLURM scripts are located, or change the SLURM script to point to the correct location.
 
@@ -67,10 +67,10 @@ In this SLURM script, we'll try running our python script with and without our v
 
 # Load the necessary module
 module load python/3.6
-echo "First, we'll test the script without activating our environment:"; echo
+echo -e "\nFirst, we'll test the script without activating our environment:\n"
 python3 myscript.py
 
-echo; echo "Next, we'll activate our environment and rerun our script:" ; echo
+echo -e "\nNext, we'll activate our environment and rerun our script:\n" 
 source my_environment/bin/activate
 python3 myscript.py
 ```
@@ -78,12 +78,12 @@ python3 myscript.py
 ## Submit the Job
 ```
 [netid@junonia ~]$ sbatch myenv.slurm 
-Submitted batch job 2082962
+Submitted batch job 174168
 ```
 
 ## Output
 ```
-[netid@junonia ~]$ cat slurm-2082962.out 
+[netid@wentletrap ~]$ cat slurm-174168.out 
 
 First, we'll test the script without activating our environment:
 
@@ -93,7 +93,7 @@ oops, can't import emoji!
 Next, we'll activate our environment and rerun our script:
 
 💾 Using a virtual environment! 💾
-Detailed performance metrics for this job will be available at https://metrics.hpc.arizona.edu/#job_viewer?action=show&realm=SUPREMM&resource_id=73&local_job_id=2082962 by 8am on 2021/09/18.
+Detailed performance metrics for this job will be available at https://metrics.hpc.arizona.edu/#job_viewer?action=show&realm=SUPREMM&resource_id=5&local_job_id=174168 by 8am on 2021/09/18.
 ```
 
 *****
