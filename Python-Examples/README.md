@@ -11,7 +11,7 @@ Virtual environments are great ways to customize your own python environments an
 The python multiprocessing package is a popular way to spread a workflow over multiple CPUs. This example demonstrates how to assign multiple CPUs to a SLURM job and then utilize them in a multiprocessing python job. 
 
 ## [Memory Limits](Memory-Limits)
-Sometimes jobs use more memory than they've been allotted and are killed by the job scheduler. Python has different methods for detecting memory usage that can help profile a workflow as part of the testing process, or kill a task once a memory threshold is met. This example provides an example of how to kill a python process that exceeds a threshold set by the user. 
+Sometimes jobs use more memory than they've been allotted and are killed by the job scheduler. Python has different methods for detecting memory usage that can help profile a workflow as part of the testing process, or kill a task once a memory threshold is met. This example shows how to kill a python process that exceeds a threshold set by the user. 
 
 *****
 [![](/Images/home.png)](https://ua-researchcomputing-hpc.github.io/) 
