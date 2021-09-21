@@ -32,7 +32,7 @@ print("The version of python being used is: %s"%sys.version)
 sys.stdout.flush()
 
 # Did you pass variables into the script, e.g. using "python3 <script> [arg]"?
-print("\nChecking if any varibles have been passed to the script")
+print("\nChecking if any variables have been passed to the script")
 try:
     input_var = sys.argv[1]
 except IndexError:
@@ -60,38 +60,45 @@ print("\n===== Leaving Python Script =====\n")
 #SBATCH --partition=standard
 #SBATCH --account=YOUR_GROUP
 
+# Defining some variables so it's easy to change if necessary
 target_script="basic_example.py"
 exec_python_statement="python3 $target_script"
 direct_exec="./$target_script"
 
+# Let's run a few python tests now
+
+#### Run Python script with python 3.6 module ####
 echo "Let's try first using the python 3.6 module"
 module load python/3.6
 echo -e "Running command: $exec_python_statement \n"
 $exec_python_statement
 
-echo "Let's try using the python 3.8 module now"
+#### Run script directly and use a different module ####
+echo "Let's see what happens when we try executing our script directly with a different module:"
+echo "Running: module swap python/3.6 python/3.8"
 module swap python/3.6 python/3.8
-echo -e "Running command: $exec_python_statement \n"
-$exec_python_statement
-
-echo "Let's see what happens when we try executing our script directly:"
 echo -e "Now trying: $direct_exec"
 $direct_exec
 
-# Check the exit status of last bash command
+#### Check the exit status of last bash command (given by variable $?) ####
 if [[ $? != 0 ]]; then
     echo "Oops, looks like $direct_exec didn't work. Let's try changing permissions"
-    echo "Previous file permissions: $(ls -l $target_script)"
+    IFS=' ' read -ra PERMS <<< $(ls -l basic_example.py); PERMISSIONS=${PERMS[0]}
+    echo "Previous file permissions: $PERMISSIONS"
     echo "Executing: chmod u+x $target_script"
     wait
     chmod u+x $target_script
-    echo "New file permissions: $(ls -l $target_script)"
+    IFS=' ' read -ra PERMS <<< $(ls -l basic_example.py); PERMISSIONS=${PERMS[0]}
+    echo "New file permissions: $PERMISSIONS"
     echo "Executing: $direct_exec"
     $direct_exec
     chmod u-x $target_script
 fi
 
-echo "Lastly, we'll feed our python script an input variable."
+#### Try passing an argument to our python script, and use anaconda ####
+echo "Lastly, we'll feed our python script an input variable. For fun, we'll get rid of python 3.8 and will use anaconda"
+echo "Running: module swap python/3.8 anaconda/2020.11"
+module swap python/3.8 anaconda/2020.11
 echo "Running $exec_python_statement INPUT"
 $exec_python_statement INPUT
 ```
@@ -99,12 +106,12 @@ $exec_python_statement INPUT
 # Job Submission
 ```
 [netid@wentletrap ~]$ sbatch submit_python.slurm 
-Submitted batch job 53316
+Submitted batch job 53325
 ```
 
 # Output
 ```
-[netid@wentletrap ~]$ cat slurm-53316.out 
+[netid@wentletrap ~]$ cat slurm-53325.out 
 Let's try first using the python 3.6 module
 Running command: python3 basic_example.py 
 
@@ -115,41 +122,23 @@ The python being used to execute this script is in: /opt/ohpc/pub/apps/python/3.
 The version of python being used is: 3.6.5 (default, Mar 31 2021, 11:18:02) 
 [GCC 8.3.0]
 
-Checking if any varibles have been passed to the script
+Checking if any variables have been passed to the script
 Guess not, oh well!
 
 Let's also grab some environment variables
 We're running on node: cpu1
-Our SLURM Job ID is: 53316
+Our SLURM Job ID is: 53325
 
 ===== Leaving Python Script =====
 
-Let's try using the python 3.8 module now
-Running command: python3 basic_example.py 
-
-
- ===== In Python Script =====
-
-The python being used to execute this script is in: /opt/ohpc/pub/apps/python/3.8.2/bin
-The version of python being used is: 3.8.2 (default, Mar 16 2021, 17:11:14) 
-[GCC 8.3.0]
-
-Checking if any varibles have been passed to the script
-Guess not, oh well!
-
-Let's also grab some environment variables
-We're running on node: cpu1
-Our SLURM Job ID is: 53316
-
-===== Leaving Python Script =====
-
-Let's see what happens when we try executing our script directly:
+Let's see what happens when we try executing our script directly with a different module:
+Running: module swap python/3.6 python/3.8
 Now trying: ./basic_example.py
-/var/spool/slurm/d/job53316/slurm_script: line 26: ./basic_example.py: Permission denied
+/var/spool/slurm/d/job53325/slurm_script: line 28: ./basic_example.py: Permission denied
 Oops, looks like ./basic_example.py didn't work. Let's try changing permissions
-Previous file permissions: -rw-r--r-- 1 netid group 913 Sep 21 13:46 basic_example.py
+Previous file permissions: -rw-r--r--
 Executing: chmod u+x basic_example.py
-New file permissions: -rwxr--r-- 1 netid group 913 Sep 21 13:46 basic_example.py
+New file permissions: -rwxr--r--
 Executing: ./basic_example.py
 
  ===== In Python Script =====
@@ -158,30 +147,31 @@ The python being used to execute this script is in: /opt/ohpc/pub/apps/python/3.
 The version of python being used is: 3.8.2 (default, Mar 16 2021, 17:11:14) 
 [GCC 8.3.0]
 
-Checking if any varibles have been passed to the script
+Checking if any variables have been passed to the script
 Guess not, oh well!
 
 Let's also grab some environment variables
 We're running on node: cpu1
-Our SLURM Job ID is: 53316
+Our SLURM Job ID is: 53325
 
 ===== Leaving Python Script =====
 
-Lastly, we'll feed our python script an input variable.
+Lastly, we'll feed our python script an input variable. For fun, we'll get rid of python 3.8 and will use anaconda
+Running: module swap python/3.8 anaconda/2020.11
 Running python3 basic_example.py INPUT
 
  ===== In Python Script =====
 
-The python being used to execute this script is in: /opt/ohpc/pub/apps/python/3.8.2/bin
-The version of python being used is: 3.8.2 (default, Mar 16 2021, 17:11:14) 
-[GCC 8.3.0]
+The python being used to execute this script is in: /opt/ohpc/pub/apps/anaconda/2020.11/bin
+The version of python being used is: 3.8.5 (default, Sep  4 2020, 07:30:14) 
+[GCC 7.3.0]
 
-Checking if any varibles have been passed to the script
+Checking if any variables have been passed to the script
 Looks like you've included the input variable: INPUT
 
 Let's also grab some environment variables
 We're running on node: cpu1
-Our SLURM Job ID is: 53316
+Our SLURM Job ID is: 53325
 
 ===== Leaving Python Script =====
 ```
