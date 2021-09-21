@@ -11,12 +11,14 @@ Submitted batch job 53329
 ```
 # Output
 ```
+[netid@wentletrap ~]$ ls
+slurm-53329.out  example.r  submit_r_script.slurm
 [netid@wentletrap ~]$ cat slurm-53329.out 
 [1] "In R Script. Plotting..."
 null device 
           1 
 ```
-
+![](/R-Examples/Plotting-In-R/rplot.pdf)
 
 *****
 
