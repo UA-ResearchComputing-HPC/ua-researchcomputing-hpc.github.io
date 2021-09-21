@@ -3,7 +3,8 @@ This repository provides some examples for how to submit R analyses as batch job
 
 ## Basic R Example
 
-## Plotting in a Batch Script
+## [Plotting in a Batch Script](Plotting-In-R)
+Creating and saving figures as a part of your workflow is possible in a batch script. You can save your figure to a specified directory (the default is your working directory), give it a custom name, control your image quality and dimensions, and choose your output format (e.g., pdf, png, jpg, etc.). An example is included below.
 *****
 
 [![](/Images/home.png)](https://ua-researchcomputing-hpc.github.io/) 
