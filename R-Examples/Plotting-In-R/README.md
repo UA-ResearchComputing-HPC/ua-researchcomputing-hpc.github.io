@@ -18,7 +18,7 @@ slurm-53329.out  example.r  submit_r_script.slurm
 null device 
           1 
 ```
-![](/R-Examples/Plotting-In-R/rplot.png)
+![](./rplot.png)
 
 *****
 
