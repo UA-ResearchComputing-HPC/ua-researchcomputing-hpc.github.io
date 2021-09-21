@@ -1,5 +1,5 @@
 # Overview
-To run an R job as a batch submission, you can include all of your R commands in a single file and execute it with ```Rscript```
+To run an R job as a batch submission, you can include all of your R commands in a single file and execute it with ```Rscript```.
 
 # Submission Script
 [Click here to download example](basic-r-job.tar.gz)
@@ -35,3 +35,9 @@ Submitted batch job 53341
 [netid@wentletrap ~]$ cat slurm-53341.out 
 [1] Hello World! 
 ```
+
+
+------------
+
+[![](/Images/home.png)](https://ua-researchcomputing-hpc.github.io/) 
+[![](/Images/back.png)](../)
