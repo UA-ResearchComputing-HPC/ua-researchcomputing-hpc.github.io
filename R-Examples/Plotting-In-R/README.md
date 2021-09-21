@@ -1,5 +1,5 @@
 # Overview
-You don't need to be in an interactive session to view and save figures. Instead, you can save your figure to a specified directory (the default is your working directory), give it a custom name, control your image quality and dimensions, and choose your output format (e.g., pdf, png, jpg, etc.). An example is included below.
+You don't need to be in an interactive session to view and save figures. In a batch script you can save your figure to a specified directory (the default is your working directory), give it a custom name, control your image quality and dimensions, and choose your output format (e.g., pdf, png, jpg, etc.). An example is included below.
 
 # Submission Script
 [Click here to download example](r-plotting.tar.gz)
