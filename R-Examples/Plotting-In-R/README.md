@@ -3,6 +3,7 @@ You don't need to be in an interactive session to view and save figures. In a ba
 
 # Submission Script
 [Click here to download example](r-plotting.tar.gz)
+
 To run your R script as a batch job, use ```Rscript``` instead of ```R``` which is used for interactive sessions. 
 ```
 #!/bin/bash
