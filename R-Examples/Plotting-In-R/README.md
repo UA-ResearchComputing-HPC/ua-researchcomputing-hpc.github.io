@@ -43,6 +43,5 @@ null device
 ![](/R-Examples/Plotting-In-R/rplot.png)
 
 *****
-
 [![](/Images/home.png)](https://ua-researchcomputing-hpc.github.io/) 
 [![](/Images/back.png)](../)
