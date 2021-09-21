@@ -13,7 +13,7 @@ To run your R script as a batch job, use ```Rscript``` instead of ```R``` which 
 #SBATCH --partition=standard
 #SBATCH --account=YOUR_GROUP
 
-module load R
+module load R/4.0.0
 Rscript example.r
 ```
 
@@ -29,13 +29,13 @@ dev.off()
 # Job Submission
 ```
 [netid@wentletrap ~]$ sbatch submit_r_script.slurm 
-Submitted batch job 53335
+Submitted batch job 53337
 ```
 # Output
 ```
 [netid@wentletrap ~]$ ls
-slurm-53335.out  rplot.png  example.r  submit_r_script.slurm
-[netid@wentletrap ~]$ cat slurm-53335.out 
+slurm-53337.out  rplot.png  example.r  submit_r_script.slurm
+[netid@wentletrap ~]$ cat slurm-53337.out 
 [1] "In R Script. Plotting..."
 null device 
           1 
