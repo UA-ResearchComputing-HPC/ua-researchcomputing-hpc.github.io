@@ -5,9 +5,11 @@ This example runs a basic Python script.
 
 
 # Python Script
+
 A basic python script to test which Python is being used and flushes its output.
+
 > Python buffers input/output functions to improve efficiency. This means that output is stored in memory before printing. The result is that while your Python script is running in a batch job, you may not see any output appear in your SLURM file until the job has completed, even if you have print statements scattered throughout. If you'd like to force your data to be flushed to stdout during the job's execution, you can use a ```sys.stdout.flush()``` statement or set the parameter ```flush=True``` in your print statement. [More information here](https://www.delftstack.com/howto/python/python-print-flush/).
-> 
+
 ```
 #!/usr/bin/env python3
 
