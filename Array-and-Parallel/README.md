@@ -9,6 +9,8 @@ HPC users should be able to run each script with minor modifications (i.e. addin
 
 # Scripts
 ## Array Jobs
+> ⚠️ Be careful using custom output filenames (e.g. ```-o myjob.out```) in array jobs. If the filename specified doesn't include unique descriptors (e.g., array ID), each subjob will write to and replace that filename, meaning you'll only capture the output from a single subjob. See our [documentation on filename patterns](https://public.confluence.arizona.edu/display/UAHPC/Running+Jobs+with+SLURM#RunningJobswithSLURM-SLURMOutputFilenamePatterns) for help. 
+
 An array job is a way to easily submit multiple jobs using the same SLURM script with a single ```sbatch```. When an array job is submitted, it will create multiple subjobs, each using the same SLURM directives and same commands as written in the main script.
 
 ### [Basic Array Job](Basic-Array-Job)
