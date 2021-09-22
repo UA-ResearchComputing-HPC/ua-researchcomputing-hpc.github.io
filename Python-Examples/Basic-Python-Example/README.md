@@ -1,23 +1,13 @@
 # Overview
 [Click here to download example](Basic-Python-Example.tar.gz)
 
-This example runs a basic Python script. Below, and in the script, are a couple of tips and tricks for running your python jobs
-
-# Tips
-
-### Why the shebang (```#!```)?
-While not strictly necessary, the shebang allows you to execute your script directly using ```./my_script.py``` without needing to explicitly call ```python3```. When you include ```#!/usr/bin/env python3```, the system will use whichever python3 interpreter is in your environment. This makes your script more portable since you won't need the system-specific path to the relevant python3 executable. Note that you'll need to make your script executable to do this. You can add the execute permission using something like: ```chmod u+x your_script.py```.
-
-### Why is my output not being printed until the job ends?
-Python buffers input/output functions to improve efficiency. This means that output is stored in memory before printing. The result is that while your Python script is running in a batch job, you may not see any output appear in your SLURM file until the job has completed, even if you have print statements scattered throughout. If you'd like to force your data to be flushed to stdout during the job's execution, you can use a ```sys.stdout.flush()``` statement or set the parameter ```flush=True``` in your print statement. [More information here](https://www.delftstack.com/howto/python/python-print-flush/).
-
-
-### Why do I get python 2 when running ```python``` when I have the python 3 module loaded?
-The executable ```python``` calls python 2 which is the system version stored in ```/usr/bin```. To call python 3, use ```python3```. There are exceptions to this, such as when using Anaconda or a virtual environment. 
+This example runs a basic Python script.
 
 
 # Python Script
 A basic python script to test which Python is being used and flushes its output.
+> Python buffers input/output functions to improve efficiency. This means that output is stored in memory before printing. The result is that while your Python script is running in a batch job, you may not see any output appear in your SLURM file until the job has completed, even if you have print statements scattered throughout. If you'd like to force your data to be flushed to stdout during the job's execution, you can use a ```sys.stdout.flush()``` statement or set the parameter ```flush=True``` in your print statement. [More information here](https://www.delftstack.com/howto/python/python-print-flush/).
+> 
 ```
 #!/usr/bin/env python3
 
