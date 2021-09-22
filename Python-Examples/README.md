@@ -18,7 +18,7 @@ Sometimes jobs use more memory than they've been allotted and are killed by the 
 ### [Multiprocessing](Multiprocessing)
 The python ```multiprocessing``` package is a popular way to spread a workflow over multiple CPUs. This example demonstrates how to assign multiple CPUs to a SLURM job and then utilize them in a multiprocessing python job. 
 
-### [MPI With Python](MPI4PY)
+### [MPI4PY](MPI4PY)
 The package ```mpi4py``` provides a Python interface to MPI that can be used to parallelize and utilize more than one node in a single workflow. 
 
 *****
