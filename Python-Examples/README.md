@@ -7,11 +7,16 @@ A basic python example to get started.
 ## [Using a Virtual Environment](Using-Virtualenv)
 Virtual environments are great ways to customize your own python environments and add user packages. This tutorial installs a non-standard package and makes use of it in a batch script. 
 
+## [Memory Limits](Memory-Limits)
+Sometimes jobs use more memory than they've been allotted and are killed by the job scheduler. Python has different methods for detecting memory usage that can help profile a workflow as part of the testing process, or kill a task once a memory threshold is met. This example shows how to kill a python process that exceeds a threshold set by the user. 
+
+---------
+# Parallelization and MPI Jobs
+
 ## [Multiprocessing](Multiprocessing)
 The python multiprocessing package is a popular way to spread a workflow over multiple CPUs. This example demonstrates how to assign multiple CPUs to a SLURM job and then utilize them in a multiprocessing python job. 
 
-## [Memory Limits](Memory-Limits)
-Sometimes jobs use more memory than they've been allotted and are killed by the job scheduler. Python has different methods for detecting memory usage that can help profile a workflow as part of the testing process, or kill a task once a memory threshold is met. This example shows how to kill a python process that exceeds a threshold set by the user. 
+## [MPI With Python](MPI4PY)
 
 *****
 [![](/Images/home.png)](https://ua-researchcomputing-hpc.github.io/) 
