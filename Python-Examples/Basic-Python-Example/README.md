@@ -1,5 +1,6 @@
 # Overview
-[Click here to download example](Basic-Python-Example.tar.gz)
+
+[![](/Images/Download-Button.png)](Basic-Python-Example.tar.gz)
 
 This example runs a basic Python script.
 
