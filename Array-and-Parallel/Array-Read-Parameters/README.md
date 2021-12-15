@@ -1,12 +1,15 @@
 # Array Jobs With Multiple Input Parameters
+[![](/Images/Download-Button.png)](Array-Read-Parameters.tar.gz)
+
+
+## Example
+
 This script demonstrates how to feed parameters to different subjobs in an array by pulling them from an input file, e.g.:
 
 * **Job 1**: ```./executable job1_variable1 job1_variable2 job1_variable3```
 * **Job 2**: ```./executable job2_variable1 job2_variable2 job2_variable3```
 etc.
 
-## Script Example
-[Click here to download example](Array-Read-Parameters.tar.gz)
 
 ### Submission Script
 ```
