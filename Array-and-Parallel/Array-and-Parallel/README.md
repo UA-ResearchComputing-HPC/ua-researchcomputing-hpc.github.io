@@ -1,11 +1,14 @@
 # Array Job with GNU Parallel
+[![](/Images/Download-Button.png)](Array-and-Parallel.tar.gz)
+
+
 This script combines the methods of the basic array job and the basic parallel job to execute a large number of jobs.
 
 ## What problem does this help fix? 
 Sometimes you need to run a *lot* of jobs. More than can be reasonably accomplished using arrays since submitting thousands of jobs can be a problem for the system, and GNU Parallel can be challenging to make work in a multi-node environment. In this case, we can combine the forces of GNU Parallel and array jobs to distribute a chunk of tasks across multiple nodes where GNU Parallel will execute them
 
-## Script Example
-[Click here to download example](Array-and-Parallel.tar.gz)
+## Example
+
 ```
 #!/bin/bash
 #SBATCH --job-name=Sample_Array_With_GNU_Parallel
