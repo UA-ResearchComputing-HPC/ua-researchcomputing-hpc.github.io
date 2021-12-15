@@ -1,9 +1,11 @@
 # Multi-Node MPI Job
 
+[![](/Images/Download-Button.png)](Multi-Node-MPI-Job.tar.gz)
+
 Very similar to the single node MPI job example, except in this case, we're distributing the 30 tasks across 3 nodes
 
-## Script Example
-[Click here to download example](Multi-Node-MPI-Job.tar.gz)
+## Example
+
 ```
 #!/bin/bash
 #SBATCH --job-name=Multi-Node-MPI-Job
