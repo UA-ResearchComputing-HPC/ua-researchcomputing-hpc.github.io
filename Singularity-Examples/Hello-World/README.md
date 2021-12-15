@@ -1,5 +1,7 @@
 # Singularity Hello World
 
+[![](/Images/Download-Button.png)](Hello-World.tar.gz)
+
 ## About 
 You can use the pull or build commands to download pre-built images from resources like Singularity Hub or Docker Hub. In this example, we'll pull a container from Singularity Hub and execute it in a SLURM script.
 
@@ -12,7 +14,7 @@ INFO:    Downloading shub image
 ```
 
 ## Submission Script
-[Click here to download example](Hello-World.tar.gz)
+
 ```
 #!/bin/bash
 #SBATCH --job-name=Singularity_Hello_World
