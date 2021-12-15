@@ -1,8 +1,11 @@
 # Overview
+
+[![](/Images/Download-Button.png)](basic-r-job.tar.gz)
+
 To run an R job as a batch submission, you can include all of your R commands in a single file and execute it with ```Rscript```.
 
 # Submission Script
-[Click here to download example](basic-r-job.tar.gz)
+
 ```
 #!/bin/bash
 #SBATCH --job-name=R-Plotting-Job
