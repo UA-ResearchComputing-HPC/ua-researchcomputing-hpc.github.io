@@ -1,7 +1,8 @@
 # Using Virtual Environments
 
 ## Overview
-[Click here to download example](Using-Virtualenv.tar.gz)
+
+[![](/Images/Download-Button.png)](Using-Virtualenv.tar.gz)
 
 Have you ever wanted to install custom Python packages on a cluster but received permission denied errors when you tried? Or maybe you want to create separate environments for different workflows so they don't interfere with one another. A good solution is to use ```virtualenv```. This is a way to create a local, unique environment that can be activated and deactivated as needed. For more in-depth information, see our [online Python documentation](https://public.confluence.arizona.edu/display/UAHPC/Using+and+Installing+Python).
 
