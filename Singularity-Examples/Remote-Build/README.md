@@ -1,9 +1,12 @@
 # Singularity Remote Build
+
+[![](/Images/Download-Button.png)](Remote-Build.tar.gz)
+
 ## About
 An earlier limitation of Singularity was the requirement for access to a root account to build a container. You not have root access on an HPC cluster. Singularity 3.0 introduced the ability to build a container in the cloud, negating the root requirement.
 
 ## Example Recipe File
-[Click here to download example](Remote-Build.tar.gz)
+
 ```
 BootStrap: docker
 From: nersc/ubuntu-mpi:14.04
