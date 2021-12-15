@@ -1,5 +1,7 @@
 # BLAST Example
 
+[![](/Images/Download-Button.png)](BLAST_EXAMPLE.tar.gz)
+
 This blastp script constructs a blast database from a fasta file. In then uses 4 threads to blast an input sequence against the database. This script can be easily modified to run blastn, blastx, etc. by changing the executable program and database.
 
 The included reference fasta file was downloades from an NCBI ftp repository.
@@ -8,8 +10,7 @@ For more information on BLAST, see:
 * [BLAST Quick Start](https://www.ncbi.nlm.nih.gov/books/NBK279680/)
 * [BLAST Software and Databases](https://blast.ncbi.nlm.nih.gov/Blast.cgi?PAGE_TYPE=BlastDocs&DOC_TYPE=Download)
 
-## Script Example
-[Click here to download example](BLAST_EXAMPLE.tar.gz)
+## Example
 
 To run this example, click the link above to download the tar file and unpack it in your HPC account. Inside, you will find ```blast_example.slurm```. This script requires minimal edits to run. Replace ```YOUR_GROUP``` with your own group's name (this can be found using the command ```va``` if you are unsure).
 ```
