@@ -8,3 +8,7 @@ A PDF of the slides from past workshops can be found in our training documentati
 
 To download the script examples from the interactive component of the workshops, [click here](intro-to-ML.tar.gz).
 
+*****
+[![](/Images/home.png)](https://ua-researchcomputing-hpc.github.io/) 
+[![](/Images/back.png)](../)
+
