@@ -1,10 +1,10 @@
 # Basic Parallel Job
 
+[![](/Images/Download-Button.png)](Basic-Parallel-Job.tar.gz)
+
 This example demonstrates how to parallelize multiple tasks within one job using [gnu parallel](https://www.gnu.org/software/parallel/)
 
-## Script Example
-
-[Click here to download example](Basic-Parallel-Job.tar.gz)
+## Example
 
 ```
 #!/bin/bash
