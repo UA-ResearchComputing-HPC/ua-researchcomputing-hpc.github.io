@@ -1,6 +1,6 @@
 # Intro to Machine Learning
 
-[![](/Images/download-button.png)](intro-to-ML.tar.gz)
+[![](/Images/download.png)](intro-to-ML.tar.gz)
 
 This short training class is available to users periodically throughout each academic year. Information on upcoming workshops can be found in our [training documentation](https://public.confluence.arizona.edu/display/UAHPC/Training). Before each workshop, an email will be sent to all HPC users through hpc-announce with information on dates, timing, location, and registration.
 
