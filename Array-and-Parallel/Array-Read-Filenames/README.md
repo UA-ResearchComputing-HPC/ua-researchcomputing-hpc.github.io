@@ -1,10 +1,10 @@
 # Array Job With Text Filenames
+[![](/Images/Download-Button.png)](Array-Read-Filenames.tar.gz)
 
 ## What problem does this help fix?
 If you want to run multiple jobs where each opens a different file to analyze but the naming scheme isn't conducive to automating the process using simple array indices (i.e., 1.txt,2.txt,...)
 
-## Script Example
-[Click here to download example](Array-Read-Filenames.tar.gz)
+## Example
 ### Submission Script
 ```
 #!/bin/bash
