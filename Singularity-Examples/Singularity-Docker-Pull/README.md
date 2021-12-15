@@ -1,4 +1,7 @@
 # Singularity Docker Pull
+
+[![](/Images/Download-Button.png)](Singularity-Docker-Pull.tar.gz)
+
 ## About
 You can use the pull command to download pre-built images from resources like Docker. This example pulls a container and executes it on a compute node in a batch script.
 
@@ -15,7 +18,7 @@ INFO:    Creating SIF file...
 ```
 
 ## Submission Script
-[Click here to download example](Singularity-Docker-Pull.tar.gz)
+
 ```
 #!/bin/bash
 #SBATCH --job-name=Singularity_Docker_Pull
