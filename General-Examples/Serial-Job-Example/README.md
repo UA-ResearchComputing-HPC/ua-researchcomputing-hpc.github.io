@@ -1,6 +1,7 @@
 # Serial Job
 
-[Click here to download example](Serial-Job-Example.tar.gz)
+[![](/Images/Download-Button.png)](Serial-Job-Example.tar.gz)
+
 
 This script runs a serial, single-CPU job using the standard queue.
 
