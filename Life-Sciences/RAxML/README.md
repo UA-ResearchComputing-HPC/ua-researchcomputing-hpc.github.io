@@ -1,10 +1,10 @@
 # RAxML Example
+[![](/Images/Download-Button.png)](RAxML.tar.gz)
 
 ## About
 For information on RAxML, see [the RAxML documentation](https://cme.h-its.org/exelixis/web/software/raxml/#documentation)
 
-## Script Example
-[Click here to download example](RAxML.tar.gz)
+## Example
 ```
 #!/bin/bash
 #SBATCH --job-name=RAxML-Example
