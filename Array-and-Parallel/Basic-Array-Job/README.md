@@ -1,4 +1,7 @@
 # Basic Array Job
+
+[![](/Images/Download-Button.png)](Basic-Array-Job.tar.gz)
+
 Array jobs are used to execute the same script multiple times with different input.
 ## What problem does this help fix?
 To execute multiple analyses, a user may be tempted to submit jobs with a scripted loop, e.g.:
@@ -7,9 +10,8 @@ for i in $( seq 1 10 ); do sbatch script.slurm <submission options> ; done
 ```
  This isn't a good solution because it submits too many jobs too quickly and overloads the scheduler. Instead, an array job can be used to achieve the same ends.
 
-## Script Example
- 
- [Click here to download example](Basic-Array-Job.tar.gz)
+## Example
+
  ```
 #!/bin/bash
 #SBATCH --ntasks=1
