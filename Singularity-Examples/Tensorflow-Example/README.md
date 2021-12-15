@@ -1,5 +1,7 @@
 # Tensorflow Example
 
+[![](/Images/Download-Button.png)](Tensorflow-Example.tar.gz)
+
 ## About 
 This script makes use of a Tensorflow Singularity image available as a module on HPC to execute a workflow on a GPU node. 
 
@@ -11,7 +13,7 @@ tensorflow is aliased to `singularity exec --nv /contrib/singularity/nvidia/nvid
 ```
 
 ## Submission Script
-[Click here to download example](Tensorflow-Example.tar.gz)
+
 ```
 #!/bin/bash
 #SBATCH --output=Sample-tensorflow-example-%a.out
