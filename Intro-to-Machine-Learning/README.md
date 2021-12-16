@@ -24,7 +24,7 @@ A component of these workshops is interactive where users will learn to:
 1. Train and visualize a linear regression model using a training set.
 2. Build and visualize a clustering model using the "elbow method".
 
-Both of these exercises will make use of python using a Jupyter Notebook through Open OnDemand.
+Both of these exercises will make use of python in a Jupyter Notebook through Open OnDemand.
 
 ## Accessing the Data
 To access the files you need, start a terminal to log into the system and copy the necessary files into your account. If you're unsure of how to use or access a terminal, see [our online documentation](https://public.confluence.arizona.edu/display/UAHPC/System+Access#SystemAccess-CommandLine/TerminalAccess) for information (or, if you're in a live workshop, flag one of us down and we can help). To get the files you need, use the following commands: 
@@ -47,6 +47,9 @@ rm intro-to-ML.tar.gz
 We'll use a Jupyter Notebook through Open OnDemand which is available as an interactive application and can be accessed here: https://ood.hpc.arizona.edu/
 
 Once you log in using your university credentials, click the 
+
+![](application-select.png)
+
 *****
 [![](/Images/home.png)](https://ua-researchcomputing-hpc.github.io/) 
 [![](/Images/back.png)](../)
