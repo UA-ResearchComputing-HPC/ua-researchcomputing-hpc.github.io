@@ -46,9 +46,27 @@ rm intro-to-ML.tar.gz
 ## Using a Jupyter Notebook
 We'll use a Jupyter Notebook through Open OnDemand which is available as an interactive application and can be accessed here: https://ood.hpc.arizona.edu/
 
-Once you log in using your university credentials, click the 
+Once you log in using your university credentials, click the Interactive Apps dropdown menu and select "Jupyter Notebook"
 
-![](application-select.png)
+<img src="application-select.png" alt="application-select" width="300"/>
+
+This will bring you to a web form that's used to request compute resources on one of our clusters. Use the following options to request your session:
+
+|Option|Value|
+|------|-----|
+|Run Time | 2|
+|Core count on a single node | 1 |
+|Memory per core|6|
+|GPUs required|0|
+|PI Group | your group**|
+|Queue | standard|
+
+** If you don't know your group's name, go to a terminal session (see section above) and use the command ```va```.
+
+<img src="web-form.png" alt="web-form" width="300"/>
+
+
+
 
 *****
 [![](/Images/home.png)](https://ua-researchcomputing-hpc.github.io/) 
