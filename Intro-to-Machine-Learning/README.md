@@ -52,6 +52,8 @@ Once you log in using your university credentials, click the Interactive Apps dr
 
 This will bring you to a web form that's used to request compute resources on one of our clusters. Use the following options to request your session:
 
+<img src="web-form.png" alt="web-form" width="300"/>
+
 |Option|Value|
 |------|-----|
 |Run Time | 2|
@@ -61,9 +63,12 @@ This will bring you to a web form that's used to request compute resources on on
 |PI Group | your group**|
 |Queue | standard|
 
+
 ** If you don't know your group's name, go to a terminal session (see section above) and use the command ```va```.
 
-<img src="web-form.png" alt="web-form" width="300"/>
+
+
+Once you complete the form, click Submit. This will bring you to a page with a tile that shows your pending job. When it's first submitted, its status will show as pending. Once it starts, it's status will change to Running and you'll be given a link you can use to connect. 
 
 
 
