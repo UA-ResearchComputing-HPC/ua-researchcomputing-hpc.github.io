@@ -7,9 +7,7 @@
     2. [Starting a Jupyter Session](#starting-a-jupyter-session)
     3. [Opening a Notebook](#opening-a-notebook)
 3. [Linear Regression Example](#linear-regression-example)
-    1. [Code](#regression-code)
-5. [Clustering Model Example](#clustering-model-example)
-    1. [Code](#clustering-code)
+4. [Clustering Model Example](#clustering-model-example)
 
 
 ## Get the Files
@@ -102,7 +100,6 @@ To run Python code in a notebook, enter your commands into a cell and click **Ru
 
 <img src="regression.png" alt="regression" width="300"/>
 
-## Regression Code
 Import Libraries
 ```
 import pandas as pd
@@ -181,7 +178,6 @@ plt.show()
 
 <img src="iris.png" alt="iris" width="300"/>
 
-## Clustering Code
 Import libraries 
 ```
 # import libraries
