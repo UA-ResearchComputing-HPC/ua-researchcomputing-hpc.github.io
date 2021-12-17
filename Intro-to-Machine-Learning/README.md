@@ -3,9 +3,11 @@
 [![](/Images/Download-Button.png)](intro-to-ML.tar.gz)
 
 1. [Overview](#overview)
-2. [Interactive Work](#interactive-work)
+2. [Setting up for Interactive Work](#setting-up-for-interactive-work)
     1. [Accessing the Data](#accessing-the-data)
-    2. [Using a Jupyter Notebook](#using-a-jupyter-notebook)
+    2. [Starting a Jupyter Notebook](#starting-a-jupyter-notebook)
+3. [Linear Regression Example](#linear-regression-example)
+4. [Clustering Model Example](#clustering-model-example)
 
 
 --------------
@@ -18,7 +20,11 @@ This workshop provides a brief introduction to key concepts of machine learning 
 
 A PDF of the slides from past workshops can be found in our training documentation linked above. 
 
-# Interactive Work
+
+
+--------------
+
+# Setting up for Interactive Work
 A component of these workshops is interactive where users will learn to:
 
 1. Train and visualize a linear regression model using a training set.
@@ -43,7 +49,7 @@ tar xzvf intro-to-ML.tar.gz --strip-components=1
 rm intro-to-ML.tar.gz
 ```
 
-## Using a Jupyter Notebook
+## Starting a Jupyter Notebook
 We'll use a Jupyter Notebook through Open OnDemand which is available as an interactive application and can be accessed here: https://ood.hpc.arizona.edu/
 
 Once you log in using your university credentials, click the Interactive Apps dropdown menu and select "Jupyter Notebook"
@@ -79,6 +85,15 @@ Once you complete the form, click Submit. This will bring you to a page with a t
     <figcaption>Session that has started with link to connect.</figcaption>
 </figure>
 
+
+--------------
+
+
+# Linear Regression Example
+
+--------------
+
+# Clustering Model Example
 
 *****
 [![](/Images/home.png)](https://ua-researchcomputing-hpc.github.io/) 
