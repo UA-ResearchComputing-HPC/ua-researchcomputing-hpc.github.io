@@ -8,7 +8,10 @@
     3. [Opening a Notebook](#opening-a-notebook)
 3. [Linear Regression Example](#linear-regression-example)
     1. [Code](#regression-code)
+    2. [Opening the Full Regression Example](opening-the-full-regression-example)
 5. [Clustering Model Example](#clustering-model-example)
+    1. [Code](#clustering-code)
+    2. [Opening the Full Clustering Example](opening-the-full-clustering-example)
 
 ## Get the Files
 [![](/Images/Download-Button.png)](intro-to-ML.tar.gz)
@@ -86,13 +89,21 @@ Once you complete the form, click **Launch**. This will bring you to a page with
 <img src="running.png" alt="running" width="600"/>
 
 ## Opening a Notebook
+Once you've clicked Launch, you'll see a file navigator. This is your home directory on HPC. To access the example, click the **intro-to-hpc** directory you created earlier to access the files used in this example. To open a notebook, click the **New** dropdown menu in the upper right and select **python3**.
 
+<img src="start-kernel.png" alt="start-kernel" width="800"/>
+
+## Running Code
+To run Python code in a notebook, enter your commands into a cell and click **Run**. To add a new cell, click the **+** in the upper left. 
+
+<img src="cell.png" alt="cell" width="800"/>
 
 --------------
 
 
 # Linear Regression Example
 
+<img src="regression.png" alt="regression" width="300"/>
 
 ## Regression Code
 Import Libraries
@@ -166,10 +177,105 @@ plt.legend()
 plt.show()
 ```
 
+## Opening the Full Regression Example
+The full example can be opened as a notebook from the Jupyter file browser. Just go into your intro-to-hpc directory and select **ML-HPC.ipynb**
+
+<img src="ML-HPC-ipynb.png" alt="ML-HPC-ipynb" width="600"/>
+
+<img src="ML-HPC-open.png" alt="ML-HPC-open" width="600"/>
+
+
 --------------
 
 # Clustering Model Example
 
+<img src="iris.png" alt="iris" width="300"/>
+
+## Clustering Code
+Import libraries 
+```
+# import libraries
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+%matplotlib inline
+from sklearn.cluster import KMeans
+from sklearn.datasets import load_iris
+```
+Load the data
+```
+# load the data
+iris=load_iris()
+iris
+```
+Convert to a datafram
+```
+df=pd.DataFrame(data=iris.data, columns=['sepal length','sepal width','petal length','petal width'])
+df['target']=pd.Series(iris.target)
+df
+```
+Visualize the data
+```
+# visualize the data
+plt.scatter(x=df['sepal length'], y=df['sepal width'] ,c=iris.target, cmap='gist_rainbow')
+plt.xlabel('Sepal Width', fontsize=18)
+plt.ylabel('Sepal Length', fontsize=18)
+```
+Estimate k with elbow method. First try k=5.
+```
+# Estimate k with elbow at k=5
+x = iris.data
+kmeans5 = KMeans(n_clusters=5,init = 'k-means++', random_state = 0)
+y = kmeans5.fit_predict(x)
+print(y)
+```
+Visualize centers.
+```
+kmeans5.cluster_centers_
+plt.scatter(x[y == 0,0], x[y==0,1], s = 15, c= 'red', label = 'Cluster_1')
+plt.scatter(x[y == 1,0], x[y==1,1], s = 15, c= 'blue', label = 'Cluster_2')
+plt.scatter(x[y == 2,0], x[y==2,1], s = 15, c= 'green', label = 'Cluster_3')
+plt.scatter(x[y == 3,0], x[y==3,1], s = 15, c= 'cyan', label = 'Cluster_4')
+plt.scatter(x[y == 4,0], x[y==4,1], s = 15, c= 'magenta', label = 'Cluster_5')
+plt.scatter(kmeans5.cluster_centers_[:,0], kmeans5.cluster_centers_[:,1], s = 25, c = 'yellow', label = 'Centroids')
+plt.legend()
+plt.show()
+```
+Estimate k with elbow method.
+```
+# estimate k with elbow method
+Error =[]
+for i in range(1, 11):
+    kmeans11 = KMeans(n_clusters = i, init = 'k-means++', max_iter = 300, n_init = 10, random_state = 0).fit(x)
+    kmeans11.fit(x)
+    Error.append(kmeans11.inertia_)
+import matplotlib.pyplot as plt
+plt.plot(range(1, 11), Error)
+plt.title('Elbow Method with k=1-11') #within cluster sum of squares
+plt.xlabel('Number of clusters')
+plt.ylabel('Error')
+plt.show()
+```
+Get the optimal k=3 from the elbow method. Cluster centers and visualize.
+```
+kmeans3 = KMeans(n_clusters=3, random_state=21)
+y = kmeans3.fit_predict(x)
+kmeans3.cluster_centers_
+plt.scatter(x[y == 0,0], x[y==0,1], s = 15, c= 'red', label = 'Cluster_1')
+plt.scatter(x[y == 1,0], x[y==1,1], s = 15, c= 'blue', label = 'Cluster_2')
+plt.scatter(x[y == 2,0], x[y==2,1], s = 15, c= 'green', label = 'Cluster_3')
+plt.scatter(kmeans3.cluster_centers_[:,0], kmeans3.cluster_centers_[:,1], s = 25, c = 'black', label = 'Centroids')
+plt.legend()
+plt.show()
+```
+
+## Opening the Full Clustering Example
+The full example can be opened as a notebook from the Jupyter file browser. Just go into your intro-to-hpc directory and select **ML-Iris.ipynb**
+
+<img src="ML-Iris-ipynb.png" alt="ML-Iris-ipynb" width="600"/>
+
+<img src="ML-Iris-open.png" alt="ML-Iris-open" width="600"/>
 *****
 [![](/Images/home.png)](https://ua-researchcomputing-hpc.github.io/) 
 [![](/Images/back.png)](../)
