@@ -7,7 +7,9 @@
     1. [Accessing the Data](#accessing-the-data)
     2. [Starting a Jupyter Notebook](#starting-a-jupyter-notebook)
 3. [Linear Regression Example](#linear-regression-example)
-4. [Clustering Model Example](#clustering-model-example)
+    1. [Code](#regression-code)
+5. [Clustering Model Example](#clustering-model-example)
+
 
 
 --------------
@@ -90,6 +92,79 @@ Once you complete the form, click Submit. This will bring you to a page with a t
 
 
 # Linear Regression Example
+
+
+## Regression Code
+Import Libraries
+```
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.linear_model import LinearRegression
+from sklearn.model_selection import train_test_split
+```
+Use Pandas to load the data and view the first five rows
+```
+data = pd.read_excel("king_county_house_data.xls")
+data.head(5)
+```
+Choose the columns from the data and split into train and test sets
+```
+space = data['sqft_living']
+price = data['price']
+# Change X into 2D array
+X = np.array(space).reshape(-1, 1)
+Y = np.array(price)
+# Split data into train sets and test sets
+X_train,X_test,Y_train,Y_test = train_test_split(X,Y,test_size=1/3,random_state=0)
+```
+Visualize the train set
+```
+# Visualize training set
+plt.scatter(X_train,Y_train,color="red",label="Living Area")
+plt.title("Housing Prices")
+plt.xlabel("Area")
+plt.ylabel("Price")
+plt.legend()
+plt.show()
+```
+Train the model with the training set and predict with the test set
+```
+# Train
+regressor = LinearRegression()
+regressor.fit(X_train, Y_train)
+# Prediction
+y_pred = regressor.predict(X_test)
+```
+
+Visualize the train data and the best fit line
+```
+# Visualize the data and the best fit line
+plt.scatter(X_train,Y_train,color="red",label="Living Area")
+plt.title("Housing Prices in King County")
+plt.plot(X_train,regressor.predict(X_train),color="blue",label="Price")
+plt.xlabel("Area")
+plt.ylabel("Price")
+plt.legend()
+plt.show()
+```
+Predict the price of a house with a certain area
+```
+# Make a prediction
+area = 5000
+price = regressor.predict([[area]])
+print('House of %d sq-ft costs about $%d' % (area, price))
+```
+Visualize the test data
+```
+# Visualize test set
+plt.scatter(X_test,Y_test,color='red',label="Living Area")
+plt.plot(X_test,regressor.predict(X_test),color="blue",label="Price")
+plt.xlabel="Area (sq-ft)")
+plt.ylabel("Price (USD)")
+plt.legend()
+plt.show()
+```
 
 --------------
 
