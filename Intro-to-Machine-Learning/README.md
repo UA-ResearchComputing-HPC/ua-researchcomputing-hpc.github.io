@@ -2,7 +2,7 @@
 
 ## Contents
 1. [Overview](#overview)
-2. [Setting up for Interactive Work](#setting-up-for-interactive-work)
+2. [Setting up](#setting-up)
     1. [Accessing the Data](#accessing-the-data)
     2. [Starting a Jupyter Session](#starting-a-jupyter-session)
     3. [Opening a Notebook](#opening-a-notebook)
@@ -28,7 +28,7 @@ A PDF of the slides from past workshops can be found in our training documentati
 
 --------------
 
-# Setting up for Interactive Work
+# Setting up
 A component of these workshops is interactive where users will learn to:
 
 1. Train and visualize a linear regression model using a training set.
@@ -57,6 +57,7 @@ rm intro-to-ML.tar.gz
 For this tutorial, we'll use a Jupyter Notebook which is available as an interactive application and can be accessed through [Open OnDemand](https://ood.hpc.arizona.edu/).
 
 Once you log in using your university credentials, click the **Interactive Apps** dropdown menu and select **Jupyter Notebook**. This will bring you to a web form that's used to request compute resources on one of our clusters. Use the following options in your request:
+
 |Option|Value|
 |------|-----|
 |Cluster|Ocelote Cluter|
