@@ -8,10 +8,9 @@
     3. [Opening a Notebook](#opening-a-notebook)
 3. [Linear Regression Example](#linear-regression-example)
     1. [Code](#regression-code)
-    2. [Opening the Full Regression Example](opening-the-full-regression-example)
 5. [Clustering Model Example](#clustering-model-example)
     1. [Code](#clustering-code)
-    2. [Opening the Full Clustering Example](opening-the-full-clustering-example)
+
 
 ## Get the Files
 [![](/Images/Download-Button.png)](intro-to-ML.tar.gz)
@@ -35,7 +34,7 @@ A PDF of the slides from past workshops can be found in our training documentati
 A component of these workshops is interactive where users will learn to:
 
 1. Train and visualize a linear regression model using a training set.
-2. Build and visualize a clustering model using the "elbow method".
+2. Build and visualize a clustering model using the elbow method.
 
 Both of these exercises will make use of Python in a Jupyter Notebook through Open OnDemand.
 
@@ -59,6 +58,8 @@ rm intro-to-ML.tar.gz
 ## Starting a Jupyter Session
 For this tutorial, we'll use a Jupyter Notebook which is available as an interactive application and can be accessed through [Open OnDemand](https://ood.hpc.arizona.edu/).
 
+<img src="application-select.png" alt="application-select" height="400"/> <img src="web-form.png" alt="web-form" height="400"/>
+
 Once you log in using your university credentials, click the **Interactive Apps** dropdown menu and select **Jupyter Notebook**. This will bring you to a web form that's used to request compute resources on one of our clusters. Use the following options in your request:
 
 |Option|Value|
@@ -74,13 +75,9 @@ Once you log in using your university credentials, click the **Interactive Apps*
 ** If you don't know your group's name, go to a terminal session (see section above) and use the command ```va```.
 
 
-<img src="application-select.png" alt="application-select" height="400"/> <img src="web-form.png" alt="web-form" height="400"/>
 
 
-
-
-
-Once you complete the form, click **Launch**. This will bring you to a page with a tile that shows your pending job. When it's first submitted, its status will show as pending. Once it starts, it's status will change to Running and you'll be given a link you can use to connect. 
+Once you complete the form, click **Launch**. This will bring you to a page with a tile that shows your pending job. When it's first submitted, its status will show as Queued. Once it starts, it's status will change to Running and you'll be given a link you can use to connect. 
 
 
 <img src="queued.png" alt="queued" width="600"/>
@@ -89,7 +86,7 @@ Once you complete the form, click **Launch**. This will bring you to a page with
 <img src="running.png" alt="running" width="600"/>
 
 ## Opening a Notebook
-Once you've clicked Launch, you'll see a file navigator. This is your home directory on HPC. To access the example, click the **intro-to-hpc** directory you created earlier to access the files used in this example. To open a notebook, click the **New** dropdown menu in the upper right and select **python3**.
+Once you've clicked Launch, you'll see a file navigator. This is your home directory on HPC. To access the files for the examples, click the **intro-to-hpc** directory you created earlier. To open a notebook, click the **New** dropdown menu in the upper right and select **python3**.
 
 <img src="start-kernel.png" alt="start-kernel" width="800"/>
 
@@ -177,13 +174,6 @@ plt.legend()
 plt.show()
 ```
 
-## Opening the Full Regression Example
-The full example can be opened as a notebook from the Jupyter file browser. Just go into your intro-to-hpc directory and select **ML-HPC.ipynb**
-
-<img src="ML-HPC-ipynb.png" alt="ML-HPC-ipynb" width="600"/>
-
-<img src="ML-HPC-open.png" alt="ML-HPC-open" width="600"/>
-
 
 --------------
 
@@ -270,12 +260,6 @@ plt.legend()
 plt.show()
 ```
 
-## Opening the Full Clustering Example
-The full example can be opened as a notebook from the Jupyter file browser. Just go into your intro-to-hpc directory and select **ML-Iris.ipynb**
-
-<img src="ML-Iris-ipynb.png" alt="ML-Iris-ipynb" width="600"/>
-
-<img src="ML-Iris-open.png" alt="ML-Iris-open" width="600"/>
 
 *****
 
