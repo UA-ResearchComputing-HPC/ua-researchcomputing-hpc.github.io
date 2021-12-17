@@ -276,7 +276,9 @@ The full example can be opened as a notebook from the Jupyter file browser. Just
 <img src="ML-Iris-ipynb.png" alt="ML-Iris-ipynb" width="600"/>
 
 <img src="ML-Iris-open.png" alt="ML-Iris-open" width="600"/>
+
 *****
+
 [![](/Images/home.png)](https://ua-researchcomputing-hpc.github.io/) 
 [![](/Images/back.png)](../)
 
