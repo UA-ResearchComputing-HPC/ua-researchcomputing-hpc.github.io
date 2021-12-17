@@ -1,15 +1,17 @@
 # Intro to Machine Learning
 
-[![](/Images/Download-Button.png)](intro-to-ML.tar.gz)
-
+## Contents
 1. [Overview](#overview)
 2. [Setting up for Interactive Work](#setting-up-for-interactive-work)
     1. [Accessing the Data](#accessing-the-data)
-    2. [Starting a Jupyter Notebook](#starting-a-jupyter-notebook)
+    2. [Starting a Jupyter Session](#starting-a-jupyter-session)
+    3. [Opening a Notebook](#opening-a-notebook)
 3. [Linear Regression Example](#linear-regression-example)
     1. [Code](#regression-code)
 5. [Clustering Model Example](#clustering-model-example)
 
+## Get the Files
+[![](/Images/Download-Button.png)](intro-to-ML.tar.gz)
 
 
 --------------
@@ -32,10 +34,10 @@ A component of these workshops is interactive where users will learn to:
 1. Train and visualize a linear regression model using a training set.
 2. Build and visualize a clustering model using the "elbow method".
 
-Both of these exercises will make use of python in a Jupyter Notebook through Open OnDemand.
+Both of these exercises will make use of Python in a Jupyter Notebook through Open OnDemand.
 
 ## Accessing the Data
-To access the files you need, start a terminal to log into the system and copy the necessary files into your account. If you're unsure of how to use or access a terminal, see [our online documentation](https://public.confluence.arizona.edu/display/UAHPC/System+Access#SystemAccess-CommandLine/TerminalAccess) for information (or, if you're in a live workshop, flag one of us down and we can help). To get the files you need, use the following commands: 
+To begin, start a terminal to log into the system and copy the necessary files into your account. If you're unsure of how to use or access a terminal, see [our online documentation](https://public.confluence.arizona.edu/display/UAHPC/System+Access#SystemAccess-CommandLine/TerminalAccess) for information (or, if you're in a live workshop, flag one of us down and we can help). To get the files you need, use the following commands: 
 ```
 ssh your_netid@hpc.arizona.edu
 shell
@@ -44,26 +46,20 @@ mkdir intro_to_hpc
 cd intro_to_hpc
 cp /xdisk/chrisreidy/workshops/* .
 ```
-If you get a permission denied message using ```cp```, you likely haven't been added to the group ```chrisreidy```. If this is the case, stay in your ```intro_to_hpc``` directory and try:
+If you get a permission denied message using ```cp```, you likely haven't been added to the group ```chrisreidy```. If this is the case, stay in your ```intro_to_hpc``` directory and use:
 ```
 wget https://ua-researchcomputing-hpc.github.io/Intro-to-Machine-Learning/intro-to-ML.tar.gz
 tar xzvf intro-to-ML.tar.gz --strip-components=1
 rm intro-to-ML.tar.gz
 ```
 
-## Starting a Jupyter Notebook
-We'll use a Jupyter Notebook through Open OnDemand which is available as an interactive application and can be accessed here: https://ood.hpc.arizona.edu/
+## Starting a Jupyter Session
+For this tutorial, we'll use a Jupyter Notebook which is available as an interactive application and can be accessed through [Open OnDemand](https://ood.hpc.arizona.edu/).
 
-Once you log in using your university credentials, click the Interactive Apps dropdown menu and select "Jupyter Notebook"
-
-<img src="application-select.png" alt="application-select" width="300"/>
-
-This will bring you to a web form that's used to request compute resources on one of our clusters. Use the following options to request your session:
-
-<img src="web-form.png" alt="web-form" width="300"/>
-
+Once you log in using your university credentials, click the **Interactive Apps** dropdown menu and select **Jupyter Notebook**. This will bring you to a web form that's used to request compute resources on one of our clusters. Use the following options in your request:
 |Option|Value|
 |------|-----|
+|Cluster|Ocelote Cluter|
 |Run Time | 2|
 |Core count on a single node | 1 |
 |Memory per core|6|
@@ -71,21 +67,24 @@ This will bring you to a web form that's used to request compute resources on on
 |PI Group | your group**|
 |Queue | standard|
 
-
 ** If you don't know your group's name, go to a terminal session (see section above) and use the command ```va```.
 
 
+<img src="application-select.png" alt="application-select" height="400"/> <img src="web-form.png" alt="web-form" height="400"/>
 
-Once you complete the form, click Submit. This will bring you to a page with a tile that shows your pending job. When it's first submitted, its status will show as pending. Once it starts, it's status will change to Running and you'll be given a link you can use to connect. 
 
-<figure>
-    <img src="queued.png" alt="queued" width="600"/>
-    <figcaption>Queued session waiting to start.</figcaption>
-</figure>
-<figure>
-    <img src="running.png" alt="running" width="600"/>
-    <figcaption>Session that has started with link to connect.</figcaption>
-</figure>
+
+
+
+Once you complete the form, click **Launch**. This will bring you to a page with a tile that shows your pending job. When it's first submitted, its status will show as pending. Once it starts, it's status will change to Running and you'll be given a link you can use to connect. 
+
+
+<img src="queued.png" alt="queued" width="600"/>
+
+
+<img src="running.png" alt="running" width="600"/>
+
+## Opening a Notebook
 
 
 --------------
