@@ -70,7 +70,14 @@ This will bring you to a web form that's used to request compute resources on on
 
 Once you complete the form, click Submit. This will bring you to a page with a tile that shows your pending job. When it's first submitted, its status will show as pending. Once it starts, it's status will change to Running and you'll be given a link you can use to connect. 
 
-
+<figure>
+    <img src="queued.png" alt="queued" width="600"/>
+    <figcaption>Queued session waiting to start.</figcaption>
+</figure>
+<figure>
+    <img src="running.png" alt="running" width="600"/>
+    <figcaption>Session that has started with link to connect.</figcaption>
+</figure>
 
 
 *****
