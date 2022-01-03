@@ -21,6 +21,11 @@ cd intro_to_hpc
 cp /xdisk/chrisreidy/workshops/* .
 ```
 If you get a permission denied message using cp, you likely haven’t been added to the group chrisreidy. If this is the case, stay in your intro_to_hpc directory and use:
+```
+wget https://ua-researchcomputing-hpc.github.io/Intro-to-HPC/intro-to-HPC.tar.gz
+tar xzvf intro-to-HPC.tar.gz --strip-components=1
+rm intro-to-HPC.tar.gz
+```
 
 
 
