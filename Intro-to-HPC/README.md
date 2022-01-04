@@ -39,7 +39,7 @@ Detailed information can be found in our [online documentation](https://public.c
 
 ### Local terminal
 #### Mac/Linux
-On a Mac or Linux, open a Terminal (on Mac, this can be found under Applications -> Utilities), and enter 
+On a Mac or Linux, open a Terminal (on Mac, this can be found under Applications -> Utilities), and connect to the system using the following as a guide:
 ```
 💻 intro-to-hpc $ ssh your_netid@hpc.arizona.edu
 Password: # <- your password goes here
