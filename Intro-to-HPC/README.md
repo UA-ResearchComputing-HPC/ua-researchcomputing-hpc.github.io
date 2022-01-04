@@ -26,7 +26,7 @@ $ ocelote
 #### Windows
 On Windows, you will need an SSH client such as PuTTY or MobaXterm. In PuTTY, use ```hpc.arizona.edu``` as your hostname, then enter your NetID at the promt. Once you have duo-authenticated, type ```shell```, then ```ocelote``` to connect to Ocelote.
 
-<img src="putty-login.jpeg" alt="putty-login" height="300"/><img src="putty-prompt.png" alt="putty-prompt" height="300"/>
+<img src="putty-login.jpeg" alt="putty-login" height="250"/><img src="putty-prompt.png" alt="putty-prompt" height="250"/>
 
 
 
@@ -39,6 +39,7 @@ Once you're connected, type ```ocelote``` to connect to Ocelote.
 Once you're logged in, you'll be in your home directory and can interact with the system using Bash commands. Some basic Bash commands are provided below if you are unfamiliar with its syntax. 
 
 ## Bash Basics
+
 |Command|What it does|
 |--------|------------------|
 |```ls``` | Lists the contents of your working directory |
@@ -53,6 +54,7 @@ Once you're logged in, you'll be in your home directory and can interact with th
 
 
 ## HPC-Specific Commands
+
 |Command|What it does|
 |--------|------------------|
 |```uquota```|Checks your storage usage|
