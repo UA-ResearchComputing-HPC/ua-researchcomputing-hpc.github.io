@@ -63,7 +63,7 @@ Once you're logged in, you'll be in your home directory and can interact with th
 |```nodes-busy```|Displays a visual of a cluster's compute nodes and their usage|
 |```system-busy```|Displays a text-based summary of a cluster's compute nodes and their usage|
 |```cluster-busy```|Displays a visual of each cluster's average usage. Only available on the login nodes|
-|```job-history <jobid>```|Prints a detailed summary of a running/completed job|
+|```job-history <jobid>    ```|Prints a detailed summary of a running/completed job|
 |```seff <jobid>```|Prints a summary of a completed job's memory and CPU efficiency|
 
 # Accessing Workshop Files
