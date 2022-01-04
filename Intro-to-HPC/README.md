@@ -1,7 +1,7 @@
 # Intro to HPC Workshop
-<img src="hpc-image.jpeg" alt="hpc-image" style="margin: 3px 12px 3px 0px; border: 1px solid #000000; box-shadow: 10px 10px 5px grey;" width="350"/> 
 
 ## Contents
+<img src="hpc-image.jpeg" alt="hpc-image" style="margin: 3px 12px 3px 0px; border: 1px solid #000000; box-shadow: 10px 10px 5px grey;" align="right" width="350"/> 
 
 1. [Overview](#overview)
 2. [System Basics](#system-basics)
@@ -12,7 +12,7 @@
      2. [Submission Script Details](#submission-script-overview)
      3. [Submitting a Batch Job](#submitting-your-batch-job)
 
-
+<br clear="left"/>
 # Get the Files
 
 [![](/Images/Download-Button.png)](intro-to-hpc.tar.gz)[![](/Images/download-pdf.png)](IntroToHPC.pdf)
