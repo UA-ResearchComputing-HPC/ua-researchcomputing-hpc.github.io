@@ -24,9 +24,9 @@ $ ocelote
 
 ```
 #### Windows
-On Windows, you will need an SSH client such as PuTTY or MobaXterm. In PuTTY, use ```hpc.arizona.edu``` as your hostname, then enter your NetID at the promt. Once you have duo-authenticated, type ```shell```, then ```ocelote``` to connect to Ocelote.
+On Windows, you will need an SSH client such as PuTTY or MobaXterm. In PuTTY, use ```hpc.arizona.edu``` as your hostname, click Open, then enter your NetID at the ```login as``` promt. Once you have duo-authenticated, type ```shell```, then ```ocelote``` to connect to Ocelote.
 
-<img src="putty-login.jpeg" alt="putty-login" height="200"/> <img src="putty-prompt.png" alt="putty-prompt" height="200"/>
+<img src="putty-login.jpeg" alt="putty-login" height="400"/> 
 
 
 
