@@ -18,7 +18,7 @@
 
 # Overview
 
-<img src="cluster-diagram.png" alt="cluster-diagram" hspace=5 vspace=5 align="left" width="400"/> 
+<img src="cluster-diagram.png" alt="cluster-diagram" style="float: left; margin: 3px 12px 3px 0px; border: 1px solid #000000;" align="left" width="400"/> 
 
 This short training class is available to users periodically throughout each academic year. Information on upcoming workshops can be found in our [training documentation](https://public.confluence.arizona.edu/display/UAHPC/Training). Before each workshop, an email will be sent to all HPC users through hpc-announce with information on dates, times, location, and how to register.
 
