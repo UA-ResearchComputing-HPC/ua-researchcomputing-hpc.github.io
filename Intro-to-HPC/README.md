@@ -2,7 +2,7 @@
 
 
 ## Contents
-<img src="hpc-image.jpeg" alt="hpc-image" style="float: left; margin: 3px 12px 3px 0px; border: 1px solid #000000; box-shadow: 10px 10px 5px grey;" align="right" width="400"/> 
+<img src="hpc-image.jpeg" alt="hpc-image" style="float: left; margin: 3px 12px 3px 0px; border: 1px solid #000000;" align="right" width="400"/> 
 
 1. [Overview](#overview)
 2. [System Basics](#system-basics)
@@ -31,7 +31,7 @@ A PDF of the slides from past workshops can be found in our training documentati
 # System Basics
 
 ## Logging In
-<img src="cluster-diagram.png" alt="cluster-diagram" style="float: left; margin: 3px 12px 3px 0px; border: 1px solid #000000;" align="left" width="400"/> 
+<img src="cluster-diagram.png" alt="cluster-diagram" style="float: left; margin: 3px 12px 3px 0px; border: 1px solid #000000; box-shadow: 10px 10px 5px grey;" align="left" width="400"/> 
 
 To begin, open a terminal session and connect to HPC. This can be done two ways, either using your own terminal/SSH client, or through our Open OnDemand web interface. You will use your university credentials (NetID and password) to access the system and will also be prompted for a method to duo authenticate after.
 
