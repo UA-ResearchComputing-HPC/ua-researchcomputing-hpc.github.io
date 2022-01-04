@@ -1,12 +1,12 @@
 # Intro to HPC
 
-[![](/Images/Download-Button.png)](intro-to-HPC.tar.gz)
+[![](/Images/Download-Button.png)](intro-to-HPC.tar.gz)[![](/Images/download-pdf.png)](IntroToHPC.pdf)
 
 This short training class is available to users periodically throughout each academic year. Information on upcoming workshops can be found in our [training documentation](https://public.confluence.arizona.edu/display/UAHPC/Training). Before each workshop, an email will be sent to all HPC users through hpc-announce with information on dates, times, location, and how to register.
 
 This training course will help you get started on using HPC resources.  If you have recently started, you might learn there is a better way, or there are capabilities you are not taking advantage of. You may also want to go through our [quick start](https://public.confluence.arizona.edu/display/UAHPC/Puma+Quick+Start) for additional information.
 
-A PDF of the slides from past workshops can be found in our training documentation linked above. A summary of the training material for the interactive component of this workshop can be found below.
+A PDF of the slides from past workshops can be found in our training documentation linked above and can be downloaded by clicking the Download PDF button at the top of this page. A summary of the training material for the interactive component of this workshop can be found below.
 
 # Logging In
 To begin, open a terminal session and connect to HPC. This can be done two ways, either using your own terminal/SSH client, or through our Open OnDemand web interface. You will use your university credentials (NetID and password) to access the system and will also be prompted for a method to duo authenticate after.
