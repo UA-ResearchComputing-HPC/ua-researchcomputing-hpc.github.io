@@ -1,7 +1,19 @@
 # Intro to HPC
 
+## Contents
+1. [Overview](#overview)
+2. [Logging into HPC](#logging-in)
+3. [Basic Shell Commands](#basic-commands)
+4. [Accessing Workshop Files](#accessing-workshop-files)
+5. [Submission Script Details](#slurm-submission-script)
+6. [Submitting a Batch Job](#submitting-a-batch-job)
+7. 
+
+# Get the Files
+
 [![](/Images/Download-Button.png)](intro-to-HPC.tar.gz)[![](/Images/download-pdf.png)](IntroToHPC.pdf)
 
+# Overview
 This short training class is available to users periodically throughout each academic year. Information on upcoming workshops can be found in our [training documentation](https://public.confluence.arizona.edu/display/UAHPC/Training). Before each workshop, an email will be sent to all HPC users through hpc-announce with information on dates, times, location, and how to register.
 
 This training course will help you get started on using HPC resources.  If you have recently started, you might learn there is a better way, or there are capabilities you are not taking advantage of. You may also want to go through our [quick start](https://public.confluence.arizona.edu/display/UAHPC/Puma+Quick+Start) for additional information.
@@ -73,7 +85,7 @@ To access the files you need for this workshop, use the following commands:
 ```
 mkdir intro_to_hpc
 cd intro_to_hpc
-cp /xdisk/chrisreidy/workshops/sample_slurm.script.
+cp /xdisk/chrisreidy/workshops/sample_slurm.script .
 ```
 If you get a permission denied message using cp, you likely haven’t been added to the group chrisreidy. If this is the case, stay in your intro_to_hpc directory and use:
 ```
@@ -82,16 +94,24 @@ tar xzvf intro-to-HPC.tar.gz --strip-components=1
 rm intro-to-HPC.tar.gz
 ```
 
-# View Your Files
+# SLURM Submission Script
 The bash command ```cat``` will print a file's contents to your screen. View the contents of the sample script you just copied using:
 ```
 cat sample_slurm.script
+```
+This should display the following:
+```
+
 ```
 
 # Submitting a Batch Job
 The command ```sbatch``` will submit your script to the job scheduler to run on one of Ocelote's compute nodes:
 ```
 sbatch sample_slurm.script
+```
+If everything worked correctly, a job ID will be printed to the screen that you can use to track it's progress using:
+```
+squeue --job <your_job_id>
 ```
 
 
