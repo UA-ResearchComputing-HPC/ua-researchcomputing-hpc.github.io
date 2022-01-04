@@ -1,5 +1,5 @@
 # Intro to HPC Workshop
-<img src="hpc-image.jpeg" alt="hpc-image" style="float: left; margin: 3px 12px 3px 0px; border: 1px solid #000000; box-shadow: 10px 10px 5px grey;" width="350"/> 
+<img src="hpc-image.jpeg" alt="hpc-image" style="margin: 3px 12px 3px 0px; border: 1px solid #000000; box-shadow: 10px 10px 5px grey;" width="350"/> 
 
 ## Contents
 
@@ -41,10 +41,41 @@ Detailed information can be found in our [online documentation](https://public.c
 #### Mac/Linux
 On a Mac or Linux, open a Terminal (on Mac, this can be found under Applications -> Utilities), and enter 
 ```
-$ ssh your_netid@hpc.arizona.edu
-$ # enter your NetID password at the prompt and duo authenticate
-$ shell
+💻 intro-to-hpc $ ssh your_netid@hpc.arizona.edu
+Password: # <- your password goes here
+Duo two-factor login for your_netid
+
+Enter a passcode or select one of the following options:
+
+ 1. Duo Push to XXX-XXX-XXXX
+ 2. SMS passcodes to XXX-XXX-XXXX (next code starts with: X)
+
+Passcode or option (1-2): 1
+Success. Logging you in...
+This is a bastion host used to access the rest of the RT/HPC environment.
+
+Type "shell" to access the job submission hosts for all environments
+-----------------------------------------
+
+[your_netid@gatekeeper 16:26:46 ~]$ shell
+***
+The default cluster for job submission is Puma
+***
+Shortcut commands change the target cluster
+-----------------------------------------
+Puma:
+$ puma
+(puma) $
+Ocelote:
 $ ocelote
+(ocelote) $
+ElGato:
+$ elgato
+(elgato) $
+-----------------------------------------
+
+(puma) [your_netid@wentletrap ~]$ ocelote
+(ocelote) [your_netid@wentletrap ~]$ 
 
 ```
 #### Windows
