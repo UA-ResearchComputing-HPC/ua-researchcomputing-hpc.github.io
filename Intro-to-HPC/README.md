@@ -1,7 +1,7 @@
 # Intro to HPC Workshop
 
 ## Contents
-<img src="hpc-image.jpeg" alt="hpc-image" style="margin: 3px 12px 3px 0px; border: 1px solid #000000; box-shadow: 10px 10px 5px grey;" align="right" width="350"/> 
+<img src="hpc-image.jpeg" alt="hpc-image" style="margin: 3px 12px 3px 0px; box-shadow: 10px 10px 5px grey;" align="right" width="350"/> 
 
 1. [Overview](#overview)
 2. [System Basics](#system-basics)
@@ -29,7 +29,7 @@ A PDF of the slides from past workshops can be found in our training documentati
 # System Basics
 
 ## Logging In
-<img src="cluster-diagram.png" alt="cluster-diagram" style="float: left; margin: 3px 12px 3px 0px; border: 1px solid #000000; box-shadow: 10px 10px 5px grey;" align="left" width="400"/> 
+<img src="cluster-diagram.png" alt="cluster-diagram" style="float: left; margin: 3px 12px 3px 0px; box-shadow: 10px 10px 5px grey;" align="left" width="400"/> 
 
 To begin, open a terminal session and connect to HPC. This can be done two ways, either using your own terminal/SSH client, or through our Open OnDemand web interface. You will use your university credentials (NetID and password) to access the system and will also be prompted for a method to duo authenticate after.
 
@@ -79,10 +79,11 @@ $ elgato
 
 ```
 #### Windows
+<img src="putty-login.png" alt="putty-login" style="float: left; margin: 3px 12px 3px 0px; box-shadow: 10px 10px 5px grey;" align="left" height="350"/> 
+
 On Windows, you will need an SSH client such as PuTTY or MobaXterm. In PuTTY, use ```hpc.arizona.edu``` as your hostname, click Open, then enter your NetID at the ```login as``` promt. Once you have duo-authenticated, type ```shell```, then ```ocelote``` to connect to Ocelote.
 
-<img src="putty-login.jpeg" alt="putty-login" height="400"/> 
-
+<br clear="left"/>
 
 
 ### Open OnDemand
