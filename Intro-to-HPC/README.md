@@ -1,4 +1,4 @@
-# Intro to HPC
+# Intro to HPC Workshop
 
 
 ## Contents
@@ -31,9 +31,13 @@ A PDF of the slides from past workshops can be found in our training documentati
 # System Basics
 
 ## Logging In
+<img src="cluster-diagram.png" alt="cluster-diagram" style="float: left; margin: 3px 12px 3px 0px; border: 1px solid #000000;" align="right" width="400"/> 
+
 To begin, open a terminal session and connect to HPC. This can be done two ways, either using your own terminal/SSH client, or through our Open OnDemand web interface. You will use your university credentials (NetID and password) to access the system and will also be prompted for a method to duo authenticate after.
 
 Detailed information can be found in our [online documentation](https://public.confluence.arizona.edu/display/UAHPC/System+Access#SystemAccess-CommandLine/TerminalAccess).
+
+<br clear="right"/>
 
 ### Local terminal
 #### Mac/Linux
