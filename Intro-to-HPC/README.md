@@ -12,13 +12,13 @@
      2. [Submission Script Details](#submission-script-overview)
      3. [Submitting a Batch Job](#submitting-your-batch-job)
      4. [Job Output](#job-output)
-     5. [Exercise: Modify Your Job](#exercise-modify-your-job)
      6. [Other SLURM Commands](#other-slurm-commands)
 4. [Interactive vs. Batch](#interactive-vs-batch)
 5. [Accessing Software](#accessing-software)
 6. [Open OnDemand](#open-ondemand)
-7. [Getting Help](#getting-help)
-8. [Community Events](#community-events)
+7. [Testing Your Knowledge](#testing-your-knowledge)
+8. [Getting Help](#getting-help)
+9. [Community Events](#community-events)
 
 <br clear="left"/>
 
@@ -211,8 +211,31 @@ This script is running on:
 i11n1.ocelote.hpc.arizona.edu
 ```
 
-## Exercise: Modify Your Job
 
+## Other SLURM Commands
+
+********
+
+
+# Interactive vs. Batch
+
+
+********
+
+
+# Accessing Software
+
+********
+
+# Open OnDemand
+
+
+********
+
+# Testing Your Knowledge
+
+
+## Batch Scripts
 In the exercises below, try modifying and submitting your submission script based on the prompts. For details on SLURM directives, see our [SLURM documentation](https://public.confluence.arizona.edu/display/UAHPC/Running+Jobs+with+SLURM#RunningJobswithSLURM-PBS%E2%86%92SLURMRosettaStone)
 
 1. Change your script to use 4 CPUs instead of 1.
@@ -264,22 +287,7 @@ sleep 120
 </details>
 
 
-## Other SLURM Commands
 
-********
-
-
-# Interactive vs. Batch
-
-
-********
-
-
-# Accessing Software
-
-********
-
-# Open OnDemand
 
 
 ********
