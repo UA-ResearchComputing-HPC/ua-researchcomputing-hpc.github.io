@@ -219,20 +219,21 @@ Try modifying your script to use 4 CPUs instead of 1. For details on SLURM direc
     Click here for the solution
     <span class="icon">👇</span>
   </summary>
-     
-```
-#!/bin/bash
-#SBATCH --job-name=test
-#SBATCH -e test.e%A
-#SBATCH -o test.o%A
-#SBATCH --partition=windfall
-#SBATCH --nodes=1
-#SBATCH --ntasks=4
-#SBATCH --time=00:10:00
-echo 'This script is running on:'
-hostname
-sleep 120
-```
+     <pre>
+     <code>
+          #!/bin/bash <br>
+          #SBATCH --job-name=test 
+          #SBATCH -e test.e%A 
+          #SBATCH -o test.o%A 
+          #SBATCH --partition=windfall 
+          #SBATCH --nodes=1 
+          #SBATCH --ntasks=4 
+          #SBATCH --time=00:10:00 
+          echo 'This script is running on:' 
+          hostname 
+          sleep 120 
+     </code>
+     </pre>
 
 </details>
 
