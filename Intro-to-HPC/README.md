@@ -234,10 +234,20 @@ salloc: Nodes i15n0 are ready for job
 [netid@i15n0 ~]$ 
 ```
 
+Try running ```interactive --help``` for information on full usage.
+
 ********
 
 
 # Accessing Software
+Software packages are installed on HPC's compute nodes as [software modules](https://public.confluence.arizona.edu/display/UAHPC/Software+Resources). These are accessible using the command ```module```:
+
+| Command | Description | Example| 
+|---------|-------------|--------|
+|```module avail```| Prints available modules on the system | ```module avail python```|
+|```module load```| Adds software to your environment| ```module load python/3.6```|
+|```module unload```| Unloads software from your environment| ```module unload python/3.6```|
+|```module swap```| Swaps software versions in your environment| ```module swap python/3.6 python/3.8```|
 
 ********
 
