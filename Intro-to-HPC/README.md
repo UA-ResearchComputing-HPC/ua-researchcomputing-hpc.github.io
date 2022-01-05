@@ -285,7 +285,7 @@ Software packages are installed on HPC's compute nodes as [software modules](htt
 ## Batch Scripts
 In the exercises below, try modifying and submitting your submission script based on the prompts. For details on SLURM directives, see our [SLURM documentation](https://public.confluence.arizona.edu/display/UAHPC/Running+Jobs+with+SLURM#RunningJobswithSLURM-PBS%E2%86%92SLURMRosettaStone)
 
-1. Change your script to use 4 CPUs instead of 1.
+* **Change your script to use 4 CPUs instead of 1.**
 <details>
   <summary>
     Click here for the solution
@@ -310,7 +310,7 @@ sleep 120
 
 <br>
 
-2. Change your script to use the standard partition instead of windfall.
+* **Change your script to use the standard partition instead of windfall.**
 <details>
   <summary>
     Click here for the solution
