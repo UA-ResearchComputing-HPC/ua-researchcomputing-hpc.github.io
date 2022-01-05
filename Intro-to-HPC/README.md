@@ -28,7 +28,7 @@
 [![](/Images/Download-Button.png)](intro-to-hpc.tar.gz)[![](/Images/download-pdf.png)](IntroToHPC.pdf)
 
 
----------
+********
 
 # Overview
 
@@ -38,6 +38,7 @@ This training course will help you get started on using HPC resources.  If you h
 
 A PDF of the slides from past workshops can be found in our training documentation linked above and can be downloaded by clicking the Download PDF button at the top of this page. A summary of the training material for the interactive component of this workshop can be found below.
 
+********
 
 # System Basics
 
@@ -106,13 +107,13 @@ Log into [https://ood.hpc.arizona.edu/](https://ood.hpc.arizona.edu/), then sele
 Once you're connected, type ```ocelote``` to connect to Ocelote.
 
 ## Basic Commands
-Once you're logged in, you'll be in your home directory and can interact with the system using Bash commands. Some basic Bash commands are provided below if you are unfamiliar with its syntax. 
+Once you're logged in, you can interact with the system using Bash commands. Some basics are provided below if you are unfamiliar with its syntax. 
 
 ### Bash
 
 |Command|What it does|
 |--------|------------------|
-|```ls``` | Lists the contents of your working directory |
+|```ls``` | Lists the contents of a directory |
 |```pwd```| Prints the location of your working directory |
 |```whoami```|Prints your username | 
 |```hostname```|Prints the name of the machine you're connected to|
@@ -213,17 +214,40 @@ i11n1.ocelote.hpc.arizona.edu
 
 ## Other SLURM Commands
 
+********
+
+
 # Interactive vs. Batch
+
+
+********
+
 
 # Accessing Software
 
+********
+
 # Open OnDemand
+
+********
 
 # Getting Help
 
+| | Description |  |
+|------|-------|-------|
+|Documentation |Detailed HPC information  | [docs.hpc.arizona.edu](docs.hpc.arizona.edu) |
+|Consulting Services| Contact us for HPC, statistical, or visualization consulting | [Service Now request forms](https://uarizona.service-now.com/sp?id=sc_category&sys_id=84d3d1acdbc8f4109627d90d6896191f&catalog_id=e0d08b13c3330100c8b837659bba8fb4)|
+|Office Hours | Drop by for weekly virtual office hours, every Wednesday from 2:00-4:00 pm| [Click here to join](https://gather.town/app/dVsAprPNBVmI9NpL/hpc-office-hours)|
+
+********
+
 # Community Events
+<img src="ResBaz.png" alt="ResBaz" style="margin: 3px 12px 3px 0px; box-shadow: 10px 10px 10px grey;" align="right" width="400"/> 
+
+ResBaz provides a supportive community for anyone, of any level of expertise, involved in research computing. 
 https://researchbazaar.arizona.edu/
 
+<br clear="right"/>
 
 *****
 [![](/Images/home.png)](https://ua-researchcomputing-hpc.github.io/) 
