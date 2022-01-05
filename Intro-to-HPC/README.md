@@ -12,7 +12,6 @@
      2. [Submission Script Details](#submission-script-overview)
      3. [Submitting a Batch Job](#submitting-your-batch-job)
      4. [Job Output](#job-output)
-     6. [Other SLURM Commands](#other-slurm-commands)
 4. [Interactive vs. Batch](#interactive-vs-batch)
 5. [Accessing Software](#accessing-software)
 6. [Open OnDemand](#open-ondemand)
@@ -211,14 +210,29 @@ This script is running on:
 i11n1.ocelote.hpc.arizona.edu
 ```
 
-
-## Other SLURM Commands
-
 ********
 
 
 # Interactive vs. Batch
 
+Sometimes you need to work with your analyses interactively, for example:
+1. To compile code
+2. To execute test runs
+3. To test software/system modules
+
+The built-in command ```interactive``` will put you on a compute node where you'll have access to compute resources and system modules. You'll notice your command prompt will change its hostname once your session starts to reflect the machine you're connected to. For example:
+```
+(ocelote) [netid@junonia ~]$ interactive
+Run "interactive -h for help customizing interactive use"
+Submitting with /usr/local/bin/salloc --job-name=interactive --mem-per-cpu=4GB --nodes=1    --ntasks=1 --time=01:00:00 --account=windfall --partition=windfall
+salloc: Pending job allocation 464177
+salloc: job 464177 queued and waiting for resources
+salloc: job 464177 has been allocated resources
+salloc: Granted job allocation 464177
+salloc: Waiting for resource configuration
+salloc: Nodes i15n0 are ready for job
+[netid@i15n0 ~]$ 
+```
 
 ********
 
