@@ -243,7 +243,7 @@ i11n1.ocelote.hpc.arizona.edu
 ********
 
 # Community Events
-<img src="ResBaz.png" alt="ResBaz" style="margin: 12px 12px 12px 0px; box-shadow: 10px 10px 10px grey;" align="left" width="300"/> 
+<img src="ResBaz.png" alt="ResBaz" style="margin: 120px 12px 12px 0px; box-shadow: 10px 10px 10px grey;" align="left" width="300"/> 
 
 ResBaz provides a supportive community for anyone, of any level of expertise, involved in research computing. Weekly social events include Coffee & Code and Hacky Hour where you can go to meet other research professionals and get help. For more information, see: [https://researchbazaar.arizona.edu/](https://researchbazaar.arizona.edu/)
 
