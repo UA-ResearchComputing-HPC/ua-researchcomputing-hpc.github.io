@@ -167,17 +167,18 @@ This should display the following:
 #SBATCH --job-name=test
 #SBATCH -e test.e%A
 #SBATCH -o test.o%A
-#SBATCH --mail-type=ALL
-#SBATCH --mail-user=netid@email.arizona.edu
 #SBATCH --partition=windfall
+#SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --time=00:10:00
-
 echo 'This script is running on:'
 hostname
 sleep 120
 ```
-
+Note that there are three components to the script above:
+1. The first line ```#!/bin/bash``` is called a "shebang" and specifies the language interpreter which will be used to execute the script. In this case, it's set to Bash.
+2. Lines beginning with ```#SBATCH``` are SLURM directives used to set job specifications. This include requesting compute resources, setting output filenames, requesting email notifications, etc.
+3. Everything after the last ```#SBATCH``` are the commands that will be executed on the compute node(s).
 
 
 ## Submitting Your Batch Job
@@ -211,6 +212,29 @@ i11n1.ocelote.hpc.arizona.edu
 ```
 
 ## Modify Your Job
+Try modifying your script to use 4 CPUs instead of 1. For details on SLURM directives, see our [SLURM documentation](https://public.confluence.arizona.edu/display/UAHPC/Running+Jobs+with+SLURM#RunningJobswithSLURM-PBS%E2%86%92SLURMRosettaStone)
+
+<details>
+  <summary>
+    Click here for the solution
+    <span class="icon">👇</span>
+  </summary>
+     
+```
+#!/bin/bash
+#SBATCH --job-name=test
+#SBATCH -e test.e%A
+#SBATCH -o test.o%A
+#SBATCH --partition=windfall
+#SBATCH --nodes=1
+#SBATCH --ntasks=4
+#SBATCH --time=00:10:00
+echo 'This script is running on:'
+hostname
+sleep 120
+```
+
+</details>
 
 ## Other SLURM Commands
 
