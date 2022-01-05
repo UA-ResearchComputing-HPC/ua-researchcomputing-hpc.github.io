@@ -1,4 +1,4 @@
-# Intro to HPC Workshop
+<h1> Intro to HPC Workshop </h1>
 
 <h2 style="background-color:DarkSlateGray; color=White"> Contents </h2>
 <br>
