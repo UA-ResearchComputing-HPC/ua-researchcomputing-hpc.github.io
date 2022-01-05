@@ -8,17 +8,18 @@
 2. [System Basics](#system-basics)
      1. [Logging In](#logging-in)
      2. [Working on the Command Line](#working-on-the-command-line)
-3. [Submitting a Sample Job](#submitting-a-sample-job)
+3. [Transferring Files](#transferring-files)
+4. [Submitting a Batch Job](#submitting-a-sample-job)
      1. [Accessing Workshop Files](#accessing-workshop-files)
      2. [Submission Script Details](#submission-script-overview)
      3. [Submitting a Batch Job](#submitting-your-batch-job)
      4. [Job Output](#job-output)
-4. [Interactive vs. Batch](#interactive-vs-batch)
-5. [Accessing Software](#accessing-software)
-6. [Open OnDemand](#open-ondemand)
-7. [Testing Your Knowledge](#testing-your-knowledge)
-8. [Getting Help](#getting-help)
-9. [Community Events](#community-events)
+5. [Interactive vs. Batch](#interactive-vs-batch)
+6. [Accessing Software](#accessing-software)
+7. [Open OnDemand](#open-ondemand)
+8. [Testing Your Knowledge](#testing-your-knowledge)
+9. [Getting Help](#getting-help)
+10. [Community Events](#community-events)
 
 <br clear="left"/>
 
@@ -147,8 +148,16 @@ Once you're logged in, you can interact with the system using Bash commands. Som
 
 <br>
 
+# Transferring Files
 
-# Submitting a Sample Job
+<br>
+
+************
+
+<br>
+
+
+# Submitting a Batch Job
 ## Accessing Workshop Files
 
 To access the files you need for this workshop, use the following commands:
