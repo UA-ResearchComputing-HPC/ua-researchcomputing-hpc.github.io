@@ -7,7 +7,7 @@
 1. [Overview](#overview)
 2. [System Basics](#system-basics)
      1. [Logging In](#logging-in)
-     2. [Basic Commands](#basic-commands)
+     2. [Working on the Command Line](#working-on-the-command-line)
 3. [Submitting a Sample Job](#submitting-a-sample-job)
      1. [Accessing Workshop Files](#accessing-workshop-files)
      2. [Submission Script Details](#submission-script-overview)
@@ -110,7 +110,7 @@ Log into [https://ood.hpc.arizona.edu/](https://ood.hpc.arizona.edu/), then sele
 
 Once you're connected, type ```ocelote``` to connect to Ocelote.
 
-## Basic Commands
+## Working on the Command Line
 Once you're logged in, you can interact with the system using Bash commands. Some basics are provided below if you are unfamiliar with its syntax. 
 
 ### Bash
