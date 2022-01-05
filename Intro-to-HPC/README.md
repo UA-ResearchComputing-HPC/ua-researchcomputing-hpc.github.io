@@ -140,6 +140,13 @@ Once you're logged in, you can interact with the system using Bash commands. Som
 |```seff <jobid>```|Prints a summary of a completed job's memory and CPU efficiency|
 
 
+<br>
+
+**************
+
+<br>
+
+
 # Submitting a Sample Job
 ## Accessing Workshop Files
 
@@ -214,8 +221,11 @@ This script is running on:
 i11n1.ocelote.hpc.arizona.edu
 ```
 
+<br>
+
 ********
 
+<br>
 
 # Interactive vs. Batch
 
@@ -240,8 +250,11 @@ salloc: Nodes i15n0 are ready for job
 
 Try running ```interactive --help``` for information on full usage.
 
+<br>
+
 ********
 
+<br>
 
 # Accessing Software
 Software packages are installed on HPC's compute nodes as [software modules](https://public.confluence.arizona.edu/display/UAHPC/Software+Resources). These are accessible using the command ```module```:
@@ -253,15 +266,21 @@ Software packages are installed on HPC's compute nodes as [software modules](htt
 |```module unload```| Unloads software from your environment| ```module unload python/3.6```|
 |```module swap```| Swaps software versions in your environment| ```module swap python/3.6 python/3.8```|
 
+<br>
+
 ********
+
+<br>
 
 # Open OnDemand
 
+<br>
 
 ********
 
-# Testing Your Knowledge
+<br>
 
+# Testing Your Knowledge
 
 ## Batch Scripts
 In the exercises below, try modifying and submitting your submission script based on the prompts. For details on SLURM directives, see our [SLURM documentation](https://public.confluence.arizona.edu/display/UAHPC/Running+Jobs+with+SLURM#RunningJobswithSLURM-PBS%E2%86%92SLURMRosettaStone)
@@ -316,9 +335,11 @@ sleep 120
 
 
 
-
+<br>
 
 ********
+
+<br>
 
 # Getting Help
 
@@ -328,7 +349,11 @@ sleep 120
 |Consulting Services| Contact us for HPC, statistical, or visualization consulting | [Service Now request forms](https://uarizona.service-now.com/sp?id=sc_category&sys_id=84d3d1acdbc8f4109627d90d6896191f&catalog_id=e0d08b13c3330100c8b837659bba8fb4)|
 |Office Hours | Drop by for weekly virtual office hours, every Wednesday from 2:00-4:00 pm| [Click here to join](https://gather.town/app/dVsAprPNBVmI9NpL/hpc-office-hours)|
 
+<br>
+
 ********
+
+<br>
 
 # Community Events
 <img src="ResBaz.png" alt="ResBaz" style="margin: 12px 20px 12px 0px; box-shadow: 10px 10px 10px grey;" align="left" width="300"/> 
