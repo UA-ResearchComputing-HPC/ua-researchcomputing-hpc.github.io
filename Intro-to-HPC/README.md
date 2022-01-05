@@ -229,11 +229,12 @@ i11n1.ocelote.hpc.arizona.edu
 
 # Open OnDemand
 
+
 ********
 
 # Getting Help
 
-| | Description |  |
+| | Description | Link |
 |------|-------|-------|
 |Documentation |Detailed HPC information  | [docs.hpc.arizona.edu](docs.hpc.arizona.edu) |
 |Consulting Services| Contact us for HPC, statistical, or visualization consulting | [Service Now request forms](https://uarizona.service-now.com/sp?id=sc_category&sys_id=84d3d1acdbc8f4109627d90d6896191f&catalog_id=e0d08b13c3330100c8b837659bba8fb4)|
@@ -242,12 +243,15 @@ i11n1.ocelote.hpc.arizona.edu
 ********
 
 # Community Events
-<img src="ResBaz.png" alt="ResBaz" style="margin: 3px 12px 3px 0px; box-shadow: 10px 10px 10px grey;" align="right" width="400"/> 
+<img src="ResBaz.png" alt="ResBaz" style="margin: 3px 12px 3px 0px; box-shadow: 10px 10px 10px grey;" align="left" width="300"/> 
 
-ResBaz provides a supportive community for anyone, of any level of expertise, involved in research computing. 
-https://researchbazaar.arizona.edu/
+ResBaz provides a supportive community for anyone, of any level of expertise, involved in research computing. Weekly social events include Coffee & Code and Hacky Hour where you can go to meet other research professionals and get help. For more information, see: https://researchbazaar.arizona.edu/
 
-<br clear="right"/>
+**Coffee and Code**: Time: Tuesdays 8:00-10:00am. Location: Catalyst Café (Keating building), 1657 E Helen St.
+
+**Hacky Hour**: Time: Thursdays 4:00-7:00pm. Location: Snakes & Lattes (Main Gate Square), 865 E University Blvd
+
+<br clear="left"/>
 
 *****
 [![](/Images/home.png)](https://ua-researchcomputing-hpc.github.io/) 
