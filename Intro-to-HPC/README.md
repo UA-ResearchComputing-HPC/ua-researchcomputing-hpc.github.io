@@ -308,6 +308,8 @@ sleep 120
 </pre>
 </details>
 
+<br>
+
 2. Change your script to use the standard partition instead of windfall.
 <details>
   <summary>
