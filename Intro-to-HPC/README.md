@@ -12,7 +12,7 @@
      2. [Submission Script Details](#submission-script-overview)
      3. [Submitting a Batch Job](#submitting-your-batch-job)
      4. [Job Output](#job-output)
-     5. [Modify Your Job](#modify-your-job)
+     5. [Exercise: Modify Your Job](#exercise-modify-your-job)
      6. [Other SLURM Commands](#other-slurm-commands)
 4. [Interactive vs. Batch](#interactive-vs-batch)
 5. [Accessing Software](#accessing-software)
@@ -211,9 +211,11 @@ This script is running on:
 i11n1.ocelote.hpc.arizona.edu
 ```
 
-## Modify Your Job
-Try modifying your script to use 4 CPUs instead of 1. For details on SLURM directives, see our [SLURM documentation](https://public.confluence.arizona.edu/display/UAHPC/Running+Jobs+with+SLURM#RunningJobswithSLURM-PBS%E2%86%92SLURMRosettaStone)
+## Exercise: Modify Your Job
 
+In the exercises below, try modifying and submitting your submission script based on the prompts. For details on SLURM directives, see our [SLURM documentation](https://public.confluence.arizona.edu/display/UAHPC/Running+Jobs+with+SLURM#RunningJobswithSLURM-PBS%E2%86%92SLURMRosettaStone)
+
+1. Change your script to use 4 CPUs instead of 1.
 <details>
   <summary>
     Click here for the solution
@@ -234,8 +236,33 @@ hostname
 sleep 120 
 </code>
 </pre>
-
 </details>
+
+2. Change your script to use the standard partition instead of windfall.
+<details>
+  <summary>
+    Click here for the solution
+    <span class="icon">👇</span>
+  </summary>
+<pre>
+<code>
+#!/bin/bash
+#SBATCH --job-name=test 
+#SBATCH -e test.e%A 
+#SBATCH -o test.o%A 
+#SBATCH --partition=standard
+#SBATCH --account=your_group
+#SBATCH --nodes=1 
+#SBATCH --ntasks=1
+#SBATCH --time=00:10:00 
+echo 'This script is running on:' 
+hostname 
+sleep 120 
+</code>
+</pre>
+     * If you don't know your group's name, run the command <code>va</code> to see which groups you are a member of.
+</details>
+
 
 ## Other SLURM Commands
 
