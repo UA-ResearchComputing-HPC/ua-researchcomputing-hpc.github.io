@@ -11,8 +11,17 @@
      1. [Accessing Workshop Files](#accessing-workshop-files)
      2. [Submission Script Details](#submission-script-overview)
      3. [Submitting a Batch Job](#submitting-your-batch-job)
+     4. [Job Output](#job-output)
+     5. [Modify Your Job](#modify-your-job)
+     6. [Other SLURM Commands](#other-slurm-commands)
+4. [Interactive vs. Batch](#interactive-vs-batch)
+5. [Accessing Software](#accessing-software)
+6. [Open OnDemand](#open-ondemand)
+7. [Getting Help](#getting-help)
+8. [Community Events](#community-events)
 
 <br clear="left"/>
+
 # Get the Files
 
 [![](/Images/Download-Button.png)](intro-to-hpc.tar.gz)[![](/Images/download-pdf.png)](IntroToHPC.pdf)
@@ -129,11 +138,13 @@ Once you're logged in, you'll be in your home directory and can interact with th
 To access the files you need for this workshop, use the following commands:
 
 ```
-mkdir intro_to_hpc
-cd intro_to_hpc
+mkdir intro-to-hpc
+cd intro-to-hpc
 cp /xdisk/chrisreidy/workshops/sample_slurm.script .
 ```
-If you get a permission denied message using cp, you likely haven’t been added to the group chrisreidy. If this is the case, stay in your intro_to_hpc directory and use:
+Note, the ```.``` at the end. This is shorthand for your current working directory.
+
+If you get a permission denied message using cp, you likely haven’t been added to the group chrisreidy. If this is the case, stay in your intro-to-hpc directory and use:
 ```
 wget https://ua-researchcomputing-hpc.github.io/Intro-to-HPC/intro-to-hpc.tar.gz
 tar xzvf intro-to-hpc.tar.gz --strip-components=1
@@ -152,7 +163,7 @@ This should display the following:
 #SBATCH -e test.e%A
 #SBATCH -o test.o%A
 #SBATCH --mail-type=ALL
-### SBATCH --mail-user=netid@email.arizona.edu
+#SBATCH --mail-user=netid@email.arizona.edu
 #SBATCH --partition=windfall
 #SBATCH --ntasks=1
 #SBATCH --time=00:10:00
@@ -174,6 +185,40 @@ If everything worked correctly, a job ID will be printed to the screen that you 
 squeue --job <your_job_id>
 ```
 
+For example:
+```
+(ocelote) [netid@wentletrap intro-to-hpc]$ sbatch sample_slurm.script 
+Submitted batch job 463482
+(ocelote) [netid@wentletrap intro-to-hpc]$ squeue --job 463482
+             JOBID PARTITION     NAME  USER ST       TIME  NODES NODELIST(REASON)
+            463482  windfall     test netid PD       0:00      1 (Priority)
+```
+
+## Job Output
+Once your job starts running, an output file will be created in the directory where you submitted your script. In this case, you will have two output files that will look like ```test.o<jobid>``` and ```test.e<jobid>```. The first will be any standard output that would have been printed to the terminal had you run your work interactively and the second will contain any errors. First, check if you have output files using ```ls```. If they exist, check their contents using ```cat```. For example:
+
+```
+(ocelote) [netid@wentletrap intro-to-hpc]$ ls
+test.e463482  test.o463482  sample_slurm.script
+(ocelote) [netid@wentletrap intro-to-hpc]$ cat test.o463482 
+This script is running on:
+i11n1.ocelote.hpc.arizona.edu
+```
+
+## Modify Your Job
+
+## Other SLURM Commands
+
+# Interactive vs. Batch
+
+# Accessing Software
+
+# Open OnDemand
+
+# Getting Help
+
+# Community Events
+https://researchbazaar.arizona.edu/
 
 
 *****
