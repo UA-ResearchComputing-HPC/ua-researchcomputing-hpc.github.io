@@ -1,6 +1,9 @@
 <h1> Intro to HPC Workshop </h1>
 
-<h2 style="background-color:DarkSlateGray; text-color=white;"> Contents </h2>
+<div id="example1">
+  <h2 style="box-shadow: 5px 5px blue, 10px 10px red, 15px 15px green;">Contents</h2>
+</div>
+
 
 
 <img src="hpc-image.jpeg" alt="hpc-image" style="margin: 3px 12px 3px 0px; box-shadow: 10px 10px 5px grey;" align="right" width="350"/> 
