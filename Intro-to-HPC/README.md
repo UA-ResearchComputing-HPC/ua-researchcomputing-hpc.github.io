@@ -37,7 +37,11 @@ This training course will help you get started on using HPC resources.  If you h
 
 A PDF of the slides from past workshops can be found in our training documentation linked above and can be downloaded by clicking the Download PDF button at the top of this page. A summary of the training material for the interactive component of this workshop can be found below.
 
+<br>
+
 ********
+
+<br>
 
 # System Basics
 
