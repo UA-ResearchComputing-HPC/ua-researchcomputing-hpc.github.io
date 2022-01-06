@@ -8,7 +8,15 @@
 
 <h3 style="color:#FBFCFC; background-color:#2C3E50;"> System Basics </h3>
 
+* [Logging In](#logging-in)
+* [Working on the Command Line](#working-on-the-command-line)
+
 <h3 style="color:#FBFCFC; background-color:#2C3E50;"> Submitting a Batch Job </h3>
+
+* [Accessing Workshop Files](#accessing-workshop-files)
+* [Submission Script Details](#submission-script-overview)
+* [Submitting Your Job](#submitting-your-batch-job)
+* [Job Output](#job-output)
 
 <h3 style="color:#FBFCFC; background-color:#2C3E50;"> Interactive vs. Batch </h3>
 
