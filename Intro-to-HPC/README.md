@@ -71,7 +71,7 @@ A PDF of the slides from past workshops can be found in our training documentati
 
 <br>
 
-# System Basics
+<h1> <a name="system-basics"> System Basics </a> </h1>
 
 ## Logging In
 <img src="cluster-diagram.png" alt="cluster-diagram" style="float: left; margin: 3px 12px 3px 0px; box-shadow: 10px 10px 10px grey;" align="left" width="400"/> 
@@ -183,7 +183,7 @@ Once you're logged in, you can interact with the system. Some commands are provi
 <br>
 
 
-# Submitting a Batch Job
+<h1> <a name="submitting-a-batch-job"> Submitting a Batch Job </a> </h1>
 ## Accessing Workshop Files
 
 To access the files you need for this workshop, use the following commands:
@@ -263,7 +263,7 @@ i11n1.ocelote.hpc.arizona.edu
 
 <br>
 
-# Interactive vs. Batch
+<h1> <a name="interactive-vs-batch"> Interactive vs. Batch </a> </h1>
 
 Sometimes you need to work with your analyses interactively, for example:
 1. To compile code
@@ -292,7 +292,7 @@ Try running ```interactive --help``` for information on full usage.
 
 <br>
 
-# Accessing Software
+<h1> <a name="accessing-software"> Accessing Software </a> </h1>
 Software packages are installed on HPC's compute nodes as [software modules](https://public.confluence.arizona.edu/display/UAHPC/Software+Resources). These are accessible using the command ```module```:
 
 | Command | Description | Example| 
@@ -308,7 +308,7 @@ Software packages are installed on HPC's compute nodes as [software modules](htt
 
 <br>
 
-# Open OnDemand
+<h1> <a name="open-ondemand"> Open OnDemand </a> </h1>
 
 <br>
 
@@ -316,7 +316,7 @@ Software packages are installed on HPC's compute nodes as [software modules](htt
 
 <br>
 
-# Testing Your Knowledge
+<h1> <a name="testing-your-knowledge"> Testing Your Knowledge </a> </h1>
 
 ## Batch Scripts
 In the exercises below, try modifying and submitting your submission script based on the prompts. For details on SLURM directives, see our [SLURM documentation](https://public.confluence.arizona.edu/display/UAHPC/Running+Jobs+with+SLURM#RunningJobswithSLURM-PBS%E2%86%92SLURMRosettaStone)
@@ -379,7 +379,7 @@ sleep 120
 
 <br>
 
-# Getting Help
+<h1> <a name="getting-help"> Getting Help </a> </h1>
 
 | | Description | Link |
 |------|-------|-------|
@@ -393,7 +393,7 @@ sleep 120
 
 <br>
 
-# Community Events
+<h1> <a name="community-events"> Community Events </a> </h1>
 <img src="ResBaz.png" alt="ResBaz" style="margin: 12px 20px 12px 0px; box-shadow: 10px 10px 10px grey;" align="left" width="300"/> 
 
 ResBaz provides a supportive community for anyone, of any level of expertise, involved in research computing. Weekly social events include Coffee & Code and Hacky Hour where you can go to meet other research professionals and get help. For more information, see: [https://researchbazaar.arizona.edu/](https://researchbazaar.arizona.edu/)
