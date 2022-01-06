@@ -2,33 +2,33 @@
 
 ## Contents
 
-<img src="vertical-hpc.png" alt="vertical-hpc" style="margin: 3px 12px 3px 0px; box-shadow: 10px 10px 5px grey;" align="right" height="450"/> 
+<img src="vertical-hpc.png" alt="vertical-hpc" style="margin: 3px 12px 3px 0px; box-shadow: 10px 10px 5px grey; border: 5px solid #FBFCFC;" align="right" height="450"/> 
 
 <h3 style="color:#FBFCFC; background-color:#2C3E50;"> <a href="#overview" style="text-decoration=none; color:#FBFCFC;"> Overview </a> </h3>
 
-<h3 style="color:#FBFCFC; background-color:#2C3E50;"> System Basics </h3>
+<h3 style="color:#FBFCFC; background-color:#2C3E50;"> <a href="#system-basics" style="text-decoration=none; color:#FBFCFC;"> System Basics </a> </h3>
 
 * [Logging In](#logging-in)
 * [Working on the Command Line](#working-on-the-command-line)
 
-<h3 style="color:#FBFCFC; background-color:#2C3E50;"> Submitting a Batch Job </h3>
+<h3 style="color:#FBFCFC; background-color:#2C3E50;"> <a href="#submitting-a-batch-job" style="text-decoration=none; color:#FBFCFC;"> Submitting a Batch Job </a> </h3>
 
 * [Accessing Workshop Files](#accessing-workshop-files)
 * [Submission Script Details](#submission-script-overview)
 * [Submitting Your Job](#submitting-your-batch-job)
 * [Job Output](#job-output)
 
-<h3 style="color:#FBFCFC; background-color:#2C3E50;"> Interactive vs. Batch </h3>
+<h3 style="color:#FBFCFC; background-color:#2C3E50;"> <a href="#interactive-vs-batch" style="text-decoration=none; color:#FBFCFC;"> Interactive vs. Batch </a> </h3>
 
-<h3 style="color:#FBFCFC; background-color:#2C3E50;"> Accessing Software </h3>
+<h3 style="color:#FBFCFC; background-color:#2C3E50;"> <a href="#accessing-software" style="text-decoration=none; color:#FBFCFC;"> Accessing Software </a> </h3>
 
-<h3 style="color:#FBFCFC; background-color:#2C3E50;"> Open OnDemand </h3>
+<h3 style="color:#FBFCFC; background-color:#2C3E50;"> <a href="#open-ondemand" style="text-decoration=none; color:#FBFCFC;"> Open OnDemand </a> </h3>
 
-<h3 style="color:#FBFCFC; background-color:#2C3E50;"> Testing Your Knowledge </h3>
+<h3 style="color:#FBFCFC; background-color:#2C3E50;"> <a href="#testing-your-knowledge" style="text-decoration=none; color:#FBFCFC;"> Testing Your Knowledge </a> </h3>
 
-<h3 style="color:#FBFCFC; background-color:#2C3E50;"> Getting Help </h3>
+<h3 style="color:#FBFCFC; background-color:#2C3E50;"> <a href="#getting-help" style="text-decoration=none; color:#FBFCFC;"> Getting Help </a> </h3>
 
-<h3 style="color:#FBFCFC; background-color:#2C3E50;"> Community Events </h3>
+<h3 style="color:#FBFCFC; background-color:#2C3E50;"> <a href="#community-events" style="text-decoration=none; color:#FBFCFC;"> Community Events </a> </h3>
 
 1. [Overview](#overview)
 2. [System Basics](#system-basics)
