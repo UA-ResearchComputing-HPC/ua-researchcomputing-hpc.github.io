@@ -278,7 +278,7 @@ Try running ```interactive --help``` for information on full usage.
 
 <br>
 
-<h1> <a name="accessing-software"> Accessing Software </a> </h1>
+<h1> <a name="accessing-software" style="text-decoration=none; color:#000000;"> Accessing Software </a> </h1>
 Software packages are installed on HPC's compute nodes as [software modules](https://public.confluence.arizona.edu/display/UAHPC/Software+Resources). These are accessible using the command ```module```:
 
 | Command | Description | Example| 
@@ -294,7 +294,7 @@ Software packages are installed on HPC's compute nodes as [software modules](htt
 
 <br>
 
-<h1> <a name="open-ondemand"> Open OnDemand </a> </h1>
+<h1> <a name="open-ondemand" style="text-decoration=none; color:#000000;" > Open OnDemand </a> </h1>
 
 <br>
 
