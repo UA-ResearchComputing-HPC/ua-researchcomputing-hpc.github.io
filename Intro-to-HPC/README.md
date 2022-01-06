@@ -4,37 +4,37 @@
 
 <img src="vertical-hpc.png" alt="vertical-hpc" style="margin: 12px 12px 3px 0px; box-shadow: 10px 10px 5px grey; border: 5px solid #FBFCFC; border-radius: 4px;" align="right" height="500"/> 
 
-<h3 style="color:#FBFCFC; background-color:#566573;"> <a href="#overview" style="text-decoration=none; color:#FBFCFC;"> Overview </a> </h3>
+<h3 style="color:#FBFCFC; background-color:#5D6D7E;"> <a href="#overview" style="text-decoration=none; color:#FBFCFC;"> Overview </a> </h3>
 
-<h3 style="color:#FBFCFC; background-color:#566573;"> <a href="#system-basics" style="text-decoration=none; color:#FBFCFC;"> System Basics </a> </h3>
+<h3 style="color:#FBFCFC; background-color:#5D6D7E;"> <a href="#system-basics" style="text-decoration=none; color:#FBFCFC;"> System Basics </a> </h3>
 
 * [Logging In](#logging-in)
 * [Working on the Command Line](#working-on-the-command-line)
 
-<h3 style="color:#FBFCFC; background-color:#566573;"> <a href="#submitting-a-batch-job" style="text-decoration=none; color:#FBFCFC;"> Submitting a Batch Job </a> </h3>
+<h3 style="color:#FBFCFC; background-color:#5D6D7E;"> <a href="#submitting-a-batch-job" style="text-decoration=none; color:#FBFCFC;"> Submitting a Batch Job </a> </h3>
 
 * [Accessing Workshop Files](#accessing-workshop-files)
 * [Submission Script Details](#submission-script-overview)
 * [Submitting Your Job](#submitting-your-batch-job)
 * [Job Output](#job-output)
 
-<h3 style="color:#FBFCFC; background-color:#566573;"> <a href="#interactive-vs-batch" style="text-decoration=none; color:#FBFCFC;"> Interactive vs. Batch </a> </h3>
+<h3 style="color:#FBFCFC; background-color:#5D6D7E;"> <a href="#interactive-vs-batch" style="text-decoration=none; color:#FBFCFC;"> Interactive vs. Batch </a> </h3>
 
-<h3 style="color:#FBFCFC; background-color:#566573;"> <a href="#accessing-software" style="text-decoration=none; color:#FBFCFC;"> Accessing Software </a> </h3>
+<h3 style="color:#FBFCFC; background-color:#5D6D7E;"> <a href="#accessing-software" style="text-decoration=none; color:#FBFCFC;"> Accessing Software </a> </h3>
 
-<h3 style="color:#FBFCFC; background-color:#566573;"> <a href="#open-ondemand" style="text-decoration=none; color:#FBFCFC;"> Open OnDemand </a> </h3>
+<h3 style="color:#FBFCFC; background-color:#5D6D7E;"> <a href="#open-ondemand" style="text-decoration=none; color:#FBFCFC;"> Open OnDemand </a> </h3>
 
-<h3 style="color:#FBFCFC; background-color:#566573;"> <a href="#testing-your-knowledge" style="text-decoration=none; color:#FBFCFC;"> Testing Your Knowledge </a> </h3>
+<h3 style="color:#FBFCFC; background-color:#5D6D7E;"> <a href="#testing-your-knowledge" style="text-decoration=none; color:#FBFCFC;"> Testing Your Knowledge </a> </h3>
 
-<h3 style="color:#FBFCFC; background-color:#566573;"> <a href="#getting-help" style="text-decoration=none; color:#FBFCFC;"> Getting Help </a> </h3>
+<h3 style="color:#FBFCFC; background-color:#5D6D7E;"> <a href="#getting-help" style="text-decoration=none; color:#FBFCFC;"> Getting Help </a> </h3>
 
-<h3 style="color:#FBFCFC; background-color:#566573;"> <a href="#community-events" style="text-decoration=none; color:#FBFCFC;"> Community Events </a> </h3>
+<h3 style="color:#FBFCFC; background-color:#5D6D7E;"> <a href="#community-events" style="text-decoration=none; color:#FBFCFC;"> Community Events </a> </h3>
 
 
 <br clear="left"/>
 
 
-<hr style="height: 10;">
+<hr style="height:50; background-color:#666;">
 
 # Get the Files
 
