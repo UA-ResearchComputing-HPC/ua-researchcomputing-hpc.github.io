@@ -4,7 +4,7 @@
 
 <img src="vertical-hpc.png" alt="vertical-hpc" style="margin: 3px 12px 3px 0px; box-shadow: 10px 10px 5px grey;" align="right" height="450"/> 
 
-<a href="#overview" style="text-decoration:none;"> <h3 style="color:#FBFCFC; background-color:#2C3E50;">Overview</h3></a>
+<a href="#overview" style="text-decoration:none;"> <h3 style="color:#FBFCFC; background-color:#2C3E50;"> Overview </h3> </a>
 
 1. [Overview](#overview)
 2. [System Basics](#system-basics)
