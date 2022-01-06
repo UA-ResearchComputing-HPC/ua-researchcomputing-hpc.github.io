@@ -48,9 +48,7 @@ This training course will help you get started on using HPC resources.  If you h
 A PDF of the slides from past workshops can be found in our training documentation linked above and can be downloaded by clicking the Download PDF button at the top of this page. A summary of the training material for the interactive component of this workshop can be found below.
 
 <br>
-
-********
-
+<hr style="height:15px; background-color:#313131; border:none" >
 <br>
 
 <h1> <a name="system-basics" style="text-decoration=none; color:#000000;"> System Basics </a> </h1>
@@ -151,17 +149,13 @@ Once you're logged in, you can interact with the system. Some commands are provi
 
 
 <br>
-
-**************
-
+<hr style="height:15px; background-color:#313131; border:none" >
 <br>
 
 # Transferring Files
 
 <br>
-
-************
-
+<hr style="height:15px; background-color:#313131; border:none" >
 <br>
 
 
@@ -240,9 +234,7 @@ i11n1.ocelote.hpc.arizona.edu
 ```
 
 <br>
-
-********
-
+<hr style="height:15px; background-color:#313131; border:none" >
 <br>
 
 <h1> <a name="interactive-vs-batch" style="text-decoration=none; color:#000000;"> Interactive vs. Batch </a> </h1>
@@ -269,9 +261,7 @@ salloc: Nodes i15n0 are ready for job
 Try running ```interactive --help``` for information on full usage.
 
 <br>
-
-********
-
+<hr style="height:15px; background-color:#313131; border:none" >
 <br>
 
 <h1> <a name="accessing-software" style="text-decoration=none; color:#000000;"> Accessing Software </a> </h1>
@@ -285,17 +275,13 @@ Software packages are installed on HPC's compute nodes as [software modules](htt
 |```module swap```| Swaps software versions in your environment| ```module swap python/3.6 python/3.8```|
 
 <br>
-
-********
-
+<hr style="height:15px; background-color:#313131; border:none" >
 <br>
 
 <h1> <a name="open-ondemand" style="text-decoration=none; color:#000000;" > Open OnDemand </a> </h1>
 
 <br>
-
-********
-
+<hr style="height:15px; background-color:#313131; border:none" >
 <br>
 
 <h1> <a name="testing-your-knowledge" style="text-decoration=none; color:#000000;"> Testing Your Knowledge </a> </h1>
@@ -356,9 +342,7 @@ sleep 120
 
 
 <br>
-
-********
-
+<hr style="height:15px; background-color:#313131; border:none" >
 <br>
 
 <h1> <a name="getting-help" style="text-decoration=none; color:#000000;"> Getting Help </a> </h1>
@@ -370,9 +354,7 @@ sleep 120
 |Office Hours | Drop by for weekly virtual office hours, every Wednesday from 2:00-4:00 pm| [Click here to join](https://gather.town/app/dVsAprPNBVmI9NpL/hpc-office-hours)|
 
 <br>
-
-********
-
+<hr style="height:15px; background-color:#313131; border:none" >
 <br>
 
 <h1> <a name="community-events" style="text-decoration=none; color:#000000;"> Community Events </a> </h1>
@@ -388,6 +370,7 @@ Time: Thursdays 4:00-7:00pm. Location: Snakes & Lattes (Main Gate Square), 865 E
 
 <br clear="left"/>
 
-*****
+<hr style="height:15px; background-color:#313131; border:none" >
+
 [![](/Images/home.png)](https://ua-researchcomputing-hpc.github.io/) 
 [![](/Images/back.png)](../)
