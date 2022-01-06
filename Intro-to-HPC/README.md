@@ -36,7 +36,7 @@
 <br clear="left"/>
 
 
-<hr style="height:50px; background-color:#666; border:5px" >
+<hr style="height:20px; background-color:#34495E; border:none" >
 
 
 ********
