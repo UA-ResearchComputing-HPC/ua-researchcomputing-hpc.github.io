@@ -34,7 +34,7 @@
 <br clear="left"/>
 
 
-<hr style="height:50; background-color:#666; border:5px" >
+<hr style="height:50px; background-color:#666; border:5px" >
 
 # Get the Files
 
