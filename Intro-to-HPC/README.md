@@ -1,13 +1,16 @@
 # Intro to HPC Workshop
 
+<br> 
+
 [![](/Images/Download-Button.png)](intro-to-hpc.tar.gz)[![](/Images/download-pdf.png)](IntroToHPC.pdf)
+
+<br> 
 
 ## Contents
 
 <img src="vertical-hpc.png" alt="vertical-hpc" style="margin: 20px 12px 3px 0px; box-shadow: 10px 10px 5px grey; border: 5px solid #FBFCFC; border-radius: 4px;" align="right" height="500"/> 
 
 <h3 style="color:#FBFCFC; background-color:#34495E;"> <a href="#overview" style="text-decoration=none; color:#FBFCFC;"> Overview </a> </h3>
-
 <h3 style="color:#FBFCFC; background-color:#34495E;"> <a href="#system-basics" style="text-decoration=none; color:#FBFCFC;"> System Basics </a> </h3>
 
 * [Logging In](#logging-in)
@@ -21,25 +24,20 @@
 * [Job Output](#job-output)
 
 <h3 style="color:#FBFCFC; background-color:#34495E;"> <a href="#interactive-vs-batch" style="text-decoration=none; color:#FBFCFC;"> Interactive vs. Batch </a> </h3>
-
 <h3 style="color:#FBFCFC; background-color:#34495E;"> <a href="#accessing-software" style="text-decoration=none; color:#FBFCFC;"> Accessing Software </a> </h3>
-
 <h3 style="color:#FBFCFC; background-color:#34495E;"> <a href="#open-ondemand" style="text-decoration=none; color:#FBFCFC;"> Open OnDemand </a> </h3>
-
 <h3 style="color:#FBFCFC; background-color:#34495E;"> <a href="#testing-your-knowledge" style="text-decoration=none; color:#FBFCFC;"> Testing Your Knowledge </a> </h3>
-
 <h3 style="color:#FBFCFC; background-color:#34495E;"> <a href="#getting-help" style="text-decoration=none; color:#FBFCFC;"> Getting Help </a> </h3>
-
 <h3 style="color:#FBFCFC; background-color:#34495E;"> <a href="#community-events" style="text-decoration=none; color:#FBFCFC;"> Community Events </a> </h3>
 
 
 <br clear="left"/>
 
 
-<hr style="height:20px; background-color:#34495E; border:none" >
+<hr style="height:15px; background-color:#34495E; border:none" >
 
 
-********
+<br>
 
 <h1> <a name="overview" style="text-decoration=none; color:#000000;" > Overview </a> </h1>
 
