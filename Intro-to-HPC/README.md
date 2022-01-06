@@ -1,5 +1,7 @@
 # Intro to HPC Workshop
 
+[![](/Images/Download-Button.png)](intro-to-hpc.tar.gz)[![](/Images/download-pdf.png)](IntroToHPC.pdf)
+
 ## Contents
 
 <img src="vertical-hpc.png" alt="vertical-hpc" style="margin: 20px 12px 3px 0px; box-shadow: 10px 10px 5px grey; border: 5px solid #FBFCFC; border-radius: 4px;" align="right" height="500"/> 
@@ -35,10 +37,6 @@
 
 
 <hr style="height:50px; background-color:#666; border:5px" >
-
-# Get the Files
-
-[![](/Images/Download-Button.png)](intro-to-hpc.tar.gz)[![](/Images/download-pdf.png)](IntroToHPC.pdf)
 
 
 ********
