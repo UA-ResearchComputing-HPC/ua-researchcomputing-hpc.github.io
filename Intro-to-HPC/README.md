@@ -34,6 +34,8 @@
 <br clear="left"/>
 
 
+<hr style="height: 10;">
+
 # Get the Files
 
 [![](/Images/Download-Button.png)](intro-to-hpc.tar.gz)[![](/Images/download-pdf.png)](IntroToHPC.pdf)
