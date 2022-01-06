@@ -4,6 +4,8 @@
 
 <img src="vertical-hpc.png" alt="vertical-hpc" style="margin: 3px 12px 3px 0px; box-shadow: 10px 10px 5px grey;" align="right" height="450"/> 
 
+<p style="color:#FBFCFC; background-color:#2C3E50;">Overview</p>
+
 1. [Overview](#overview)
 2. [System Basics](#system-basics)
      1. [Logging In](#logging-in)
@@ -50,9 +52,9 @@ A PDF of the slides from past workshops can be found in our training documentati
 ## Logging In
 <img src="cluster-diagram.png" alt="cluster-diagram" style="float: left; margin: 3px 12px 3px 0px; box-shadow: 10px 10px 10px grey;" align="left" width="400"/> 
 
-To begin, open a terminal session and connect to HPC. This can be done two ways, either using your own terminal/SSH client, or through our Open OnDemand web interface. You will use your university credentials (NetID and password) to access the system and will also be prompted for a method to duo authenticate after.
+Logging in can be done two ways, either using your own terminal/SSH client or through our Open OnDemand web interface. Both methods are described below.
 
-Detailed information can be found in our [online documentation](https://public.confluence.arizona.edu/display/UAHPC/System+Access#SystemAccess-CommandLine/TerminalAccess).
+More detailed information can be found in our [online documentation](https://public.confluence.arizona.edu/display/UAHPC/System+Access#SystemAccess-CommandLine/TerminalAccess).
 
 <br clear="left"/>
 
@@ -112,9 +114,9 @@ Log into [https://ood.hpc.arizona.edu/](https://ood.hpc.arizona.edu/), then sele
 Once you're connected, type ```ocelote``` to connect to Ocelote.
 
 ## Working on the Command Line
-Once you're logged in, you can interact with the system using Bash commands. Some basics are provided below if you are unfamiliar with its syntax. 
+Once you're logged in, you can interact with the system. Some commands are provided below.
 
-### Bash
+### Linux Shell
 
 |Command|What it does|
 |--------|------------------|
