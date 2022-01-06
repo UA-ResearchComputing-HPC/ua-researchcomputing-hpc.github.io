@@ -57,7 +57,7 @@
 
 ********
 
-<h1> <a name="overview"> Overview </a> </h1>
+<h1> <a name="overview" style="text-decoration=none; color:#000000;" > Overview </a> </h1>
 
 This short training class is available to users periodically throughout each academic year. Information on upcoming workshops can be found in our [training documentation](https://public.confluence.arizona.edu/display/UAHPC/Training). Before each workshop, an email will be sent to all HPC users through hpc-announce with information on dates, times, location, and how to register.
 
