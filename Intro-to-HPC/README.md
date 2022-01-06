@@ -34,7 +34,7 @@
 <br clear="left"/>
 
 
-<hr style="height:10px; background-color:#34495E; border:none" >
+<hr style="height:5px; background-color:#34495E; border:none" >
 
 
 <br>
