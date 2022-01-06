@@ -2,7 +2,7 @@
 
 ## Contents
 
-<img src="vertical-hpc.png" alt="vertical-hpc" style="margin: 3px 12px 3px 0px; box-shadow: 10px 10px 5px grey; border: 5px solid #FBFCFC; border-radius: 4px;" align="right" height="450"/> 
+<img src="vertical-hpc.png" alt="vertical-hpc" style="margin: 12px 12px 3px 0px; box-shadow: 10px 10px 5px grey; border: 5px solid #FBFCFC; border-radius: 4px;" align="right" height="500"/> 
 
 <h3 style="color:#FBFCFC; background-color:#2C3E50;"> <a href="#overview" style="text-decoration=none; color:#FBFCFC;"> Overview </a> </h3>
 
@@ -30,22 +30,6 @@
 
 <h3 style="color:#FBFCFC; background-color:#2C3E50;"> <a href="#community-events" style="text-decoration=none; color:#FBFCFC;"> Community Events </a> </h3>
 
-1. [Overview](#overview)
-2. [System Basics](#system-basics)
-     1. [Logging In](#logging-in)
-     2. [Working on the Command Line](#working-on-the-command-line)
-3. [Transferring Files](#transferring-files)
-4. [Submitting a Batch Job](#submitting-a-sample-job)
-     1. [Accessing Workshop Files](#accessing-workshop-files)
-     2. [Submission Script Details](#submission-script-overview)
-     3. [Submitting a Batch Job](#submitting-your-batch-job)
-     4. [Job Output](#job-output)
-5. [Interactive vs. Batch](#interactive-vs-batch)
-6. [Accessing Software](#accessing-software)
-7. [Open OnDemand](#open-ondemand)
-8. [Testing Your Knowledge](#testing-your-knowledge)
-9. [Getting Help](#getting-help)
-10. [Community Events](#community-events)
 
 <br clear="left"/>
 
