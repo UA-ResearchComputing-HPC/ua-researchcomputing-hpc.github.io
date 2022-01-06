@@ -2,7 +2,7 @@
 
 ## Contents
 
-<img src="vertical-hpc.png" alt="vertical-hpc" style="margin: 12px 12px 3px 0px; box-shadow: 10px 10px 5px grey; border: 5px solid #FBFCFC; border-radius: 4px;" align="right" height="500"/> 
+<img src="vertical-hpc.png" alt="vertical-hpc" style="margin: 20px 12px 3px 0px; box-shadow: 10px 10px 5px grey; border: 5px solid #FBFCFC; border-radius: 4px;" align="right" height="500"/> 
 
 <h3 style="color:#FBFCFC; background-color:#34495E;"> <a href="#overview" style="text-decoration=none; color:#FBFCFC;"> Overview </a> </h3>
 
