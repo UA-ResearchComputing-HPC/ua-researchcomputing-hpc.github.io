@@ -4,7 +4,7 @@
 
 <img src="vertical-hpc.png" alt="vertical-hpc" style="margin: 3px 12px 3px 0px; box-shadow: 10px 10px 5px grey;" align="right" height="450"/> 
 
-<p style="color:#FBFCFC; background-color:#2C3E50;">Overview</p>
+<a href="#overview" style="text-decoration:none;"> <h3 style="color:#FBFCFC; background-color:#2C3E50;">Overview</h3></a>
 
 1. [Overview](#overview)
 2. [System Basics](#system-basics)
@@ -33,7 +33,7 @@
 
 ********
 
-# Overview
+<h1 name="overview"> Overview </h1>
 
 This short training class is available to users periodically throughout each academic year. Information on upcoming workshops can be found in our [training documentation](https://public.confluence.arizona.edu/display/UAHPC/Training). Before each workshop, an email will be sent to all HPC users through hpc-announce with information on dates, times, location, and how to register.
 
