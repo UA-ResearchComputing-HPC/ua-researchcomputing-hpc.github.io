@@ -330,11 +330,6 @@ Once its status has changed to active, you can connect and work interactively wi
 <hr style="height:5px; background-color:#34495E; border:none" >
 <br>
 
-<h1> <a name="open-ondemand" style="text-decoration=none; color:#000000;" > Open OnDemand </a> </h1>
-
-<br>
-<hr style="height:5px; background-color:#34495E; border:none" >
-<br>
 
 <h1> <a name="testing-your-knowledge" style="text-decoration=none; color:#000000;"> Testing Your Knowledge </a> </h1>
 
