@@ -314,9 +314,24 @@ Software modules are accessible using the command ```module```:
 <h1> <a name="testing-your-knowledge" style="text-decoration=none; color:#000000;"> Testing Your Knowledge </a> </h1>
 
 ## Batch Scripts
-In the exercises below, try modifying and submitting your submission script based on the prompts. For details on SLURM directives, see our [SLURM documentation](https://public.confluence.arizona.edu/display/UAHPC/Running+Jobs+with+SLURM#RunningJobswithSLURM-PBS%E2%86%92SLURMRosettaStone)
+In the exercises below, try modifying and submitting the example submission script based on the prompts listed below:
+```
+#!/bin/bash
+#SBATCH --job-name=test
+#SBATCH -e test.e%A
+#SBATCH -o test.o%A
+#SBATCH --partition=windfall
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --time=00:10:00
+echo 'This script is running on:'
+hostname
+sleep 120
+```
 
-* **Change your script to use 4 CPUs instead of 1.**
+For details on SLURM directives, see our [SLURM documentation](https://public.confluence.arizona.edu/display/UAHPC/Running+Jobs+with+SLURM#RunningJobswithSLURM-PBS%E2%86%92SLURMRosettaStone)
+
+**Question 1: Change your script to use 4 CPUs instead of 1.**
 <details>
   <summary>
     Click here for the solution
@@ -341,7 +356,7 @@ sleep 120
 
 <br>
 
-* **Change your script to use the standard partition instead of windfall.**
+**Question 2: Change your script to use the standard partition instead of windfall.**
 <details>
   <summary>
     Click here for the solution
