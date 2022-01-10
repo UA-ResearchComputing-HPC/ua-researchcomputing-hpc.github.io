@@ -356,7 +356,7 @@ sleep 120
 
 For details on SLURM directives, see our [SLURM documentation](https://public.confluence.arizona.edu/display/UAHPC/Running+Jobs+with+SLURM#RunningJobswithSLURM-PBS%E2%86%92SLURMRosettaStone)
 
-**Question 1: Change your script to use 4 CPUs instead of 1.**
+**Challenge 1: Change your script to use 4 CPUs instead of 1.**
 <details>
   <summary>
     Click here for the solution
@@ -381,7 +381,7 @@ sleep 120
 
 <br>
 
-**Question 2: Change your script to use the standard partition instead of windfall.**
+**Challenge 2: Change your script to use the standard partition instead of windfall.**
 <details>
   <summary>
     Click here for the solution
@@ -401,6 +401,29 @@ sleep 120
 echo 'This script is running on:' 
 hostname 
 sleep 120 
+</code>
+</pre>
+     * If you don't know your group's name, run the command <code>va</code> to see which groups you are a member of.
+</details>
+
+
+**Challenge 3: Change your script so that it loads the system module python, version 3.6.5.**
+<details>
+  <summary>
+    Click here for the solution
+    <span class="icon">👇</span>
+  </summary>
+<pre>
+<code>
+#!/bin/bash
+#SBATCH --job-name=test 
+#SBATCH -e test.e%A 
+#SBATCH -o test.o%A 
+#SBATCH --partition=windfall
+#SBATCH --nodes=1 
+#SBATCH --ntasks=1
+#SBATCH --time=00:10:00 
+module load python/3.6.5
 </code>
 </pre>
      * If you don't know your group's name, run the command <code>va</code> to see which groups you are a member of.
