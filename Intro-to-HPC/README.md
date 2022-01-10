@@ -339,7 +339,7 @@ Once its status has changed to active, you can connect and work interactively wi
 <h1> <a name="testing-your-knowledge" style="text-decoration=none; color:#000000;"> Testing Your Knowledge </a> </h1>
 
 ## Batch Scripts
-In the exercises below, try modifying and submitting the example submission script based on the prompts listed below:
+The original example script:
 ```
 #!/bin/bash
 #SBATCH --job-name=test
@@ -354,7 +354,10 @@ hostname
 sleep 120
 ```
 
-For details on SLURM directives, see our [SLURM documentation](https://public.confluence.arizona.edu/display/UAHPC/Running+Jobs+with+SLURM#RunningJobswithSLURM-PBS%E2%86%92SLURMRosettaStone)
+In the exercises below, try modifying and submitting the example submission script based on the prompts listed below:
+
+
+> For details on SLURM directives, see our [SLURM documentation](https://public.confluence.arizona.edu/display/UAHPC/Running+Jobs+with+SLURM#RunningJobswithSLURM-PBS%E2%86%92SLURMRosettaStone)
 
 ✅ **Challenge 1: Change your script to use 4 CPUs instead of 1.**
 <details>
