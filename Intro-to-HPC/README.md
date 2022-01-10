@@ -288,7 +288,10 @@ Try running ```interactive --help``` for information on full usage.
 <br>
 
 <h1> <a name="accessing-software" style="text-decoration=none; color:#000000;"> Accessing Software </a> </h1>
-Software packages are installed on HPC's compute nodes as [software modules](https://public.confluence.arizona.edu/display/UAHPC/Software+Resources). These are accessible using the command ```module```:
+Software packages are installed on HPC's compute nodes as [software modules](https://public.confluence.arizona.edu/display/UAHPC/Software+Resources). Note that software modules are not available on the login nodes. See the section on <a href="interactive-vs-batch"> Interactive Sessions </a> for accessing a compute node. 
+
+<br>
+Software modules are accessible using the command ```module```:
 
 | Command | Description | Example| 
 |---------|-------------|--------|
