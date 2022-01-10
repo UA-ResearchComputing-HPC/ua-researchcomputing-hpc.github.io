@@ -28,7 +28,10 @@
 
 <h3 style="color:#FBFCFC; background-color:#34495E;"> <a href="#interactive-vs-batch" style="text-decoration=none; color:#FBFCFC;"> Interactive vs. Batch </a> </h3>
 <h3 style="color:#FBFCFC; background-color:#34495E;"> <a href="#accessing-software" style="text-decoration=none; color:#FBFCFC;"> Accessing Software </a> </h3>
-<h3 style="color:#FBFCFC; background-color:#34495E;"> <a href="#open-ondemand" style="text-decoration=none; color:#FBFCFC;"> Open OnDemand </a> </h3>
+
+* [Command Line](#modules-on-the-command-line)
+* [Open OnDemand](#software-through-open-ondemand)
+
 <h3 style="color:#FBFCFC; background-color:#34495E;"> <a href="#testing-your-knowledge" style="text-decoration=none; color:#FBFCFC;"> Testing Your Knowledge </a> </h3>
 <h3 style="color:#FBFCFC; background-color:#34495E;"> <a href="#getting-help" style="text-decoration=none; color:#FBFCFC;"> Getting Help </a> </h3>
 <h3 style="color:#FBFCFC; background-color:#34495E;"> <a href="#community-events" style="text-decoration=none; color:#FBFCFC;"> Community Events </a> </h3>
@@ -291,6 +294,9 @@ Try running ```interactive --help``` for information on full usage.
 <h1> <a name="accessing-software" style="text-decoration=none; color:#000000;"> Accessing Software </a> </h1>
 Software packages are installed on HPC's compute nodes as [software modules](https://public.confluence.arizona.edu/display/UAHPC/Software+Resources). Note that software modules are not available on the login nodes. See the section on <a href="interactive-vs-batch"> Interactive Sessions </a> for accessing a compute node. 
 
+
+## Modules on the Command Line
+
 <br>
 Software modules are accessible using the command ```module```:
 
@@ -300,6 +306,25 @@ Software modules are accessible using the command ```module```:
 |```module load```| Adds software to your environment| ```module load python/3.6```|
 |```module unload```| Unloads software from your environment| ```module unload python/3.6```|
 |```module swap```| Swaps software versions in your environment| ```module swap python/3.6 python/3.8```|
+
+
+## Software Through Open OnDemand
+Some software packages can also be used interactively through an Open OnDemand GUI interface. A list of available applications can be found in [Open OnDemand](https://ood.hpc.arizona.edu/) under **Apps**. 
+
+A session can be requested by selecting an application, e.g. Matlab:
+
+<img src="ood_apps.png" alt="ood_apps" style="margin: 3px 12px 3px 0px; box-shadow: 10px 10px 5px grey;" width="640"/> 
+
+This will take you to a request form where you will enter the resources needed for your job:
+
+<img src="submit_form.png" alt="submit_form" style="margin: 3px 12px 3px 0px; box-shadow: 10px 10px 5px grey;" width="640"/> 
+
+Once your form is submitted, a tile will appear with job information and 
+
+<img src="queued.png" alt="queued" style="margin: 3px 12px 3px 0px; box-shadow: 10px 10px 5px grey;" width="640"/> 
+<img src="active.png" alt="active" style="margin: 3px 12px 3px 0px; box-shadow: 10px 10px 5px grey;" width="640"/> 
+
+Once its status has changed to active, you can connect and work interactively with your software. 
 
 <br>
 <hr style="height:5px; background-color:#34495E; border:none" >
