@@ -117,7 +117,7 @@ On Windows, you will need an SSH client such as PuTTY or MobaXterm. In PuTTY, us
 ### Open OnDemand
 Log into [https://ood.hpc.arizona.edu/](https://ood.hpc.arizona.edu/), then select the **Clusters** dropdown tab and click **Shell Access**
 
-<img src="ood_shell_access.png" alt="ood_shell_access" style="margin: 3px 12px 3px 0px; box-shadow: 10px 10px 5px grey;" width="600"/>
+<img src="ood_shell_access.png" alt="ood_shell_access" style="margin: 3px 12px 3px 0px; box-shadow: 10px 10px 5px grey;" width="640"/>
 
 Once you're connected, type ```ocelote``` to connect to Ocelote.
 
@@ -161,18 +161,18 @@ Once you're logged in, you can interact with the system. Some commands are provi
 Uploading small files can be done through [Open Ondemand](ood.hpc.arizona.edu) by going to the **Files** dropdown. 
 Select the relevant directory location, e.g. your home directory, and click **upload**:
 
-<img src="select-home.png" alt="select-home" style="margin: 3px 12px 3px 0px; box-shadow: 10px 10px 5px grey;" width="786"/> 
+<img src="select-home.png" alt="select-home" style="margin: 3px 12px 3px 0px; box-shadow: 10px 10px 5px grey;" width="640"/> 
 
 
-<img src="upload.png" alt="upload" style="margin: 3px 12px 3px 0px; box-shadow: 10px 10px 5px grey;" width="786"/> 
+<img src="upload.png" alt="upload" style="margin: 3px 12px 3px 0px; box-shadow: 10px 10px 5px grey;" width="640"/> 
 
 Drag/drop your files, or click **Browse Files** to upload
 
-<img src="drag-drop.png" alt="drag-drop" style="margin: 3px 12px 3px 0px; box-shadow: 10px 10px 5px grey;" height="225"/> <img src="file.png" alt="file" style="margin: 3px 12px 3px 0px; box-shadow: 10px 10px 5px grey;" height="225"/> 
+<img src="drag-drop.png" alt="drag-drop" style="margin: 3px 12px 3px 0px; box-shadow: 10px 10px 5px grey;" height="200"/> <img src="file.png" alt="file" style="margin: 3px 12px 3px 0px; box-shadow: 10px 10px 5px grey;" height="200"/> 
 
 Once uploaded, your files will appear in the relevant location
 
-<img src="test.png" alt="test" style="margin: 3px 12px 3px 0px; box-shadow: 10px 10px 5px grey;" width="786"/> 
+<img src="test.png" alt="test" style="margin: 3px 12px 3px 0px; box-shadow: 10px 10px 5px grey;" width="640"/> 
 
 
 For larger files, see our [online documentation](https://public.confluence.arizona.edu/display/UAHPC/Transferring+Files) for better transfer strategies.
