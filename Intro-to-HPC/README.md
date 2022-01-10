@@ -356,7 +356,7 @@ sleep 120
 
 For details on SLURM directives, see our [SLURM documentation](https://public.confluence.arizona.edu/display/UAHPC/Running+Jobs+with+SLURM#RunningJobswithSLURM-PBS%E2%86%92SLURMRosettaStone)
 
-**Challenge 1: Change your script to use 4 CPUs instead of 1.**
+✅ **Challenge 1: Change your script to use 4 CPUs instead of 1.**
 <details>
   <summary>
     Click here for the solution
@@ -381,7 +381,7 @@ sleep 120
 
 <br>
 
-**Challenge 2: Change your script to use the standard partition instead of windfall.**
+✅ **Challenge 2: Change your script to use the standard partition instead of windfall.**
 <details>
   <summary>
     Click here for the solution
@@ -407,7 +407,7 @@ sleep 120
 </details>
 
 
-**Challenge 3: Change your script so that it loads the system module python, version 3.6.5.**
+✅ **Challenge 3: Change your script so that it loads the system module python, version 3.6.5.**
 <details>
   <summary>
     Click here for the solution
