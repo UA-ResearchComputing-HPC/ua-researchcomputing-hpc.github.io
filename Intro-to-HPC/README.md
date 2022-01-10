@@ -167,7 +167,7 @@ Select the relevant directory location, e.g. your home directory, and click **up
 
 Drag/drop your files, or click **Browse Files** to upload
 
-<img src="drag-drop.png" alt="drag-drop" style="margin: 3px 12px 3px 0px; box-shadow: 10px 10px 5px grey;" height="300"/> <img src="file.png" alt="file" style="margin: 3px 12px 3px 0px; box-shadow: 10px 10px 5px grey;" height="300"/> 
+<img src="drag-drop.png" alt="drag-drop" style="margin: 3px 12px 3px 0px; box-shadow: 10px 10px 5px grey;" height="200"/> <img src="file.png" alt="file" style="margin: 3px 12px 3px 0px; box-shadow: 10px 10px 5px grey;" height="200"/> 
 
 Once uploaded, your files will appear in the relevant location
 
