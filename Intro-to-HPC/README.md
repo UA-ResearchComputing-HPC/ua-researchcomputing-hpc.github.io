@@ -16,6 +16,9 @@
 * [Logging In](#logging-in)
 * [Working on the Command Line](#working-on-the-command-line)
 
+
+<h3 style="color:#FBFCFC; background-color:#34495E;"> <a href="#transferring-files" style="text-decoration=none; color:#FBFCFC;"> Transferring Files </a> </h3>
+
 <h3 style="color:#FBFCFC; background-color:#34495E;"> <a href="#submitting-a-batch-job" style="text-decoration=none; color:#FBFCFC;"> Submitting a Batch Job </a> </h3>
 
 * [Accessing Workshop Files](#accessing-workshop-files)
@@ -152,7 +155,27 @@ Once you're logged in, you can interact with the system. Some commands are provi
 <hr style="height:5px; background-color:#34495E; border:none" >
 <br>
 
-# Transferring Files
+
+<h1> <a name="transferring-files" style="text-decoration=none; color:#000000;"> Transferring Files </a> </h1>
+Uploading small files can be done through [Open Ondemand](ood.hpc.arizona.edu) by going to the **Files** dropdown. 
+Select the relevant directory location, e.g. your home directory, and click **upload**:
+
+<img src="select-home.png" alt="select-home" style="float: left; margin: 3px 12px 3px 0px; box-shadow: 10px 10px 5px grey;" width="786"/> 
+
+
+<img src="upload.png" alt="upload" style="float: left; margin: 3px 12px 3px 0px; box-shadow: 10px 10px 5px grey;" width="786"/> 
+
+Drag/drop your files, or click **Browse Files** to upload
+
+<img src="drag-drop.png" alt="drag-drop" style="float: left; margin: 3px 12px 3px 0px; box-shadow: 10px 10px 5px grey;" height="300"/> <img src="file.png" alt="file" style="float: left; margin: 3px 12px 3px 0px; box-shadow: 10px 10px 5px grey;" height="300"/> 
+
+Once uploaded, your files will appear in the relevant location
+
+<img src="test.png" alt="test" style="float: left; margin: 3px 12px 3px 0px; box-shadow: 10px 10px 5px grey;" width="786"/> 
+
+
+For larger files, see our [online documentation](https://public.confluence.arizona.edu/display/UAHPC/Transferring+Files) for better transfer strategies.
+
 
 <br>
 <hr style="height:5px; background-color:#34495E; border:none" >
