@@ -406,6 +406,7 @@ sleep 120
      * If you don't know your group's name, run the command <code>va</code> to see which groups you are a member of.
 </details>
 
+<br>
 
 ✅ **Challenge 3: Change your script so that it loads the system module python, version 3.6.5.**
 <details>
