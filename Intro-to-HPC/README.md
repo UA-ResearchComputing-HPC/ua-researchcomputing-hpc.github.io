@@ -116,7 +116,8 @@ On Windows, you will need an SSH client such as PuTTY or MobaXterm. In PuTTY, us
 
 ### Open OnDemand
 Log into [https://ood.hpc.arizona.edu/](https://ood.hpc.arizona.edu/), then select the **Clusters** dropdown tab and click **Shell Access**
-<img src="ood_shell_access.png" alt="ood_shell_access" style="margin: 3px 12px 3px 0px; box-shadow: 10px 10px 5px grey;" width="500"/>
+
+<img src="ood_shell_access.png" alt="ood_shell_access" style="margin: 3px 12px 3px 0px; box-shadow: 10px 10px 5px grey;" width="550"/>
 
 Once you're connected, type ```ocelote``` to connect to Ocelote.
 
