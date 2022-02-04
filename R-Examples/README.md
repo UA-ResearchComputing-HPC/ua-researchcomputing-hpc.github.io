@@ -7,6 +7,9 @@ A basic "Hello World!" example.
 ## [Plotting in a Batch Script](Plotting-In-R)
 Creating and saving figures as a part of your workflow is possible in a batch script. You can save your figure to a specified directory (the default is your working directory), give it a custom name, control your image quality and dimensions, and choose your output format (e.g., pdf, png, jpg, etc.). An example is included below.
 
+## [R Array Job](R-Array-Job)
+Run multiple simulations using the same R script and the same batch submission script. For more information on array jobs, see: [Array and Parallel Examples](https://ua-researchcomputing-hpc.github.io/Array-and-Parallel/)
+
 ------------
 
 [![](/Images/home.png)](https://ua-researchcomputing-hpc.github.io/) 
