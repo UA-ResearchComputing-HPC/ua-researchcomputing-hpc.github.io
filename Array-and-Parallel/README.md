@@ -25,7 +25,7 @@ Run multiple jobs where each uses a distinct combination of input parameters. Ve
 
 ## Software-Specific Array Examples
 ### [Array Job in R](/R-Examples/R-Array-Jobs/)
-Run multiple simulations using the same R script and the same batch submission script while saving the output to unique filenames.
+Run multiple simulations using the same R script and the same batch submission script while saving the output to unique filenames. Redirects to R examples.
 
 --------
 
