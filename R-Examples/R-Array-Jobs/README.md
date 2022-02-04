@@ -1,5 +1,7 @@
 # Overview
+
 [![](/Images/Download-Button.png)](r_array_example.tar.gz)
+
 In this example, we'll create an R script that generates 1000 randomized 1s and 0s, stores them as a dataframe, then saves the dataframe to an output file. We'll run this R script as an array job to simulate what a researcher might do if they were performing multiple independent simulations using the same R script.
 
 Since we're using the same file for each simulation, if we were to create a single static output filename for our ```save()``` command, each simulation would overwrite the one that came before it. To deal with this issue, we'll make use of the SLURM environment variable ```$SLURM_ARRAY_TASK_ID``` to differentiate them. 
