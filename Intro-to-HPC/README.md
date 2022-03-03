@@ -2,7 +2,9 @@
 
 <br> 
 
-[![](/Images/Download-Button.png)](intro-to-hpc.tar.gz)[![](/Images/download-pdf.png)](IntroToHPC.pdf)
+[![](/Images/Download-Button.png)](intro-to-hpc.tar.gz)
+
+To access the slides and informatio on this workshop, see our [Training Documentation](https://public.confluence.arizona.edu/display/UAHPC/Training#Training-IntroductiontoHPC).
 
 <br> 
 
