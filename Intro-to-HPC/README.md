@@ -4,7 +4,7 @@
 
 [![](/Images/Download-Button.png)](intro-to-hpc.tar.gz)
 
-To access the slides and informatio on this workshop, see our [Training Documentation](https://public.confluence.arizona.edu/display/UAHPC/Training#Training-IntroductiontoHPC).
+To access the slides and information on this workshop, see our [Training Documentation](https://public.confluence.arizona.edu/display/UAHPC/Training#Training-IntroductiontoHPC).
 
 <br> 
 
