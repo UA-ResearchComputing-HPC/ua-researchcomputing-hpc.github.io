@@ -424,7 +424,7 @@ sleep 120
 #SBATCH --nodes=1 
 #SBATCH --ntasks=1
 #SBATCH --time=00:10:00 
-module load python/3.6.5
+module load python/3.6/3.6.5
 </code>
 </pre>
      * If you don't know your group's name, run the command <code>va</code> to see which groups you are a member of.
