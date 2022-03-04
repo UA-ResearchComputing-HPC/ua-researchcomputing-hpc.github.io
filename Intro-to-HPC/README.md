@@ -196,12 +196,6 @@ To access the files you need for this workshop, use the following commands:
 ```
 mkdir intro-to-hpc
 cd intro-to-hpc
-cp /xdisk/chrisreidy/workshops/sample_slurm.script .
-```
-Note, the ```.``` at the end. This is shorthand for your current working directory.
-
-If you get a permission denied message using cp, you likely haven’t been added to the group chrisreidy. If this is the case, stay in your intro-to-hpc directory and use:
-```
 wget https://ua-researchcomputing-hpc.github.io/Intro-to-HPC/intro-to-hpc.tar.gz
 tar xzvf intro-to-hpc.tar.gz --strip-components=1
 rm intro-to-hpc.tar.gz
