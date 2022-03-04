@@ -42,11 +42,8 @@ To begin, start a terminal to log into the system and copy the necessary files i
 ssh your_netid@hpc.arizona.edu
 shell
 ocelote
-mkdir intro_to_hpc
-cd intro_to_hpc
-cp /xdisk/chrisreidy/workshops/* .
 ```
-If you get a permission denied message using ```cp```, you likely haven't been added to the group ```chrisreidy```. If this is the case, stay in your ```intro_to_hpc``` directory and use:
+Now, to download the example, use:
 ```
 wget https://ua-researchcomputing-hpc.github.io/Intro-to-Machine-Learning/intro-to-ML.tar.gz
 tar xzvf intro-to-ML.tar.gz --strip-components=1
