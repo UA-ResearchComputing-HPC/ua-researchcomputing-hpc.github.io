@@ -3,27 +3,47 @@
 [![](/Images/Download-Button.png)](JupyterExample.tar.gz)
 
 # Overview
-Jupyter notebooks are available to HPC users through our [Open OnDemand web interface](https://ood.hpc.arizona.edu/). This is a great, user-friendly tool and works well for many types of analyses. However, there may be some cases when 
+> If you have never run a batch job before, see our [Quick Start Guide](https://public.confluence.arizona.edu/display/UAHPC/Puma+Quick+Start) for a walkthrough. We also have a [video recording of our Intro to HPC workshop](https://public.confluence.arizona.edu/display/UAHPC/Training#Training-IntroductiontoHPC) that goes over system use and batch scripts. Intro to HPC also comes with a [companion page](https://ua-researchcomputing-hpc.github.io/Intro-to-HPC/).
 
-# Example Notebook
-The code used to generate the histogram in this example was borrowed from [matplotlib's documentation here](https://matplotlib.org/stable/gallery/lines_bars_and_markers/filled_step.html#sphx-glr-gallery-lines-bars-and-markers-filled-step-py).
+Jupyter notebooks are available to HPC users through our [Open OnDemand web interface](https://ood.hpc.arizona.edu/). This is a great, user-friendly tool and works well for many types of analyses. However, there may be some cases when it might be advantageous to run jobs in batch instead. For example, if a job takes several hours or days to complete, it might be inconvenient to have to keep your computer and browser active for the duration of the run. Even worse, if your job has been running for a long time and you lose your connection, you might have to start all over again. 
 
-Say we have some analysis that generates an image as part of its execution, but takes several hours (or days) to run.  
+Batch jobs, on the other hand, are automated by the system and allow you to log out of HPC, close your computer, and walk away without interrupting your work. You can even request email notifications to be sent when your job is complete (do not do this for array jobs!). 
+
+In this example, we'll start with a Jupyter notebook that generates an image. To convert this workflow into something that can be run in batch:
+1. Edit your notebook to save images to output files instead of displaying them (if applicable)
+2. Install Jupyter notebook extensions in an interactive terminal session
+3. Convert your notebook to a python script
+4. Write a batch script
+5. Submit your job
+
+# Editing the Notebook
+> The code used to generate the histogram in this example was borrowed from [matplotlib's documentation](https://matplotlib.org/stable/gallery/lines_bars_and_markers/filled_step.html#sphx-glr-gallery-lines-bars-and-markers-filled-step-py).
+
+Let's say we have a Jupyter notebook saved in one of our directories on HPC called ```Hist-Plot.ipynb```. We can open this file by starting a Jupyter Notebook session through Open OnDemand under [Interactive Apps](https://public.confluence.arizona.edu/display/UAHPC/Open+On+Demand#OpenOnDemand-InteractiveGraphicalApplications). 
 
 <img src="Jupyter-file.png" alt="Jupyter-file" width="950"/>
 
+The file in this example generates an image using matplotlib and displays it to the screen using ```plt.show()```
+
+
 <img src="Example-output.png" alt="Example-output" width="950"/>
 
-Change ```plt.show()``` to ```plt.savefig('Hist-Plot.png', bbox_inches='tight')``` and save
+
+If we try running this script in an environment where images cannot be forwarded to our screen (e.g., in batch), we will not receive our image at the end of the run. 
+
+To ensure that we get our results, we'll change ```plt.show()``` to ```plt.savefig('Hist-Plot.png', bbox_inches='tight')```. This will save our image to a PNG file with the name ```Hist-Plot.png```. The second argument ```bbox_inches='tight'``` is optional and trims excess whitespace. 
+
+Once the changes have been made, we'll save the file using **Save and Checkpoint**. 
+
 
 <img src="save-update.png" alt="save-update" width="450"/>
 
 # Install Jupyter Notebook Extensions
-Log into HPC in a terminal session 
+The next step is to install Jupyter Notebook Extensions. This gives us a handy command we can use to convert Jupyter Notebooks into plain Python scripts. 
 
-https://public.confluence.arizona.edu/display/UAHPC/System+Access#SystemAccess-CommandLine/TerminalAccess
-https://public.confluence.arizona.edu/display/UAHPC/System+Access#SystemAccess-TerminalAccess
-https://public.confluence.arizona.edu/display/UAHPC/Running+Jobs+with+SLURM#RunningJobswithSLURM-interactive-jobsInteractiveJobs
+To do this log into a terminal session and connect to HPC. This can either be done from your [local workstation using an ssh client](https://public.confluence.arizona.edu/display/UAHPC/System+Access#SystemAccess-CommandLine/TerminalAccess) or through an [Open Ondemand terminal session](https://public.confluence.arizona.edu/display/UAHPC/System+Access#SystemAccess-TerminalAccess). 
+
+Next, start an [interactive session](https://public.confluence.arizona.edu/display/UAHPC/Running+Jobs+with+SLURM#RunningJobswithSLURM-interactive-jobsInteractiveJobs) by using the command ```interactive```. This will give you access to system modules. To install the Jupyter extensions, use the following:
 
 ```
 (elgato) [netid@wentletrap JupyterExample]$ interactive
