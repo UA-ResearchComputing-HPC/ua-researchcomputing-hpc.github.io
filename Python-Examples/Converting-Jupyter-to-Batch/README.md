@@ -39,6 +39,7 @@ Once the changes have been made, we'll save the file using **Save and Checkpoint
 <img src="save-update.png" alt="save-update" width="450"/>
 
 # Install Jupyter Notebook Extensions
+
 The next step is to install Jupyter Notebook Extensions. This gives us a handy command we can use to convert Jupyter Notebooks into plain Python scripts. 
 
 To do this log into a terminal session and connect to HPC. This can either be done from your [local workstation using an ssh client](https://public.confluence.arizona.edu/display/UAHPC/System+Access#SystemAccess-CommandLine/TerminalAccess) or through an [Open Ondemand terminal session](https://public.confluence.arizona.edu/display/UAHPC/System+Access#SystemAccess-TerminalAccess). 
@@ -53,8 +54,11 @@ Next, start an [interactive session](https://public.confluence.arizona.edu/displ
 [netid@cpu27 JupyterExample]$ jupyter contrib nbextension install --user
 [netid@cpu27 JupyterExample]$ jupyter nbextensions_configurator enable --user
 ```
+This will install the relevant files and dependencies in the hidden directories ```~/.local``` and ```~/.jupyter```.
 
 # Convert Notebook to Python Script
+
+The Jupyter extensions we installed in the previous step give us access to the command ```jupyter nbconvert --to script``` which allows us to convert notebook files to plain python syntax. When you convert a ```.ipynb``` file, a second file will be created with the extension ```.py```. An example is shown below: 
 ```
 [netid@cpu27 JupyterExample]$ ls
 Hist-Plot.ipynb
@@ -66,6 +70,7 @@ Hist-Plot.ipynb  Hist-Plot.py
 ```
 
 # Create a Batch Script
+Next, we need a batch script to execute our script. Create a file using ```touch Hist-Plot.slurm``` and open it in your favorite text editor. 
 ```
 #!/bin/bash
 #SBATCH --job-name=Hist-Plot
