@@ -91,12 +91,17 @@ Submitted batch job 288817
 ```
 
 # Check Output
+You'll find the generated slurm output files in the directory where you submitted your job. In this example, we'll also find the histogram we generated saved as a PNG in that same directory. 
 ```
 [netid@cpu27 JupyterExample]$ ls
 Hist-Plot.ipynb  slurm-288817.out  Hist-Plot.png  Hist-Plot.py  Hist-Plot.slurm
 ```
-<img src="check-files-in-ood.png" alt="check-files-in-ood" width="950"/>
+
+An easy method to view the image is through Open OnDemand using the [file browser](https://public.confluence.arizona.edu/display/UAHPC/Open+On+Demand#OpenOnDemand-FileBrowser) which will allow you to easily navigate the directories you have access to on HPC. To view the histogram, find the directory where your batch, Python, and Jupyter scripts are (either in your ```/home```, ```/groups``` or ```/xdisk```), click the three dots next to Hist-Plot.png, and select View.
+
 
 <img src="view-png-in-ood.png" alt="view-png-in-ood.png" width="950"/>
+
+This will open a new window where you should see the following:
 
 <img src="batch-figure-output.png" alt="batch-figure-output" width="950"/>
