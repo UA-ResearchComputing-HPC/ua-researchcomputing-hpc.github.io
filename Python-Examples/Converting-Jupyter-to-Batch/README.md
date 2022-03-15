@@ -4,15 +4,15 @@
 
 # Overview
 
-Jupyter notebooks are available through our [Open OnDemand web interface](https://ood.hpc.arizona.edu/). This is a great, user-friendly tool and works well for many types of analyses. However, there may be some cases when it might be advantageous to run jobs in batch instead. For example, if a job takes several hours or days to complete, it might be inconvenient to have to keep your computer and browser active for the duration of the run.
+Jupyter notebooks are available through our [Open OnDemand web interface](https://ood.hpc.arizona.edu/). This is a great, user-friendly tool and works well for many types of analyses. However, there may be some cases when it might be advantageous to run jobs in batch instead. For example, if a job takes several hours or days to complete it might be inconvenient to have to keep your computer and browser active for the duration of the run.
 
-Batch jobs, on the other hand, are automated by the system and allow you to log out of HPC, close your computer, and walk away without interrupting your work. You can even request email notifications to be sent when your job is complete (do not do this for array jobs!). 
+Batch jobs, on the other hand, are automated by the system and allow you to log out, close your computer, and walk away without interrupting your work. You can even request email notifications to be sent when your job is complete (do not do this for array jobs!). 
 
 In this example, we'll start with a Jupyter notebook that generates an image. To convert this workflow into something that can be run in batch we will:
 1. Edit the notebook to save the image to an output file instead of displaying it. 
 2. Log into HPC using a terminal or SSH client.
 3. Start an interactive session.
-4. Convert the notebook to a python script.
+4. Convert the notebook to a Python script.
 5. Write and submit a batch job.
 
 # Edit the Notebook
@@ -68,7 +68,7 @@ Hist-Plot.ipynb  Hist-Plot.py
 ```
 
 # Create a Batch Script
-Next, we need a batch script. Create a file using ```touch Hist-Plot.slurm``` and open it in your favorite text editor. Add the contents (changing ```--account``` to match your group name):
+Next, we need a batch script so we can submit the job. Create a file using ```touch Hist-Plot.slurm``` and open it in your favorite text editor. Add the contents (changing ```--account``` to match your group name):
 ```
 #!/bin/bash
 #SBATCH --job-name=Hist-Plot
@@ -90,13 +90,13 @@ Submitted batch job 288817
 ```
 
 # Check Output
-You'll find the generated slurm output files in the directory where you submitted your job. In this example, the histogram we generated will also be saved in the same place. Any text output that the job generated will be saved in the text file ```slurm-$SLURM_JOB_ID.out```.
+You'll find the slurm output files in the directory where you submitted your job. In this example, the histogram we created will also be saved in the same place. Any text output from your Python script will be saved in the text file ```slurm-$SLURM_JOB_ID.out```.
 ```
 [netid@cpu27 JupyterExample]$ ls
 Hist-Plot.ipynb  slurm-288817.out  Hist-Plot.png  Hist-Plot.py  Hist-Plot.slurm
 ```
 
-An easy method to view the image is through Open OnDemand using the [file browser](https://public.confluence.arizona.edu/display/UAHPC/Open+On+Demand#OpenOnDemand-FileBrowser) which will allow you to easily navigate the directories you have access to. To view the histogram, find the relevant directory (either in your ```/home```, ```/groups``` or ```/xdisk```), click the three dots next to Hist-Plot.png, and select View.
+An easy method to view the image is through Open OnDemand using the [file browser](https://public.confluence.arizona.edu/display/UAHPC/Open+On+Demand#OpenOnDemand-FileBrowser). To view the histogram, find the relevant directory (either in your ```/home```, ```/groups``` or ```/xdisk```), click the three dots next to Hist-Plot.png, and select View.
 
 
 <img src="view-png-in-ood.png" alt="view-png-in-ood.png" width="950"/>
