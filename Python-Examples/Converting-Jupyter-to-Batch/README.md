@@ -90,7 +90,7 @@ Submitted batch job 288817
 ```
 
 # Check Output
-You'll find the generated slurm output files in the directory where you submitted your job. In this example, the histogram we generated will also be saved in the same place. 
+You'll find the generated slurm output files in the directory where you submitted your job. In this example, the histogram we generated will also be saved in the same place. Any text output that the job generated will be saved in the text file ```slurm-$SLURM_JOB_ID.out```.
 ```
 [netid@cpu27 JupyterExample]$ ls
 Hist-Plot.ipynb  slurm-288817.out  Hist-Plot.png  Hist-Plot.py  Hist-Plot.slurm
