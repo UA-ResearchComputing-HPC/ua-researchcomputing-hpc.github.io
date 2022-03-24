@@ -124,5 +124,86 @@ FROM:  nvidia/cuda:10.0-cudnn7-devel-ubuntu18.04
 > Detailed instructions on building images remotely can be found on the [Singularity Remote Builds](https://ua-researchcomputing-hpc.github.io/Singularity-Examples/Remote-Build/) page.
 Save your file and exit your text editor. Then, in an [interactive session](https://public.confluence.arizona.edu/display/UAHPC/Running+Jobs+with+SLURM#RunningJobswithSLURM-interactive-jobsInteractiveJobs), build your image using ```singularity build --remote```. If you have never built a remote image before, you will need to generate an access token. Instructions can be found in the Remote Build page linked at the start of the section above.
 ```
-[netid@cpu37 ~]$ singularity build --remote tensorflow-2.0.0-py36.sif tensorflow-2.0.0-py36.recipe 
+[netid@cpu37 ~]$ singularity build --remote tensorflow-2.0.0-py36.sif tensorflow-2.0.0-py36.recipe
+INFO:    Access Token Verified!
+INFO:    Token stored in /root/.singularity/remote.yaml
+INFO:    Remote "cloud.sylabs.io" now in use.
+INFO:    Starting build...
+
+[lots of output here]
+
+INFO:    Adding environment to container
+INFO:    Creating SIF file...
+INFO:    Build complete: /tmp/image-2285496115                                                     
+WARNING: Skipping container verification
+INFO:    Uploading 2791133184 bytes
+INFO:    Build complete: tensorflow-2.0.0-py36.sif
+[netid@cpu37 ~]$ ls
+tensorflow-2.0.0-py36.recipe  tensorflow-2.0.0-py36.sif
+```
+Once your container has been created, it's ready to use. 
+
+# Job Example
+To verify that our container is working, we'll submit a sample job to a GPU node. The flag ```--nv``` statement is required following ```singularity exec``` for any job that needs to make use of a GPU.
+
+## Batch Script
+```
+#!/bin/bash
+#SBATCH --job-name=tensorflow-test
+#SBATCH --account=YOUR_GROUP
+#SBATCH --partition=standard
+#SBATCH --ntasks=1
+#SBATCH --nodes=1
+#SBATCH --gres=gpu:1
+#SBATCH --time=0:1:0
+
+singularity exec --nv tensorflow-2.0.0-py36.sif python3 tensorflow-test.py
+```
+
+## Python Script
+```
+import tensorflow as tf
+print(tf.__version__)
+tf.test.is_gpu_available()
+```
+
+## Submitting the Job
+We'll submit the job on Ocelote since this is the cluster with the most GPU nodes:
+```
+(ocelote) [netid@junonia ~]$ sbatch tensorflow-job.slurm 
+Submitted batch job 632283
+```
+
+## Job Output
+```
+(ocelote) [netid@junonia ~]$ ls
+slurm-632283.out           tensorflow-test.py    tensorflow-2.0.0-py36.recipe
+tensorflow-2.0.0-py36.sif  tensorflow-job.slurm
+(ocelote) [netid@junonia ~]$ cat slurm-632283.out 
+2022-03-24 11:23:28.440157: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2022-03-24 11:23:28.458897: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2399790000 Hz
+2022-03-24 11:23:28.461149: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x4dc13c0 executing computations on platform Host. Devices:
+2022-03-24 11:23:28.461174: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): Host, Default Version
+2022-03-24 11:23:28.468210: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcuda.so.1
+2022-03-24 11:23:28.571222: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x3b0c4a0 executing computations on platform CUDA. Devices:
+2022-03-24 11:23:28.571256: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): Tesla P100-PCIE-16GB, Compute Capability 6.0
+2022-03-24 11:23:28.572205: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1618] Found device 0 with properties: 
+name: Tesla P100-PCIE-16GB major: 6 minor: 0 memoryClockRate(GHz): 1.3285
+pciBusID: 0000:0b:00.0
+2022-03-24 11:23:28.575237: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+2022-03-24 11:23:28.608489: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10.0
+2022-03-24 11:23:28.627334: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10.0
+2022-03-24 11:23:28.636758: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10.0
+2022-03-24 11:23:28.675334: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10.0
+2022-03-24 11:23:28.700217: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10.0
+2022-03-24 11:23:28.774516: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2022-03-24 11:23:28.776652: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1746] Adding visible gpu devices: 0
+2022-03-24 11:23:28.778499: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+2022-03-24 11:23:28.779627: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1159] Device interconnect StreamExecutor with strength 1 edge matrix:
+2022-03-24 11:23:28.779643: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1165]      0 
+2022-03-24 11:23:28.779650: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1178] 0:   N 
+2022-03-24 11:23:28.781339: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1304] Created TensorFlow device (/device:GPU:0 with 15224 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:0b:00.0, compute capability: 6.0)
+2.0.0
+True
+Detailed performance metrics for this job will be available at https://metrics.hpc.arizona.edu/#job_viewer?action=show&realm=SUPREMM&resource_id=5&local_job_id=632283 by 8am on 2022/03/25.
 ```
