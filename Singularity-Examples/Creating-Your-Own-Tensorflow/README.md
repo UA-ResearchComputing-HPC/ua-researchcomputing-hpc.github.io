@@ -121,8 +121,11 @@ FROM:  nvidia/cuda:10.0-cudnn7-devel-ubuntu18.04
 ```
 
 # Building the Image
+
 > Detailed instructions on building images remotely can be found on the [Singularity Remote Builds](https://ua-researchcomputing-hpc.github.io/Singularity-Examples/Remote-Build/) page.
+
 Save your file and exit your text editor. Then, in an [interactive session](https://public.confluence.arizona.edu/display/UAHPC/Running+Jobs+with+SLURM#RunningJobswithSLURM-interactive-jobsInteractiveJobs), build your image using ```singularity build --remote```. If you have never built a remote image before, you will need to generate an access token. Instructions can be found in the Remote Build page linked at the start of the section above.
+
 ```
 [netid@cpu37 ~]$ singularity build --remote tensorflow-2.0.0-py36.sif tensorflow-2.0.0-py36.recipe
 INFO:    Access Token Verified!
