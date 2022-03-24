@@ -12,7 +12,7 @@ The general steps to doing this are:
 In this example, we will build an image using Tensorflow 2.0.0, Cuda 10.0, and Python 3.6.
 
 # Tensorflow and Cuda
-One of the difficulties with installing Tensorflow natively on HPC is library versioning. To successfully use a GPU requires that the proper version of Cuda to be installed and this is not always possible. For example, older versions of Tensorflow require Cuda 10 and earlier and the drivers on our system do not support these.
+One of the difficulties with installing Tensorflow natively on HPC is library versioning. To successfully use a GPU requires that the proper version of Cuda be installed and this is not always possible. For example, older versions of Tensorflow require Cuda 10 and earlier which our drivers do not support.
 
 To find the Cuda you need for your image, see [Tensorflow's documentation on version compatabilities](https://www.tensorflow.org/install/source#tested_build_configurations). In this case, because we want to install Tensorflow 2.0.0, we will need to use Cuda 10.0.  
 
@@ -44,6 +44,7 @@ FROM:  nvidia/cuda:10.0-cudnn7-devel-ubuntu18.04
 The ```%post``` section contains all the commands that will be executed during the build once the base OS has been installed. This will include installing system software and libraries, downloading files, setting environment variables, pip-installing your python packages, etc. We'll start by sourcing ```/environment``` (this sets relevant default environment variables) and set any necessary paths to point the system to our Cuda libraries:
 
 ```
+  %post
   . /environment
   SHELL=/bin/bash
   CPATH="/usr/local/cuda/include:$CPATH"
@@ -76,6 +77,7 @@ Now come the pip installs. This is where you would add any Python packages you n
 ## Environment
 The last section we'll create is called ```%environment``` and contains all the environment variables that will be set at the containers runtime. There will be some overlap/redundancy with the ```%post``` section. This is because the variables set during the build stage do not carry over to runtime and the variables set in ```%environment``` will not be invoked during the build.
 ```
+  %environment
   # use bash as default shell
   SHELL=/bin/bash
   # add CUDA paths
