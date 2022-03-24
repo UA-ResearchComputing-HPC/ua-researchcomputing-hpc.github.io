@@ -13,7 +13,6 @@ A basic example demonstrating how to request a high memory node on either Ocelot
 ### [Retrieving Scratch Files](Cleanup-Tmp-Files)
 Example of using a compute node's local storage, or scratch space, during a job's execution and retrieving the output before the job's walltime limit is reached.
 
-### [Heterogeneous Jobs](Heterogeneous-Jobs)
 
 
 *****
