@@ -5,7 +5,7 @@ One option for running Tensorflow on HPC is to pull pre-built images from [Nvidi
 The general steps to doing this are:
   1. Identify which version of Tensorflow you need.
   2. Identify a compatible version of Cuda.
-  3. Find a Cuda container on DockerHub to bootstrap from.
+  3. Find a Cuda container on Docker Hub to bootstrap from.
   4. Design your recipe.
   5. Build!
 
@@ -16,7 +16,7 @@ One of the difficulties with installing Tensorflow natively on HPC is library ve
 
 To find the Cuda you need for your image, see [Tensorflow's documentation on version compatabilities](https://www.tensorflow.org/install/source#tested_build_configurations). In this case, because we want to install Tensorflow 2.0.0, we will need to use Cuda 10.0.  
 
-To build an image using Cuda 10.0, we will go to [Nvidia's Dockerhub repository](https://hub.docker.com/r/nvidia/cuda), go to the Tags tab, and search 10.0:
+To build an image using Cuda 10.0, we will go to [Nvidia's Docker Hub repository](https://hub.docker.com/r/nvidia/cuda), go to the Tags tab, and search 10.0:
 
 <img src="dockerhub-tags.png" alt="dockerhub-tags" width="800"/>
 
@@ -24,7 +24,7 @@ Tensorflow requires cuDNN libraries so we'll need to find a tag that includes th
 
 <img src="found-tag.png" alt="found-tag" width="800"/>
 
-In this case, the command is ```docker pull nvidia/cuda:10.0-cudnn7-runtime-ubuntu18.04```
+The specific command for this tag is ```docker pull nvidia/cuda:10.0-cudnn7-runtime-ubuntu18.04```
 
 # Creating Your Recipe
 
