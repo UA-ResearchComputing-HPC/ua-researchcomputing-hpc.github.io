@@ -21,6 +21,9 @@ An example of how to build your own Tensorflow image.
 ### [Simple Tensorflow Example](Tensorflow-Example)
 A machine learning example that shows how to run a Tensorflow script on an GPU node.
 
+### [Running RStudio](RStudio-Example)
+An example of how to use RStudio in an Open OnDemand Desktop session using a Singularity image. 
+
 
 *****
 [![](/Images/home.png)](https://ua-researchcomputing-hpc.github.io/) 
