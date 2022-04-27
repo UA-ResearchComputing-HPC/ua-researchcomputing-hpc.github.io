@@ -26,7 +26,7 @@ python3 hello_world.py
 ```
 
 ### Example Python Script
-```python3
+```python
 #!/usr/bin/env python3
 import os
 print("Hello world! I'm running on compute node: %s"%os.environ["HOSTNAME"])
