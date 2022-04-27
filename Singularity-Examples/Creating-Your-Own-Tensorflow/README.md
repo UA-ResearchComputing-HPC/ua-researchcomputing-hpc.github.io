@@ -207,6 +207,10 @@ pciBusID: 0000:0b:00.0
 2022-03-24 11:23:28.779650: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1178] 0:   N 
 2022-03-24 11:23:28.781339: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1304] Created TensorFlow device (/device:GPU:0 with 15224 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:0b:00.0, compute capability: 6.0)
 2.0.0
+
+*****
+[![](/Images/home.png)](https://ua-researchcomputing-hpc.github.io/) 
+[![](/Images/back.png)](../)
 True
 Detailed performance metrics for this job will be available at https://metrics.hpc.arizona.edu/#job_viewer?action=show&realm=SUPREMM&resource_id=5&local_job_id=632283 by 8am on 2022/03/25.
 ```
