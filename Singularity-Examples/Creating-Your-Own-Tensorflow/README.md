@@ -35,7 +35,7 @@ To create your definition file, navigate to your preferred directory on HPC and 
 ## Header
 First, we'll enter a header that will be used to pull Docker layers from Dockerhub. This is where you will paste in the command you copied to your clipboard. You will need to remove the ```docker pull``` at the start of the command. The header should look like:
 
-```
+```singularity
 Bootstrap: docker
 FROM:  nvidia/cuda:10.0-cudnn7-devel-ubuntu18.04 
 ```
@@ -43,7 +43,7 @@ FROM:  nvidia/cuda:10.0-cudnn7-devel-ubuntu18.04
 ## Post
 The ```%post``` section contains all the commands that will be executed during the build once the base OS has been installed. This will include installing system software and libraries, downloading files, setting environment variables, pip-installing your python packages, etc. We'll start by sourcing ```/environment``` (this sets relevant default environment variables) and set any necessary paths to point the system to our Cuda libraries:
 
-```
+```singularity
   %post
   . /environment
   SHELL=/bin/bash
@@ -54,21 +54,21 @@ The ```%post``` section contains all the commands that will be executed during t
 ```
 
 Next, we'll need to install system libraries and software using [```apt-get```](https://en.wikipedia.org/wiki/APT_(software)). This will give us access to things like ```wget``` and Python 3.6:
-```
+```singularity
   apt-get update
   apt-get install -y wget git vim build-essential cmake libgtk2.0-0 python3.6 python3.6-dev python3.6-venv python3-distutils python3-apt libgtk-3-dev xauth curl
 ```
 To install packages like Tensorflow, we'll need to install ```pip```:
-```
+```singularity
   wget https://bootstrap.pypa.io/pip/3.6/get-pip.py
   python3.6 get-pip.py
 ```
 Additionally, we'll make our lives a little easier by creating a command ```python3``` so we don't have to use ```python3.6``` whenever we want to use Python:
-```
+```singularity
 ln -s /usr/bin/python3.6 /usr/local/bin/python3
 ```
 Now come the pip installs. This is where you would add any Python packages you need. You can use pypi to find the install commands for [previous releases of tensorflow-gpu](https://pypi.org/project/tensorflow-gpu/#history) (as well as other packages). In this case, we'll install tensorflow-gpu 2.0.0 and an additional non-standard package:
-```
+```singularity
   pip install tensorflow-gpu==2.0.0
   pip install astropy 
 ```
@@ -76,7 +76,7 @@ Now come the pip installs. This is where you would add any Python packages you n
 
 ## Environment
 The last section we'll create is called ```%environment``` and contains all the environment variables that will be set at the containers runtime. There will be some overlap/redundancy with the ```%post``` section. This is because the variables set during the build stage do not carry over to runtime and the variables set in ```%environment``` will not be invoked during the build.
-```
+```singularity
   %environment
   # use bash as default shell
   SHELL=/bin/bash
@@ -89,7 +89,7 @@ The last section we'll create is called ```%environment``` and contains all the 
 ```
 
 # Full Recipe
-```
+```singularity
 Bootstrap: docker
 FROM:  nvidia/cuda:10.0-cudnn7-devel-ubuntu18.04 
 
@@ -126,7 +126,7 @@ FROM:  nvidia/cuda:10.0-cudnn7-devel-ubuntu18.04
 
 Save your file and exit your text editor. Then, in an [interactive session](https://public.confluence.arizona.edu/display/UAHPC/Running+Jobs+with+SLURM#RunningJobswithSLURM-interactive-jobsInteractiveJobs), build your image using ```singularity build --remote```. If you have never built a remote image before, you will need to generate an access token. Instructions can be found in the Remote Build page linked at the start of the section above.
 
-```
+```console
 [netid@cpu37 ~]$ singularity build --remote tensorflow-2.0.0-py36.sif tensorflow-2.0.0-py36.recipe
 INFO:    Access Token Verified!
 INFO:    Token stored in /root/.singularity/remote.yaml
@@ -150,7 +150,7 @@ Once your container has been created, it's ready to use.
 To verify that our container is working, we'll submit a sample job to a GPU node. The flag ```--nv``` statement is required following ```singularity exec``` for any job that needs to make use of a GPU.
 
 ## Batch Script
-```
+```bash
 #!/bin/bash
 #SBATCH --job-name=tensorflow-test
 #SBATCH --account=YOUR_GROUP
@@ -164,7 +164,7 @@ singularity exec --nv tensorflow-2.0.0-py36.sif python3 tensorflow-test.py
 ```
 
 ## Python Script
-```
+```python3
 import tensorflow as tf
 print(tf.__version__)
 tf.test.is_gpu_available()
@@ -172,13 +172,13 @@ tf.test.is_gpu_available()
 
 ## Submitting the Job
 We'll submit the job on Ocelote since this is the cluster with the most GPU nodes:
-```
+```console
 (ocelote) [netid@junonia ~]$ sbatch tensorflow-job.slurm 
 Submitted batch job 632283
 ```
 
 ## Job Output
-```
+```console
 (ocelote) [netid@junonia ~]$ ls
 slurm-632283.out           tensorflow-test.py    tensorflow-2.0.0-py36.recipe
 tensorflow-2.0.0-py36.sif  tensorflow-job.slurm
