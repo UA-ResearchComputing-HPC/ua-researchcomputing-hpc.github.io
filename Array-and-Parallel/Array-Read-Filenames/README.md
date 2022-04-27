@@ -6,7 +6,7 @@ If you want to run multiple jobs where each opens a different file to analyze bu
 
 ## Example
 ### Submission Script
-```
+```console
 #!/bin/bash
 #SBATCH --job-name=Array-Read-Filenames
 #SBATCH --ntasks=1
@@ -31,32 +31,32 @@ SRR305p0982.fastq
 
 ## Script Breakdown
 For each of the four subjobs, we'll make use of ```SLURM_ARRAY_TASK_ID``` to pull the line number (line numbers 1 to 4) from InputFiles:
-```
+```console
 CurrentFile="$( sed "${SLURM_ARRAY_TASK_ID}q;d" InputFiles )"
 ```
 We will print a sample command that includes our filename to verify that everything is working as expected for demonstration purposes:
-```
+```console
 echo "JOB NAME: $SLURM_JOB_NAME, JOB ID: $SLURM_JOB_ID, EXAMPLE COMMAND: ./executable -o output${SLURM_ARRAY_TASK_ID} ${CurrentFile}"
 ```
 To generate your own InputFile, you can either manually add your filenames or can automate the process, for example if you have all your files in a single location:
-```
+```console
 $ ls *fastq > InputFiles
 ```
 ## Script Submission Command:
-```
+```console
 (puma) [netid@junonia ~]$ sbatch Array-Read-Filenames.slurm 
 Submitted batch job 1694071
 ```
 ## Output Files
 Each of the subjobs in the array will output its own file of the form ```slurm-<job_id>_<array_id>.out``` as seen below:
-```
+```console
 (puma) [netid@junonia ~]$ ls *.out
 slurm-1694071_1.out  slurm-1694071_2.out  slurm-1694071_3.out
 slurm-1694071_4.out
 ```
 
 ## File Contents:
-```
+```console
 (puma) [netid@junonia ~]$ cat *.out | grep fastq
 JOB NAME: Array-Read-Filenames, JOB ID: 1694072, EXAMPLE COMMAND: ./executable -o output1 SRR2309587.fastq
 JOB NAME: Array-Read-Filenames, JOB ID: 1694073, EXAMPLE COMMAND: ./executable -o output2 SRR3050489.fastq
