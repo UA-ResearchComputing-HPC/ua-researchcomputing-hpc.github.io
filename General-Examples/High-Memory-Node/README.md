@@ -6,12 +6,12 @@ The clusters Puma and Ocelote both have high memory nodes available that offer m
 
 # Submission Script
 
-```
+```bash
 #!/bin/bash
 #SBATCH --job-name=High-Memory-Node-Job
 #SBATCH --ntasks=1
 #SBATCH --nodes=1 
-#SBATCH --constraint=hi_mem            
+#SBATCH --constraint=hi_mem
 #SBATCH --time=00:00:30   
 #SBATCH --partition=standard
 #SBATCH --account=YOUR_GROUP
@@ -22,13 +22,13 @@ echo "Memory per CPU: $SLURM_MEM_PER_CPU"
 ```
 
 # Job Submission
-```
+```console
 [netid@wentletrap ~]$ sbatch High-Memory-Node.slurm 
 Submitted batch job 2106313
 ```
 
 # Output
-```
+```console
 [netid@wentletrap ~]$ cat slurm-2106313.out 
 Running job on a high memory node!
 Hostname: r5u19n1.puma.hpc.arizona.edu
