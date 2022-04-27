@@ -9,7 +9,7 @@ relative_links:
   kramdown:
     input: GFM
     syntax_highlighter: rouge
-    style: monokai_sublime.rb
+    style: monokai
 plugins:
   - jemoji
  
