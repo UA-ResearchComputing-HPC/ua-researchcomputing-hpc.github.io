@@ -5,7 +5,7 @@
 For information on RAxML, see [the RAxML documentation](https://cme.h-its.org/exelixis/web/software/raxml/#documentation)
 
 ## Example
-```
+```bash
 #!/bin/bash
 #SBATCH --job-name=RAxML-Example
 #SBATCH --ntasks=8
@@ -35,7 +35,7 @@ This RAxML script uses 8 CPUs and sets the following parameters:
 
 
 ## Script Submission
-```
+```console
 (puma) [netid@junonia ~]$ sbatch raxml_example.slurm 
 Submitted batch job 1694264
 ```
