@@ -7,7 +7,7 @@ An earlier limitation of Singularity was the requirement for access to a root ac
 
 ## Example Recipe File
 
-```
+```singularity
 BootStrap: docker
 From: nersc/ubuntu-mpi:14.04
  
@@ -21,7 +21,7 @@ From: nersc/ubuntu-mpi:14.04
 3. From an interactive session: ```singularity remote login``` and paste in the API key
 4. In your recipe file's directory: ```singularity build --remote ./nersc.sif nersc.recipe```
 
-```
+```console
 [netid@r1u03n1 ~]$ singularity build --remote nersc.sif nersc.recipe
 INFO:    Remote "default" now in use.
 INFO:    Starting build...
@@ -32,7 +32,7 @@ INFO:    Build complete: nersc.sif
 ```
 
 ## Submission Script
-```
+```bash
 #!/bin/bash
 #SBATCH --job-name=Singularity_Docker_Pull
 #SBATCH --ntasks=1
@@ -46,13 +46,13 @@ singularity run nersc.sif
 ```
 
 ## Job Submission
-```
+```console
 [netid@r1u03n1 ~]$ sbatch remote-build-example.slurm 
 Submitted batch job 1996740
 ```
 
 ## Output
-```
+```console
 [netid@r1u03n1 ~]$ cat slurm-1996740.out 
 Hello world! This is what happens when you run the container.
 ```
