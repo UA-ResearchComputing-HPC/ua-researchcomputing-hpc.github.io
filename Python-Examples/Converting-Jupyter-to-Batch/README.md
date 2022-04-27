@@ -43,7 +43,7 @@ Logging into HPC can either be done from your [local workstation using an ssh cl
 
 Next, start an [interactive session](https://public.confluence.arizona.edu/display/UAHPC/Running+Jobs+with+SLURM#RunningJobswithSLURM-interactive-jobsInteractiveJobs) by using the command ```interactive```. This will give you access to system modules (software) on a compute node. There is a contrib module that will give you access to the software needed to convert your notebook. Load it using:
 
-```
+```console
 [netid@cpu37 JupyterExample]$ module load contrib
 [netid@cpu37 JupyterExample]$ module load bjoyce3/sarawillis/jupyter-nb-convert 
 ```
@@ -51,13 +51,13 @@ Next, start an [interactive session](https://public.confluence.arizona.edu/displ
 # Convert the Notebook to a Python Script
 
 The module we loaded in the previous step gives us access to the command ```nbconvert```:
-```
+```console
 [netid@cpu37 JupyterExample]$ type nbconvert
 nbconvert is aliased to `jupyter nbconvert --to script'
 ```
 
 When you run this command on a ```.ipynb``` file, a second file will be created with the extension ```.py```. An example is shown below: 
-```
+```console
 [netid@cpu27 JupyterExample]$ ls
 Hist-Plot.ipynb
 [netid@cpu27 JupyterExample]$ nbconvert Hist-Plot.ipynb
@@ -69,7 +69,7 @@ Hist-Plot.ipynb  Hist-Plot.py
 
 # Create a Batch Script
 Next, we need a batch script so we can submit the job. Create a file using ```touch Hist-Plot.slurm``` and open it in your favorite text editor. Add the contents (changing ```--account``` to match your group name):
-```
+```bash
 #!/bin/bash
 #SBATCH --job-name=Hist-Plot
 #SBATCH --time=00:01:00
@@ -84,14 +84,14 @@ python3 Hist-Plot.py
 
 # Submit the Job
 The job can be submitted using the standard [sbatch command](https://public.confluence.arizona.edu/display/UAHPC/Running+Jobs+with+SLURM#RunningJobswithSLURM-SLURMandSystemCommands). This will return an ID that you can use to track the job's status. 
-```
+```console
 [netid@cpu27 JupyterExample]$ sbatch Hist-Plot.slurm 
 Submitted batch job 288817
 ```
 
 # Check Output
 You'll find the slurm output files in the directory where you submitted your job. In this example, the histogram we created will also be saved in the same place. Any text output from your Python script will be saved in the text file ```slurm-$SLURM_JOB_ID.out```.
-```
+```console
 [netid@cpu27 JupyterExample]$ ls
 Hist-Plot.ipynb  slurm-288817.out  Hist-Plot.png  Hist-Plot.py  Hist-Plot.slurm
 ```
