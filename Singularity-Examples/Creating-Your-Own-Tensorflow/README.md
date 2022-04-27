@@ -214,3 +214,7 @@ pciBusID: 0000:0b:00.0
 True
 Detailed performance metrics for this job will be available at https://metrics.hpc.arizona.edu/#job_viewer?action=show&realm=SUPREMM&resource_id=5&local_job_id=632283 by 8am on 2022/03/25.
 ```
+
+*****
+[![](/Images/home.png)](https://ua-researchcomputing-hpc.github.io/) 
+[![](/Images/back.png)](../)
