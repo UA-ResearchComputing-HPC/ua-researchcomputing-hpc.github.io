@@ -6,7 +6,7 @@ If you want to run multiple jobs where each opens a different file to analyze bu
 
 ## Example
 ### Submission Script
-```console
+```bash
 #!/bin/bash
 #SBATCH --job-name=Array-Read-Filenames
 #SBATCH --ntasks=1
@@ -22,7 +22,7 @@ echo "JOB NAME: $SLURM_JOB_NAME, JOB ID: $SLURM_JOB_ID, EXAMPLE COMMAND: ./execu
 
 ### Input File
 For this example, you'll want to have a file called InputFiles in your working directory. This will contain one filename per line. Contents:
-```
+```text
 SRR2309587.fastq
 SRR3050489.fastq
 SRR305356.fastq
@@ -31,11 +31,11 @@ SRR305p0982.fastq
 
 ## Script Breakdown
 For each of the four subjobs, we'll make use of ```SLURM_ARRAY_TASK_ID``` to pull the line number (line numbers 1 to 4) from InputFiles:
-```console
+```bash
 CurrentFile="$( sed "${SLURM_ARRAY_TASK_ID}q;d" InputFiles )"
 ```
 We will print a sample command that includes our filename to verify that everything is working as expected for demonstration purposes:
-```console
+```bash
 echo "JOB NAME: $SLURM_JOB_NAME, JOB ID: $SLURM_JOB_ID, EXAMPLE COMMAND: ./executable -o output${SLURM_ARRAY_TASK_ID} ${CurrentFile}"
 ```
 To generate your own InputFile, you can either manually add your filenames or can automate the process, for example if you have all your files in a single location:
