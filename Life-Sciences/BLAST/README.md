@@ -13,7 +13,7 @@ For more information on BLAST, see:
 ## Example
 
 To run this example, click the link above to download the tar file and unpack it in your HPC account. Inside, you will find ```blast_example.slurm```. This script requires minimal edits to run. Replace ```YOUR_GROUP``` with your own group's name (this can be found using the command ```va``` if you are unsure).
-```
+```bash
 #!/bin/bash
 #SBATCH --job-name=BLAST-Example
 #SBATCH --ntasks=4
@@ -28,13 +28,13 @@ time blastp -db ./human.1.protein.faa -query query.faa -out sample_blast_run.out
 ```
 
 ## Script Submission
-```
+```console
 (puma) [netid@junonia ~]$ sbatch example_blast_job.slurm
 Submitted batch job 1694194
 ```
 
 ## Output files
-```
+```console
 (puma) [netid@junonia ~]$ ls *.out *human*.faa.*
 sample_blast_run.out     slurm-1694194.out        human.1.protein.faa.pdb
 human.1.protein.faa.phr  human.1.protein.faa.pin  human.1.protein.faa.pot
