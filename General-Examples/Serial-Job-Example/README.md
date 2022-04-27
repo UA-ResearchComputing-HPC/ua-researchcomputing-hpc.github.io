@@ -11,7 +11,7 @@ To run the script, replace ```YOUR_GROUP``` with the name of your PI's group on 
 
 
 ### Submission Script
-```
+```bash
 #!/bin/bash
 
 #SBATCH --job-name=Sample_Slurm_Job
@@ -26,14 +26,14 @@ python3 hello_world.py
 ```
 
 ### Example Python Script
-```
+```python3
 #!/usr/bin/env python3
 import os
 print("Hello world! I'm running on compute node: %s"%os.environ["HOSTNAME"])
 ```
 
 ### Example Job Submission
-```
+```console
 (ocelote) [netid@junonia ~]$ ls
 hello_world.py  serial-job.slurm
 (ocelote) [netid@junonia ~]$ sbatch serial-job.slurm 
@@ -41,7 +41,7 @@ Submitted batch job 73224
 ```
 
 ### Output
-```
+```console
 (ocelote) [netid@junonia ~]$ ls
 slurm-73224.out  hello_world.py  serial-job.slurm
 (ocelote) [netid@junonia ~]$ cat slurm-73224.out 
