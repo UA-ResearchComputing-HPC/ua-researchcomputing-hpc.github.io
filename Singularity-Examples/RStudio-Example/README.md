@@ -7,25 +7,25 @@ To do this, log into HPC using an [Open OnDemand](https://ood.hpc.arizona.edu/) 
 In the terminal, make an RStudio directory where all of the necessary files will be stored. In this example, we'll be working in our home directory and will pull an RStudio image from Dockerhub to use as a test. If you're interested, you can find different RStudio images under [rocker in Dockerhub](https://hub.docker.com/u/rocker).
 
 ```console
-(puma) [netid@gpu22 ~]$ mkdir $HOME/RStudio
-(puma) [netid@gpu22 ~]$ cd $HOME/RStudio
-(puma) [netid@gpu22 RStudio]$ singularity pull ./geospatial.sif docker://rocker/geospatial.sif
+[netid@gpu22 ~]$ mkdir $HOME/RStudio
+[netid@gpu22 ~]$ cd $HOME/RStudio
+[netid@gpu22 RStudio]$ singularity pull ./geospatial.sif docker://rocker/geospatial.sif
 ```
 
 Next, create the necessary directories RStudio will use to generate temporary files. You will also generate a [secure cookie key](https://docs.rstudio.com/ide/server-pro/1.2.1047-1/load-balancing.html).
 
 ```console
-(puma) [netid@gpu22 RStudio]$ TMPDIR=$HOME/RStudio/rstudio-tmp
-(puma) [netid@gpu22 RStudio]$ mkdir -p $TMPDIR/tmp/rstudio-server
-(puma) [netid@gpu22 RStudio]$ uuidgen > $TMPDIR/tmp/rstudio-server/secure-cookie-key
-(puma) [netid@gpu22 RStudio]$ chmod 600 $TMPDIR/tmp/rstudio-server/secure-cookie-key
-(puma) [netid@gpu22 RStudio]$ mkdir -p $TMPDIR/var/{lib,run}
+[netid@gpu22 RStudio]$ TMPDIR=$HOME/RStudio/rstudio-tmp
+[netid@gpu22 RStudio]$ mkdir -p $TMPDIR/tmp/rstudio-server
+[netid@gpu22 RStudio]$ uuidgen > $TMPDIR/tmp/rstudio-server/secure-cookie-key
+[netid@gpu22 RStudio]$ chmod 600 $TMPDIR/tmp/rstudio-server/secure-cookie-key
+[netid@gpu22 RStudio]$ mkdir -p $TMPDIR/var/{lib,run}
 ```
 
 Next, create a file in your RStudio directory called ```rserver.sh``` and make it an executable:
 ```console
-(puma) [netid@gpu22 RStudio]$ touch rserver.sh
-(puma) [netid@gpu22 RStudio]$ chmod u+x rserver.sh
+[netid@gpu22 RStudio]$ touch rserver.sh
+[netid@gpu22 RStudio]$ chmod u+x rserver.sh
 ```
 Open the file in your favorite editor and enter the content below. Modify the variables under USER OPTIONS to match your account if necessary. You can change PASSWORD to any password you'd like to use. Once you've entered the contents, save and exit:
 ```bash
@@ -44,7 +44,7 @@ PASSWORD=$PASSWORD singularity exec -B $TMPDIR/var/lib:/var/lib/rstudio-server -
 ```
 Now, in your desktop session's terminal, execute the rserver.sh script using:
 ```console
-(puma) [netid@gpu22 RStudio]$ ./rserver.sh
+[netid@gpu22 RStudio]$ ./rserver.sh
 ```
 <img src="Screen Shot 2022-04-18 at 11.17.25 AM.png" alt="execute-rserver" width="600"/> 
 
