@@ -27,7 +27,7 @@ Once the process is complete, a directory with its own nested bin and lib direct
 
 ## Python Script
 A simple python script that tests whether a virtual environment is active and reports back to the user. 
-```python3
+```python
 #!/usr/bin/env python3
 
 import os
