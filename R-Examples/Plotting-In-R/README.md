@@ -7,7 +7,7 @@ You don't need to be in an interactive session to view and save figures. In a ba
 # Submission Script
 
 To run your R script as a batch job, use ```Rscript``` instead of ```R``` which is used for interactive sessions. 
-```
+```console
 #!/bin/bash
 #SBATCH --job-name=R-Plotting-Job
 #SBATCH --ntasks=1
@@ -21,7 +21,7 @@ Rscript example.r
 ```
 
 # R Script
-```
+```R
 print ("In R Script. Plotting...")
 x <- seq(-pi,pi,0.1)
 png("rplot.png") 
@@ -30,12 +30,12 @@ dev.off()
 ```
 
 # Job Submission
-```
+```console
 [netid@wentletrap ~]$ sbatch submit_r_script.slurm 
 Submitted batch job 53337
 ```
 # Output
-```
+```console
 [netid@wentletrap ~]$ ls
 slurm-53337.out  rplot.png  example.r  submit_r_script.slurm
 [netid@wentletrap ~]$ cat slurm-53337.out 
