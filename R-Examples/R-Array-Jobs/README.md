@@ -42,7 +42,7 @@ save(df, file = filename)
 ```
 
 # Submission Script
-```console
+```bash
 #!/bin/bash
 #SBATCH --account=your_group_here
 #SBATCH --partition=standard
