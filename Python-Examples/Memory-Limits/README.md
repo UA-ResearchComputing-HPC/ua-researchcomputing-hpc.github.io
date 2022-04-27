@@ -6,7 +6,7 @@ Sometimes, jobs use more memory than they've been allotted and are killed by the
 
 # Python Script
 This example will use the ```resource``` package to set the memory limits for the job. The ```tracemalloc``` package is also used to collected the memory usage information which is then reported back to the user 
-```
+```python3
 #!/usr/bin/env python3
 
 import resource, sys, tracemalloc, time
@@ -34,7 +34,7 @@ if __name__ == '__main__':
 ```
 
 # Submission Script
-```
+```bash
 #!/bin/bash
 #SBATCH --job-name=Sample_Mem_Job
 #SBATCH --ntasks=1
@@ -49,13 +49,13 @@ python3 memory-limits.py
 ```
 
 # Submit the Job
-```
+```console
 [netid@wentletrap ~]$ sbatch memory-limits.slurm 
 Submitted batch job 2105076
 ```
 
 # Output
-```
+```console
 [netid@wentletrap ~]$ cat slurm-2105076.out 
 populating list with 10000 elements
 Current memory usage is 0.363322MB; Peak was 0.363446MB
