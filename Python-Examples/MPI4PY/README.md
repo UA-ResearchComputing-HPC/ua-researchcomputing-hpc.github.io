@@ -13,7 +13,7 @@ To build ```mpi4py```, you will need to be in an interactive session. From there
 ```
 
 # Python Script
-```python3
+```python
 #!/usr/bin/env python3
 
 from mpi4py import MPI
