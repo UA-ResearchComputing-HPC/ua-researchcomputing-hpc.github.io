@@ -12,7 +12,7 @@ etc.
 
 
 ### Submission Script
-```
+```console
 #!/bin/bash
 #SBATCH --job-name=Array-Read-Parameters
 #SBATCH --ntasks=1
@@ -42,22 +42,22 @@ job10_param1 job10_param2 job10_param3
 
 ## Script Breakdown
 The line number that corresponds with the job's ```SLURM_ARRAY_TASK_ID``` is read in and parsed to extract the input parameters. The parameters here should be space-delimited (of course, you can modify your script to change these specifications). There are three parameters per line that are assigned to the variables on the left:
-```
+```console
 read first_parameter second_parameter third_parameter <<< $( sed "${SLURM_ARRAY_TASK_ID}q;d" InputParameters )
 ```
 
 A sample command is printed along with job information for demonstration purposes:
-```
+```console
 echo "Job ID: $SLURM_JOB_ID ; Host Node : $HOSTNAME ; Sample Command : ./executable $first_parameter $second_parameter $third_parameter"
 ```
 
 ## Script Submission Command
-```
+```console
 (puma) [netid@junonia ~]$ sbatch Array-Read-Parameters.slurm 
 Submitted batch job 1694093
 ```
 ## Output Files
-```
+```console
 (puma) [netid@junonia ~]$ ls *.out
 slurm-1694093_10.out  slurm-1694093_1.out  slurm-1694093_2.out
 slurm-1694093_3.out   slurm-1694093_4.out  slurm-1694093_5.out
@@ -65,7 +65,7 @@ slurm-1694093_6.out   slurm-1694093_7.out  slurm-1694093_8.out
 slurm-1694093_9.out
 ```
 ## File Contents
-```
+```console
 (puma) [netid@junonia ~]$ cat *.out | grep param
 Job ID: 1694093 ; Host Node : r1u03n2 ; Sample Command : ./executable job10_param1 job10_param2 job10_param3
 Job ID: 1694094 ; Host Node : r1u03n1 ; Sample Command : ./executable job1_param1 job1_param2 job1_param3
