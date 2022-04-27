@@ -164,7 +164,7 @@ singularity exec --nv tensorflow-2.0.0-py36.sif python3 tensorflow-test.py
 ```
 
 ## Python Script
-```python3
+```python
 import tensorflow as tf
 print(tf.__version__)
 tf.test.is_gpu_available()
