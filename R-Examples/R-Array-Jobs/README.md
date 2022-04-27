@@ -11,11 +11,11 @@ As a note: if you haven't worked with array jobs before, [Basic Array Jobs](http
 
 # R Script
 This script is designed to be excuted using the following syntax:
-```
+```console
 Rscript r_array_example.R $SLURM_ARRAY_TASK_ID
 ```
 The use of ```commandArgs()``` is to pull in that task ID to our R script so that we can use it in our output filenames.
-```
+```R
 # We'll pull in any command line arguments used in executing this script.
 # This is to grab the SLURM_ARRAY_TASK_ID that's associated with this particular
 # array subjob. We'll use this integer to differentiate save files so multiple
@@ -42,7 +42,7 @@ save(df, file = filename)
 ```
 
 # Submission Script
-```
+```console
 #!/bin/bash
 #SBATCH --account=your_group_here
 #SBATCH --partition=standard
@@ -57,13 +57,13 @@ Rscript save_example.R $SLURM_ARRAY_TASK_ID
 ```
 
 # Job Submission
-```
+```console
 [netid@cpu4 ~]$ sbatch r_array_example.slurm 
 Submitted batch job 260764
 ```
 
 # Output
-```
+```console
 [netid@cpu4 ~]$ cat slurm-260764_* | grep Simulation
 [1] "Simulation complete. Saving dataframe to filename: random_sample_df_run1.rda"
 [1] "Simulation complete. Saving dataframe to filename: random_sample_df_run2.rda"
