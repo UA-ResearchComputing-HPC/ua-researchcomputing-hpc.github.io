@@ -9,7 +9,7 @@ Sometimes you need to run a *lot* of jobs. More than can be reasonably accomplis
 
 ## Example
 
-```
+```bash
 #!/bin/bash
 #SBATCH --job-name=Sample_Array_With_GNU_Parallel
 #SBATCH --ntasks=94
@@ -26,34 +26,41 @@ seq $(($SLURM_ARRAY_TASK_ID*$BLOCK_SIZE-$BLOCK_SIZE+1)) $(($SLURM_ARRAY_TASK_ID*
 
 ## Script Breakdown
 Like with the basic parallel example, GNU Parallel is accessible as a module. The general goal here for illustration purposes is to set up a "block size". This is the number of tasks GNU Parallel will be executing in each subjob
-```
+```bash
 BLOCK_SIZE=200
 ```
-In this case, we're asking for 200 tasks per subjob and since we're submitting an array job, that totals 400 tasks. The array indices then used to differentiate tasks. ```seq n m``` generates a sequence of integers from ```n``` to ```m``` (inclusive), so we're using this with some arithmetic below:
-```
-seq $(($SLURM_ARRAY_TASK_ID*$BLOCK_SIZE-$BLOCK_SIZE+1)) $(($SLURM_ARRAY_TASK_ID*$BLOCK_SIZE))
-```
+In this case, we're asking for 200 tasks per subjob and since we're submitting an array job, that totals 400 tasks. The array indices then used to differentiate tasks. ```seq n m``` generates a sequence of integers from ```n``` to ```m``` (inclusive).
+
 
 ```SLURM_ARRAY_TASK_ID``` is either 1 or 2, depending on the subjob, so combined with ```BLOCK_SIZE```:
 
-**Subjob 1**: ```seq $(($SLURM_ARRAY_TASK_ID*$BLOCK_SIZE-$BLOCK_SIZE+1)) $(($SLURM_ARRAY_TASK_ID*$BLOCK_SIZE))```=```seq 1*200-200+1 1*200```=```seq 1 200```
-**Subjob 2**: ```seq $(($SLURM_ARRAY_TASK_ID*$BLOCK_SIZE-$BLOCK_SIZE+1)) $(($SLURM_ARRAY_TASK_ID*$BLOCK_SIZE))```=```seq 2*200-200+1 2*200```=```seq 201 400```
+**Subjob 1**: 
+```bash
+seq $(($SLURM_ARRAY_TASK_ID*$BLOCK_SIZE-$BLOCK_SIZE+1)) $(($SLURM_ARRAY_TASK_ID*$BLOCK_SIZE))
+# Doing the math --> seq 1*200-200+1 1*200 --> seq 1 200
+```
+
+**Subjob 2**: 
+```bash 
+seq $(($SLURM_ARRAY_TASK_ID*$BLOCK_SIZE-$BLOCK_SIZE+1)) $(($SLURM_ARRAY_TASK_ID*$BLOCK_SIZE))
+# Doing the math --> seq 2*200-200+1 2*200 --> seq 201 400
+```
 
 ## Script Submission Command
-```
+```console
 (puma) [netid@junonia ~]$ sbatch Array-and-Parallel.slurm 
 Submitted batch job 1693973
 ```
 
 ## Output Files
-```
+```console
 (puma) [netid@junonia ~]$ ls *.out
 slurm-1693973_1.out  slurm-1693973_2.out
 ```
 
 ## File Contents
 A total of 400 tasks were executed using an array job with two subjobs on two nodes, r2u07n1 and r2u13n2. To view the full contents of the output file, download the example above. 
-```
+```console
 (puma) [netid@junonia ~]$ head *.out
 ==> slurm-1693973_1.out <==
 JOB ID: 1693974 HOST NODE: r2u13n2 EXAMPLE COMMAND: ./executable input_1
