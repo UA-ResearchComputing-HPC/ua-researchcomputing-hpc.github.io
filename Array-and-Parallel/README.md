@@ -34,6 +34,9 @@ Run multiple simulations using the same R script and the same batch submission s
 ### [Basic GNU Parallel Job](Basic-Parallel-Job)
 Run multiple tasks on a single node without using an array job. Tasks that are not run immediately due to space restrictions are queued and are automatically executed as space becomes available. The parallelization was accomplished using [GNU Parallel](https://www.gnu.org/software/parallel/).
 
+### [Parallel Processing in Python with Multiprocessing](https://ua-researchcomputing-hpc.github.io/Python-Examples/Multiprocessing/)
+The python multiprocessing package is a popular way to spread a workflow over multiple CPUs. This example demonstrates how to assign multiple CPUs to a SLURM job and then utilize them in a multiprocessing python job.
+
 ---------
 
 # Combining Parallel and Array Jobs
