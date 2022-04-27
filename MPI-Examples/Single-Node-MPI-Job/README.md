@@ -7,7 +7,7 @@ Note: the C file can also be compiled manually in an interactive session.
 
 ## Example
 
-```
+```bash
 #!/bin/bash
 #SBATCH --job-name=Single-Node-MPI-Job
 #SBATCH --ntasks=30
@@ -23,7 +23,7 @@ mpicc -o hello_world hello_world.c
 
 ## Companion MPI Script
 The following C script was used to create the executable for this workflow. It is included in the example available for download above
-```
+```c
 #include <mpi.h>
 #include <stdio.h>
 
@@ -42,25 +42,25 @@ int main(int argc, char** argv) {
 }
 ```
 To compile the script manually, start an interactive terminal session using ```interactive```, then:
-```
+```bash
 module load gnu8 openmpi3
 mpicc -o hello_world hello_world.c
 ```
 ## Script Submission
-```
+```console
 (puma) [netid@junonia ~]$ sbatch Single-Node-MPI-Job.slurm 
 Submitted batch job 1694351
 ```
 
 ## Output Files
-```
+```console
 (puma) [netid@junonia ~]$ ls *.out
 slurm-1694351.out
 ```
 Additionally, the executable ```hello_world``` will be generated and stored in your working directory
 
 ## File Contents
-```
+```console
 (puma) [netid@junonia ~]$ head slurm-1694351.out 
 Hello world from node r2u05n1.puma.hpc.arizona.edu. My rank is 28 out of 30 processors
 Hello world from node r2u05n1.puma.hpc.arizona.edu. My rank is 8 out of 30 processors
