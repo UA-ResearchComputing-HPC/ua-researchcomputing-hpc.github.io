@@ -6,7 +6,7 @@ Sometimes, jobs use more memory than they've been allotted and are killed by the
 
 # Python Script
 This example will use the ```resource``` package to set the memory limits for the job. The ```tracemalloc``` package is also used to collected the memory usage information which is then reported back to the user 
-```python3
+```python
 #!/usr/bin/env python3
 
 import resource, sys, tracemalloc, time
