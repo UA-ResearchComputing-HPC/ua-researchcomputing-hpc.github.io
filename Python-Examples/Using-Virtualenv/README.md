@@ -18,7 +18,7 @@ To begin, start an interactive session. This can be easily done by running ```in
 
 Once the process is complete, a directory with its own nested bin and lib directories will be available in the path specified. In the bin, there's a script called ```activate``` that you can source to load the environment. Once your environment is active, you can pip install custom packages. Once they're installed, they will only be available while the environment is active. In this example, we'll install the emoji package for demonstration purposes.
 
-```
+```console
 [netid@r2u05n1 ~]$ module load python/3.6
 [netid@r2u05n1 ~]$ virtualenv --system-site-packages my_environment
 [netid@r2u05n1 ~]$ source my_environment/bin/activate
@@ -27,7 +27,7 @@ Once the process is complete, a directory with its own nested bin and lib direct
 
 ## Python Script
 A simple python script that tests whether a virtual environment is active and reports back to the user. 
-```
+```python3
 #!/usr/bin/env python3
 
 import os
@@ -56,7 +56,7 @@ else:
 
 ## Submission Script
 In this SLURM script, we'll try running our python script with and without our virtual environment activated.
-```
+```bash
 #!/bin/bash
 #SBATCH --job-name=Sample_venv_Job
 #SBATCH --ntasks=1
@@ -77,13 +77,13 @@ python3 myscript.py
 ```
 
 ## Submit the Job
-```
+```console
 [netid@junonia ~]$ sbatch myenv.slurm 
 Submitted batch job 174168
 ```
 
 ## Output
-```
+```console
 [netid@wentletrap ~]$ cat slurm-174168.out 
 
 First, we'll test the script without activating our environment:
