@@ -9,7 +9,7 @@ The Python multiprocessing package is a popular way to distribute a workflow ove
 For more information on the multiprocessing package, see the [Python documentation](https://docs.python.org/3/library/multiprocessing.html).
 
 ## Python Script
-```python3
+```python
 #!/usr/bin/env python3
 
 import os, time
