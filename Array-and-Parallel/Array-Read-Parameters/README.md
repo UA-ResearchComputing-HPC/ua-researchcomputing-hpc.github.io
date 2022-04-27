@@ -12,7 +12,7 @@ etc.
 
 
 ### Submission Script
-```console
+```bash
 #!/bin/bash
 #SBATCH --job-name=Array-Read-Parameters
 #SBATCH --ntasks=1
@@ -27,7 +27,7 @@ echo "Job ID: $SLURM_JOB_ID ; Host Node : $HOSTNAME ; Sample Command : ./executa
 ```
 
 ### Input file
-```
+```text
 job1_param1 job1_param2 job1_param3
 job2_param1 job2_param2 job2_param3
 job3_param1 job3_param2 job3_param3
@@ -42,12 +42,12 @@ job10_param1 job10_param2 job10_param3
 
 ## Script Breakdown
 The line number that corresponds with the job's ```SLURM_ARRAY_TASK_ID``` is read in and parsed to extract the input parameters. The parameters here should be space-delimited (of course, you can modify your script to change these specifications). There are three parameters per line that are assigned to the variables on the left:
-```console
+```bash
 read first_parameter second_parameter third_parameter <<< $( sed "${SLURM_ARRAY_TASK_ID}q;d" InputParameters )
 ```
 
 A sample command is printed along with job information for demonstration purposes:
-```console
+```bash
 echo "Job ID: $SLURM_JOB_ID ; Host Node : $HOSTNAME ; Sample Command : ./executable $first_parameter $second_parameter $third_parameter"
 ```
 
