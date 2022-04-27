@@ -12,7 +12,7 @@ To run an R script in batch, you'll need to start by creating a batch script. In
 ```
 Then open it in your favorite text editor. You will then add the contents below. The first lines that start with ```#SBATCH``` are how you request resources and set job options through the scheduler SLURM. The second part includes any commands you would need to run in the terminal to execute your workflow. This includes loading any modules, changing directories, executing scripts, etc. To run an R script in batch, you will use the command ```Rscript``` and not ```R```. An alternative is ```R CMD BATCH```. More information can be found [here](https://stackoverflow.com/questions/21969145/why-or-when-is-rscript-or-littler-better-than-r-cmd-batch).
 
-```console
+```bash
 #!/bin/bash
 #SBATCH --job-name=R-Plotting-Job
 #SBATCH --ntasks=1
