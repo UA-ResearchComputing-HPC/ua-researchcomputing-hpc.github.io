@@ -9,7 +9,7 @@ The Python multiprocessing package is a popular way to distribute a workflow ove
 For more information on the multiprocessing package, see the [Python documentation](https://docs.python.org/3/library/multiprocessing.html).
 
 ## Python Script
-```
+```python3
 #!/usr/bin/env python3
 
 import os, time
@@ -32,7 +32,7 @@ if __name__=="__main__":
 ```
 
 ## Submission Script
-```
+```bash
 #!/bin/bash
 #SBATCH --job-name=Sample_Multiprocessing
 ### Stick to 1 task for python multiprocessing and request
@@ -56,7 +56,7 @@ In each case below, the submission script has been modified to set ```--cpus-per
 
 ### One CPU
 
-```
+```console
 [netid@wentletrap ~]$ sbatch -o 1-process.out submit.slurm
 Submitted batch job 2104919
 [netid@wentletrap ~]$ cat 1-process.out 
@@ -69,7 +69,7 @@ sys	0m0.134s
 
 ### Five CPUs
 
-```
+```console
 [netid@wentletrap ~]$ sbatch -o 5-processes.out submit.slurm 
 Submitted batch job 2104965
 [netid@wentletrap ~]$ cat 5-processes.out 
@@ -81,7 +81,7 @@ sys	0m0.075s
 ```
 
 ### Twenty CPUs
-```
+```console
 [netid@wentletrap ~]$ sbatch -o 20-processes.out submit.slurm 
 Submitted batch job 2104966
 [netid@wentletrap ~]$ cat 20-processes.out 
