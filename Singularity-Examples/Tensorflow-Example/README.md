@@ -6,7 +6,7 @@
 This script makes use of a Tensorflow Singularity image available as a module on HPC to execute a workflow on a GPU node. 
 
 As a note: When loaded in an interactive session, you can easily execute the Tensorflow image using the alias ```tensorflow```. However, because aliases don't carry over into batch environments, you will need to provide the full ```singularity exec``` command to run your workflow. If you ever need to track down exactly what that command is, you can log into an interactive session and check, e.g.:
-```
+```console
 [netid@r1u04n2 ~]$ module load tensorflow/nvidia/2.0.0 
 [netid@r1u04n2 ~]$ type tensorflow
 tensorflow is aliased to `singularity exec --nv /contrib/singularity/nvidia/nvidia-tensorflow_2.0.0-py3.sif python3'
@@ -14,7 +14,7 @@ tensorflow is aliased to `singularity exec --nv /contrib/singularity/nvidia/nvid
 
 ## Submission Script
 
-```
+```bash
 #!/bin/bash
 #SBATCH --output=Sample-tensorflow-example-%a.out
 #SBATCH --ntasks=1
@@ -29,7 +29,7 @@ singularity exec --nv /contrib/singularity/nvidia/nvidia-tensorflow_2.0.0-py3.si
 ```
 
 ## Example Tensorflow Script
-```
+```python3
 #Linear Regression Example with TensorFlow v2 library 
 
 from __future__ import absolute_import, division, print_function
@@ -92,13 +92,13 @@ for step in range(1, training_steps + 1):
 ```
 
 ## Job Submission
-```
+```console
 [netid@wentletrap ~]$ sbatch tensorflow_example.slurm 
 Submitted batch job 2069594
 ```
 
 ## Output
-```
+```console
 [netid@junonia ~]$ tail -n 22 Sample-tensorflow-example-4294967294.out 
 2021-09-15 12:55:19.106307: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1304] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 30173 MB memory) -> physical GPU (device: 0, name: Tesla V100S-PCIE-32GB, pci bus id: 0000:81:00.0, compute capability: 7.0)
 step: 50, loss: 0.101393, W: 0.340310, b: 0.170136
