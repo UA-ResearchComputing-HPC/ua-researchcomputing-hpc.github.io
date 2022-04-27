@@ -29,7 +29,7 @@ singularity exec --nv /contrib/singularity/nvidia/nvidia-tensorflow_2.0.0-py3.si
 ```
 
 ## Example Tensorflow Script
-```python3
+```python
 #Linear Regression Example with TensorFlow v2 library 
 
 from __future__ import absolute_import, division, print_function
