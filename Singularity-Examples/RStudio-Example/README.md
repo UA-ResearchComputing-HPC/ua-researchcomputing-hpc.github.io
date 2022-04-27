@@ -49,7 +49,10 @@ Now, in your desktop session's terminal, execute the rserver.sh script using:
 <img src="Screen Shot 2022-04-18 at 11.17.25 AM.png" alt="execute-rserver" width="600"/> 
 
 Next, open a Firefox window and enter ```localhost:8787``` for the URL. In your browser, you will be prompted to log into your RStudio server. Enter your NetID under Username. Under Password, enter the password you defined in the script server.sh.
+
 <img src="Screen Shot 2022-04-18 at 11.17.49 AM.png" alt="access-from-firefox" width="600"/> 
+
 This will open your RStudio session:
+
 <img src="Screen Shot 2022-04-18 at 11.26.37 AM.png" alt="rstudio" width="600"/> 
 
