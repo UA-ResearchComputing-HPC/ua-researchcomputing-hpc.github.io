@@ -4,7 +4,7 @@ The package [```mpi4py```](https://mpi4py.readthedocs.io/en/stable/) provides Py
 # Installing
 To build ```mpi4py```, you will need to be in an interactive session. From there, you can load your desired Python module, create a virtual environment, and pip install the package. 
 
-```
+```console
 [netid@i13n9 ~]$ module load openmpi3 gnu8 python/3.6
 [netid@i13n9 ~]$ export MPICC=$(which mpicc)
 [netid@i13n9 ~]$ virtualenv --system-site-packages mpi4py_env
@@ -13,7 +13,7 @@ To build ```mpi4py```, you will need to be in an interactive session. From there
 ```
 
 # Python Script
-```
+```python3
 #!/usr/bin/env python3
 
 from mpi4py import MPI
@@ -27,7 +27,7 @@ print("Hello World! I am process %s of %s running on %s"%(rank,size,name),flush=
 ```
 
 # Submission Script
-```
+```bash
 #!/bin/bash
 
 #SBATCH --job-name=mpi4py_example
@@ -44,13 +44,13 @@ srun python3 mpi4py_example.py
 ```
 
 # Job Submission
-```
+```console
 [netid@wentletrap ~]$ sbatch mpi4py.slurm 
 Submitted batch job 185674
 ```
 
 # Output
-```
+```console
 [netid@wentletrap ~]$ cat slurm-185674.out 
 Hello World! I am process 0 of 10 running on i8n0.ocelote.hpc.arizona.edu
 Hello World! I am process 1 of 10 running on i8n2.ocelote.hpc.arizona.edu
