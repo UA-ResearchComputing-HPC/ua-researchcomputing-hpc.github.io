@@ -13,7 +13,7 @@ Our clusters use the scheduling software SLURM. Below are some helpful guides fo
 
 [![](/Images/general-examples-button.png)](General-Examples)[![](/Images/parallel-and-array.png)](Array-and-Parallel)
 [![](/Images/life-sciences-button.png)](Life-Sciences)[![](/Images/singularity-button.png)](Singularity-Examples)
-[![](/Images/gpu-button.png)](GPU-Examples)[![](/Images/mpi-button.png)](MPI-Examples)
+[![](/Images/Matlab-button.png)](Matlab-Examples)[![](/Images/mpi-button.png)](MPI-Examples)
 [![](/Images/python_button.png)](Python-Examples) [![](/Images/r-button.png)](R-Examples)
 
 
