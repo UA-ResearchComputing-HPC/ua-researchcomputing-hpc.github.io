@@ -54,7 +54,7 @@ Submitted batch job 1996740
 ## Output
 ```console
 [netid@r1u03n1 ~]$ cat slurm-1996740.out 
-Hello world! This is what happens when you run the container.
+Hello world! This is what happens when you run the container...
 ```
 
 -----
