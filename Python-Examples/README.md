@@ -25,7 +25,7 @@ Jupyter notebooks are available through our Open OnDemand web interface. This is
 ---------
 ## Anaconda
 
-### [Using an Anaconda Environment in a Batch Script][Anaconda-In-Batch]
+### [Using an Anaconda Environment in a Batch Script](Anaconda-In-Batch)
 This example goes through the process of setting up an anaconda environment, installing packages, and running a batch job using the environment. If you've set Anaconda's auto-activate feature to ```false``` and have run into an error about ```conda``` not being a valid command, this example shows you how to fix the problem. 
 
 ---------
