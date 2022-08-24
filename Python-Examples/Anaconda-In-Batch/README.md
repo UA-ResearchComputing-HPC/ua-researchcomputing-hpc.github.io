@@ -195,5 +195,20 @@ metadataUrls : [{...}]
 EOmaps: ... adding wms-layer nitrogen_0-5cm_mean
 Detailed performance metrics for this job will be available at https://metrics.hpc.arizona.edu/#job_viewer?action=show&realm=SUPREMM&resource_id=4&local_job_id=375475 by 8am on 2022/08/25.
 ```
-To view the map, log into [Open OnDemand](https://ood.hpc.arizona.edu), go to the Files dropdown tab, navigate to your maps-example directory, and click on grid.png:
+To view the map, log into [Open OnDemand](https://ood.hpc.arizona.edu), then: 
 
+1. go to the Files dropdown tab
+
+<img src="files.png" width="250"/>
+
+navigate to your maps-example directory, and click on grid.png
+
+<img src="view.png" width="500"/>
+
+
+<img src="figure.png" width="500"/>
+
+**********
+
+[![](/Images/home.png)](https://ua-researchcomputing-hpc.github.io/) 
+[![](/Images/back.png)](../)
