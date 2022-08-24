@@ -25,7 +25,8 @@ Jupyter notebooks are available through our Open OnDemand web interface. This is
 ---------
 ## Anaconda
 
-### Using an Anaconda Environment in a Batch Script -- Coming Soon
+### Using an Anaconda Environment in a Batch Script 
+Coming Soon
 
 ---------
 ## Parallelization and MPI Jobs
