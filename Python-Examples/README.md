@@ -16,11 +16,13 @@ Virtual environments are great ways to customize your own python environments an
 ### [Memory Limits](Memory-Limits)
 Sometimes jobs use more memory than they've been allotted and are killed by the job scheduler. Python has different methods for detecting memory usage that can help profile a workflow as part of the testing process, or kill a task once a memory threshold is met. This example shows how to kill a python process that exceeds a threshold set by the user. 
 
+---------
 ## Jupyter
 
 ### [Converting a Jupyter Notebook to a Batch Script](Converting-Jupyter-to-Batch)
 Jupyter notebooks are available through our Open OnDemand web interface. This is a great, user-friendly tool and works well for many types of analyses. However, there may be some cases when it might be advantageous to run jobs in batch instead (for example, jobs that takes hours or days to complete). This example goes over the process of converting an existing Jupyter notebook to a python script that can be executed as a batch job.
 
+---------
 ## Anaconda
 
 ### Using an Anaconda Environment in a Batch Script -- Coming Soon
