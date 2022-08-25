@@ -4,7 +4,7 @@ This example goes over the general process of creating and activating a local an
 
 
 ## Creating your environment and installing packages
-In this example, we'll install some map-making software called eomaps into a conda environment and will generate some fun maps in a batch job.
+In this example, we'll install some map-making software called eomaps into a conda environment. Once the software is installed, we'll generate some fun maps in a batch job.
 
 ### Start an interactive session
 To get access to system software, you'll need to be on a compute node. These can be accessed by requesting [an interactive session](https://public.confluence.arizona.edu/display/UAHPC/Running+Jobs+with+SLURM#RunningJobswithSLURM-interactive-jobsInteractiveJobs) using the command ```interactive``` from a login node:
@@ -102,7 +102,7 @@ By default, Anaconda activates itself in your environment whenever you log in. T
 The following steps can be taken either on a login node or on a compute node.
 
 ### Python script
-We'll create a script based on an example from [eomaps' online documentation](https://eomaps.readthedocs.io/en/latest/api.html#webmap-layers). We'll make a directory in our home called maps-example and save the following code in a file called maps-example.py:
+We'll create a script based on an example from [eomaps' online documentation](https://eomaps.readthedocs.io/en/latest/api.html#webmap-layers). We'll make a directory in our home called maps-example and write the code to a file called maps-example.py:
 
 ```
 (elgato) [netid@wentletrap ~]$ cd maps-example
@@ -148,7 +148,7 @@ python3 maps-example.py
 ```
 
 ## Submit the job
-```
+```console
 (elgato) [netid@wentletrap maps-example]$ ls
 maps-example.py  maps-example.slurm
 (elgato) [netid@wentletrap maps-example]$ sbatch maps-example.slurm 
@@ -158,7 +158,7 @@ Submitted batch job 375475
 ## Retrieve the results
 
 A slurm-$JOBID.out file will be generated with all the text that would have been printed to the terminal had you run it interactively Additionally, you will receive a png file with the generated figure:
-```
+```console
 (elgato) [netid@wentletrap maps-example]$ ls
 slurm-375475.out  grid.png  maps-example.py  maps-example.slurm
 (elgato) [netid@wentletrap maps-example]$ cat slurm-375475.out 
