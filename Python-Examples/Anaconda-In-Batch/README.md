@@ -104,13 +104,13 @@ The following steps can be taken either on a login node or on a compute node.
 ### Python script
 We'll create a script based on an example from [eomaps' online documentation](https://eomaps.readthedocs.io/en/latest/api.html#webmap-layers). We'll make a directory in our home called maps-example and write the code to a file called maps-example.py:
 
-```
+```console
 (elgato) [netid@wentletrap ~]$ cd maps-example
 (elgato) [netid@wentletrap maps-example]$ ls
 maps-example.py
 ```
 Where the contents of maps-example.py are:
-```python3
+```python
 #!/usr/bin/env python3
 
 from eomaps import Maps, MapsGrid
