@@ -19,3 +19,4 @@ Our clusters use the scheduling software SLURM. Below are some helpful guides fo
 
 # Workshops
 [![](/Images/intro-to-HPC-button.png)](Intro-to-HPC)[![](/Images/intro-to-ML-button.png)](Intro-to-Machine-Learning)
+[![](/Images/Intro_to_Containers.png)](Intro-to-Containers)
