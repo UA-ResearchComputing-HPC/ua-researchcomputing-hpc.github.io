@@ -7,22 +7,26 @@
 
 <img src="shipping.jpg" alt="shipping" style="margin: 20px 12px 3px 0px; box-shadow: 10px 10px 5px grey; border: 5px solid #FBFCFC; border-radius: 4px;" align="right" height="500"/> 
 
-<h3 style="color:#FBFCFC; background-color:#34495E;"> <a href="#overview" style="text-decoration=none; color:#FBFCFC;"> Overview </a> </h3>
-<h3 style="color:#FBFCFC; background-color:#34495E;"> <a href="#system-basics" style="text-decoration=none; color:#FBFCFC;"> System Basics </a> </h3>
+<h3 style="color:#FBFCFC; background-color:#34495E;"> <a href="#creating-a-container" style="text-decoration=none; color:#FBFCFC;"> Creating a Container </a> </h3>
+
+* [Pull from Docker registry](#pull-from-docker-registry)
+* [Pull from container library](#pull-from-container-library)
+* [Build from Docker registry](#build-from-docker-registry)
+
+
+<h3 style="color:#FBFCFC; background-color:#34495E;"> <a href="#build-remotely-using-sylabs" style="text-decoration=none; color:#FBFCFC;"> Build remotely using Sylabs </a> </h3>
 
 * [Logging In](#logging-in)
 * [Working on the Command Line](#working-on-the-command-line)
 
 
 
-<br>
+<br><br><br><br><br><br><br><br><br><br><br><br>
 
-* What is a container
-* Docker and Singularity 
-* Building/Using Containers
-* GPUs
-* MPI
-* BioContainers
+
+# Singularity
+
+> Note: look in .singularity for working files 
 
 ```console
 [laptop ~]$ ssh netid@hpc.arizona.edu
@@ -32,9 +36,8 @@
 [netid@i16n2 ~]$ singularity help
 [netid@i16n2 ~]$ singularity help build
 ```
-> Note: look in .singularity for working files 
 
-# Singularity on HPC - Creating
+## Creating a Container
 
 ### Pull from Docker registry 
 > Less reproducible -- image can change
@@ -42,13 +45,13 @@
 [netid@i16n2 ~]$ singularity pull docker://godlovedc/lolcow
 ```
 
-### Pulls from a container library 
+### Pull from container library 
 > More reproducible
 ```console
 [netid@i16n2 ~]$ singularity pull library://sylabsed/examples/lolcow
 ```
 
-### Builds from a Docker registry
+### Build from Docker registry
 > More options, converts to latest format, & needs a name
 ```console
 [netid@i16n2 ~]$ singularity build lolcow.sif docker://godlovedc/lolcow
@@ -57,7 +60,7 @@
 ## Build remotely using Sylabs
 ### Steps:
 
-1. Log into https://cloud.sylabs.io
+1. Log into [https://cloud.sylabs.io](https://cloud.sylabs.io)
 2. Generate an access token (API key)
 3. Start an interactive session:
 ```console
