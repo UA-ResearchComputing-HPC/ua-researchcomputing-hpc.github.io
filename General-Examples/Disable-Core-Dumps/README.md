@@ -104,3 +104,7 @@ Core dump does not exist
 
 Cleaning upDetailed performance metrics for this job will be available at https://metrics.hpc.arizona.edu/#job_viewer?action=show&realm=SUPREMM&resource_id=4&local_job_id=379921 by 8am on 2022/09/01.
  ```
+
+*****
+[![](/Images/home.png)](https://ua-researchcomputing-hpc.github.io/) 
+[![](/Images/back.png)](../)
