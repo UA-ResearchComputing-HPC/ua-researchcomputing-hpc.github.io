@@ -11,10 +11,10 @@ A basic example script that requests a single CPU on one node.
 A basic example demonstrating how to request a high memory node on either Ocelote or Puma.
 
 ### [Using a Pipefail](Pipefail)
-This script uses a pipefail to kill a SLURM job in the event of a failure at any point in the pipeline
+This script uses a pipefail to kill a SLURM job in the event of a failure at any point in the pipeline.
 
 ### [Disabling Core Dumps](Disable-Core-Dumps)
-Sometimes when applications crash, they will save a snapshot of the working memory at the time of the crash to a core dump file. Core dump files can be handy for debugging, but they can also be quite large. In some cases, it may be preferable to disable core dumps to prevent your storage allocations from filling up. To do this, you can include the line ulimit -c 0 in your batch script prior to executing your application. An example is shown below
+Sometimes when applications crash, they will save a snapshot of the working memory at the time of the crash to a core dump file. Core dump files can be handy for debugging, but they can also be quite large. In some cases, it may be preferable to disable core dumps to prevent your storage allocations from filling up. This example shows how to disable core dumps.
 
 ### [Retrieving Scratch Files](Cleanup-Tmp-Files)
 Example of using a compute node's local storage, or scratch space, during a job's execution and retrieving the output before the job's walltime limit is reached.
