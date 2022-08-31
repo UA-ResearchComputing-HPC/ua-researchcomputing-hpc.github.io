@@ -10,6 +10,9 @@ A basic example script that requests a single CPU on one node.
 ### [High Memory Node Job](High-Memory-Node)
 A basic example demonstrating how to request a high memory node on either Ocelote or Puma.
 
+### [Using a Pipefail](Pipefail)
+This script uses a pipefail to kill a SLURM job in the event of a failure at any point in the pipeline
+
 ### [Retrieving Scratch Files](Cleanup-Tmp-Files)
 Example of using a compute node's local storage, or scratch space, during a job's execution and retrieving the output before the job's walltime limit is reached.
 
