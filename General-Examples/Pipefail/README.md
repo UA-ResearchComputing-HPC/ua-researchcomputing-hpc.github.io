@@ -28,7 +28,7 @@ Submitted batch job 361837
 # Output
 Notice that when pipefail hasn't been set, the script moves on to subsequent commands (trying to import bar). After the pipefail is set, the job exits when it can't import bar and never tries to import baz.
 
-```
+```console
 [user@cpu37 fail_test]$ cat slurm-361837.out
 Traceback (most recent call last):
   File "<string>", line 1, in <module>
