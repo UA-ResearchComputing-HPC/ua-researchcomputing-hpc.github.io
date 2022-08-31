@@ -13,6 +13,8 @@ A basic example demonstrating how to request a high memory node on either Ocelot
 ### [Using a Pipefail](Pipefail)
 This script uses a pipefail to kill a SLURM job in the event of a failure at any point in the pipeline
 
+### [Disabling Core Dumps](Disable-Core-Dumps)
+
 ### [Retrieving Scratch Files](Cleanup-Tmp-Files)
 Example of using a compute node's local storage, or scratch space, during a job's execution and retrieving the output before the job's walltime limit is reached.
 
