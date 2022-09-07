@@ -46,7 +46,7 @@ ocelote
 Now, to download the example, use:
 ```
 wget https://ua-researchcomputing-hpc.github.io/Intro-to-Machine-Learning/intro-to-ML.tar.gz
-tar xzvf intro-to-ML.tar.gz --strip-components=1
+tar xzvf intro-to-ML.tar.gz
 rm intro-to-ML.tar.gz
 ```
 
