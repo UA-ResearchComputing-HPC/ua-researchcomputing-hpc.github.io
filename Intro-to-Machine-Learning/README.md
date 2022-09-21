@@ -263,7 +263,7 @@ to train a neural network model to classify the plants using labeled input.
 
 We will use the Keras interface to the popular Tensorflow neural network package
 
-Import Sklearn and Tensorflow/Keras packages:
+Import Sscikit learn and Tensorflow/Keras packages:
 ```
 from numpy import argmax
 from pandas import read_csv
@@ -276,7 +276,9 @@ from sklearn.datasets import load_iris
 import tensorflow
 ```
 
-First prepare the input data.
+Prepare the built in input data
+* change measurements to floating point numbers
+* Change names to integers
 ```
 iris = load_iris()
 X, y = iris.data, iris.target
@@ -285,8 +287,7 @@ y = LabelEncoder().fit_transform(y)
 ```
 
 split into train and test datasets
-* TRY: use different proportions for test_size, to change the amount of training data
-and make the classification problem more or less difficult
+#### TRY THIS: use different proportions for test_size, to change the amount of training data and make the classification problem more or less difficult
 ```
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.33)
 n_features = X_train.shape[1]
@@ -295,12 +296,12 @@ print("%d measurements per sample" %  n_features)
 
 Now set up the details of the neural network model.
 * Add "Dense" (fully connected) neural network layers, specifying the number of nodes per layer
-* TRY: change the number of nodes in the first and second layer
-* activation functions define how node output as a function of node input
-* softmax activation ensures that the layer outputs all sum to 1.0 (i.e., are probabilities)
+* activation functions define node output values as a function of node input values
 * kernel_initializer specifies initial values for node connection weights
 * input_shape ensures that the inputs to the first layer are equal to the number of measurements per sample
 * the 3 nodes of the final  layer correspond to the three species designations
+* softmax activation function ensures that the layer outputs all sum to 1.0 (i.e., are probabilities)
+#### TRY THIS: change the number of nodes in the first and second layers
 ```
 model = Sequential()
 
@@ -314,7 +315,7 @@ model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=
 ```
 
 Now train the model using the training data subset
-*epochs and batch_size control the efficiency of the fitting
+* epochs and batch_size control the efficiency of the fitting
 ```
 model.fit(X_train, y_train, epochs=150, batch_size=32, verbose=0)
 ```
@@ -327,6 +328,9 @@ row = [5.1,3.5,1.4,0.2]
 yhat = model.predict([row])
 print('Predicted: %s (class=%d)' % (yhat, argmax(yhat)))
 ```
+
+###Try making changes and see how it affects the classification accuracy.
+
 
 [![](/Images/home.png)](https://ua-researchcomputing-hpc.github.io/) 
 [![](/Images/back.png)](../)
