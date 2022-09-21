@@ -38,13 +38,13 @@ Both of these exercises will make use of Python in a Jupyter Notebook through Op
 
 ## Accessing the Data
 To begin, start a terminal to log into the system and copy the necessary files into your account. If you're unsure of how to use or access a terminal, see [our online documentation](https://public.confluence.arizona.edu/display/UAHPC/System+Access#SystemAccess-CommandLine/TerminalAccess) for information (or, if you're in a live workshop, flag one of us down and we can help). To get the files you need, use the following commands: 
-```
+```console
 ssh your_netid@hpc.arizona.edu
 shell
 ocelote
 ```
 Now, to download the example, use:
-```
+```console
 wget https://ua-researchcomputing-hpc.github.io/Intro-to-Machine-Learning/intro-to-ML.tar.gz
 tar xzvf intro-to-ML.tar.gz
 rm intro-to-ML.tar.gz
@@ -98,7 +98,7 @@ To run Python code in a notebook, enter your commands into a cell and click **Ru
 <img src="regression.png" alt="regression" width="300"/>
 
 Import Libraries
-```
+```python
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -106,12 +106,12 @@ from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
 ```
 Use Pandas to load the data and view the first five rows
-```
+```python
 data = pd.read_excel("king_county_house_data.xls")
 data.head(5)
 ```
 Choose the columns from the data and split into train and test sets
-```
+```python
 space = data['sqft_living']
 price = data['price']
 # Change X into 2D array
@@ -121,7 +121,7 @@ Y = np.array(price)
 X_train,X_test,Y_train,Y_test = train_test_split(X,Y,test_size=1/3,random_state=0)
 ```
 Visualize the train set
-```
+```python
 # Visualize training set
 plt.scatter(X_train,Y_train,color="red",label="Living Area")
 plt.title("Housing Prices")
@@ -131,7 +131,7 @@ plt.legend()
 plt.show()
 ```
 Train the model with the training set and predict with the test set
-```
+```python
 # Train
 regressor = LinearRegression()
 regressor.fit(X_train, Y_train)
@@ -140,7 +140,7 @@ y_pred = regressor.predict(X_test)
 ```
 
 Visualize the train data and the best fit line
-```
+```python
 # Visualize the data and the best fit line
 plt.scatter(X_train,Y_train,color="red",label="Living Area")
 plt.title("Housing Prices in King County")
@@ -151,14 +151,14 @@ plt.legend()
 plt.show()
 ```
 Predict the price of a house with a certain area
-```
+```python
 # Make a prediction
 area = 5000
 price = regressor.predict([[area]])
 print('House of %d sq-ft costs about $%d' % (area, price))
 ```
 Visualize the test data
-```
+```python
 # Visualize test set
 plt.scatter(X_test,Y_test,color='red',label="Living Area")
 plt.plot(X_test,regressor.predict(X_test),color="blue",label="Price")
@@ -176,7 +176,7 @@ plt.show()
 <img src="iris.png" alt="iris" width="300"/>
 
 Import libraries 
-```
+```python
 # import libraries
 import numpy as np
 import pandas as pd
@@ -187,26 +187,26 @@ from sklearn.cluster import KMeans
 from sklearn.datasets import load_iris
 ```
 Load the data
-```
+```python
 # load the data
 iris=load_iris()
 iris
 ```
-Convert to a datafram
-```
+Convert to a dataframe
+```python
 df=pd.DataFrame(data=iris.data, columns=['sepal length','sepal width','petal length','petal width'])
 df['target']=pd.Series(iris.target)
 df
 ```
 Visualize the data
-```
+```python
 # visualize the data
 plt.scatter(x=df['sepal length'], y=df['sepal width'] ,c=iris.target, cmap='gist_rainbow')
 plt.xlabel('Sepal Width', fontsize=18)
 plt.ylabel('Sepal Length', fontsize=18)
 ```
 Estimate k with elbow method. First try k=5.
-```
+```python
 # Estimate k with elbow at k=5
 x = iris.data
 kmeans5 = KMeans(n_clusters=5,init = 'k-means++', random_state = 0)
@@ -214,7 +214,7 @@ y = kmeans5.fit_predict(x)
 print(y)
 ```
 Visualize centers.
-```
+```python
 kmeans5.cluster_centers_
 plt.scatter(x[y == 0,0], x[y==0,1], s = 15, c= 'red', label = 'Cluster_1')
 plt.scatter(x[y == 1,0], x[y==1,1], s = 15, c= 'blue', label = 'Cluster_2')
@@ -226,7 +226,7 @@ plt.legend()
 plt.show()
 ```
 Estimate k with elbow method.
-```
+```python
 # estimate k with elbow method
 Error =[]
 for i in range(1, 11):
@@ -241,7 +241,8 @@ plt.ylabel('Error')
 plt.show()
 ```
 Get the optimal k=3 from the elbow method. Cluster centers and visualize.
-```
+
+```python
 kmeans3 = KMeans(n_clusters=3, random_state=21)
 y = kmeans3.fit_predict(x)
 kmeans3.cluster_centers_
@@ -264,7 +265,8 @@ to train a neural network model to classify the plants using labeled input.
 We will use the Keras interface to the popular Tensorflow neural network package
 
 Import Sscikit learn and Tensorflow/Keras packages:
-```
+
+```python
 from numpy import argmax
 from pandas import read_csv
 from sklearn.model_selection import train_test_split
@@ -279,7 +281,8 @@ import tensorflow
 Prepare the built in input data
 * change measurements to floating point numbers
 * Change names to integers
-```
+
+```python
 iris = load_iris()
 X, y = iris.data, iris.target
 X = X.astype('float32')
@@ -288,7 +291,8 @@ y = LabelEncoder().fit_transform(y)
 
 split into train and test datasets
 #### TRY THIS: use different proportions for test_size, to change the amount of training data and make the classification problem more or less difficult
-```
+
+```python
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.33)
 n_features = X_train.shape[1]
 print("%d measurements per sample" %  n_features)
@@ -302,7 +306,8 @@ Now set up the details of the neural network model.
 * the 3 nodes of the final  layer correspond to the three species designations
 * softmax activation function ensures that the layer outputs all sum to 1.0 (i.e., are probabilities)
 #### TRY THIS: change the number of nodes in the first and second layers
-```
+
+```python
 model = Sequential()
 
 model.add(Dense(10, activation='relu', kernel_initializer='he_normal', input_shape=(n_features,)))
@@ -316,12 +321,14 @@ model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=
 
 Now train the model using the training data subset
 * epochs and batch_size control the efficiency of the fitting
-```
+
+```python
 model.fit(X_train, y_train, epochs=150, batch_size=32, verbose=0)
 ```
 
 Evaluate and use the model:
-```
+
+```python
 loss, acc = model.evaluate(X_test, y_test)
 print('Test Accuracy: %.3f' % acc)
 row = [5.1,3.5,1.4,0.2]
@@ -329,7 +336,7 @@ yhat = model.predict([row])
 print('Predicted: %s (class=%d)' % (yhat, argmax(yhat)))
 ```
 
-###Try making changes and see how it affects the classification accuracy.
+### Try making changes and see how it affects the classification accuracy.
 
 
 [![](/Images/home.png)](https://ua-researchcomputing-hpc.github.io/) 
