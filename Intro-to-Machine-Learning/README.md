@@ -8,7 +8,7 @@
     3. [Opening a Notebook](#opening-a-notebook)
 3. [Linear Regression Example](#linear-regression-example)
 4. [Clustering Model Example](#clustering-model-example)
-
+5. [Neural Network Classification Example](#neural-network-classification-example)
 
 ## Get the Files
 [![](/Images/Download-Button.png)](intro-to-ML.tar.gz)
@@ -255,6 +255,78 @@ plt.show()
 
 
 *****
+
+# Neural Network Classification Example
+In this example we will use the same Iris dataset that we used in the unsupervised clustering example
+to train a neural network model to classify the plants using labeled input.
+
+
+We will use the Keras interface to the popular Tensorflow neural network package
+
+Import Sklearn and Tensorflow/Keras packages:
+```
+from numpy import argmax
+from pandas import read_csv
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import LabelEncoder
+from tensorflow.keras import Sequential
+from tensorflow.keras.utils import plot_model
+from tensorflow.keras.layers import Dense
+from sklearn.datasets import load_iris
+import tensorflow
+```
+
+First prepare the input data.
+```
+iris = load_iris()
+X, y = iris.data, iris.target
+X = X.astype('float32')
+y = LabelEncoder().fit_transform(y)
+```
+
+split into train and test datasets
+* TRY: use different proportions for test_size, to change the amount of training data
+and make the classification problem more or less difficult
+```
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.33)
+n_features = X_train.shape[1]
+print("%d measurements per sample" %  n_features)
+```
+
+Now set up the details of the neural network model.
+* Add "Dense" (fully connected) neural network layers, specifying the number of nodes per layer
+* TRY: change the number of nodes in the first and second layer
+* activation functions define how node output as a function of node input
+* softmax activation ensures that the layer outputs all sum to 1.0 (i.e., are probabilities)
+* kernel_initializer specifies initial values for node connection weights
+* input_shape ensures that the inputs to the first layer are equal to the number of measurements per sample
+* the 3 nodes of the final  layer correspond to the three species designations
+```
+model = Sequential()
+
+model.add(Dense(10, activation='relu', kernel_initializer='he_normal', input_shape=(n_features,)))
+
+model.add(Dense(8, activation='relu', kernel_initializer='he_normal'))
+
+model.add(Dense(3, activation='softmax'))
+
+model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
+```
+
+Now train the model using the training data subset
+*epochs and batch_size control the efficiency of the fitting
+```
+model.fit(X_train, y_train, epochs=150, batch_size=32, verbose=0)
+```
+
+Evaluate and use the model:
+```
+loss, acc = model.evaluate(X_test, y_test)
+print('Test Accuracy: %.3f' % acc)
+row = [5.1,3.5,1.4,0.2]
+yhat = model.predict([row])
+print('Predicted: %s (class=%d)' % (yhat, argmax(yhat)))
+```
 
 [![](/Images/home.png)](https://ua-researchcomputing-hpc.github.io/) 
 [![](/Images/back.png)](../)
