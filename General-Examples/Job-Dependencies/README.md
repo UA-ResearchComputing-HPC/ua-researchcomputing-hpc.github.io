@@ -1,7 +1,7 @@
 # SLURM Job Dependencies Example
 
-<video width="320" height="240" controls>
-  <source src="volcano.mp4" type="video/mp4">
-</video>
 
-![](volcano.mp4)
+
+
+https://user-images.githubusercontent.com/24305667/197612375-f0a81477-1e4f-4029-bcb4-ce0ab55cbd63.mp4
+
