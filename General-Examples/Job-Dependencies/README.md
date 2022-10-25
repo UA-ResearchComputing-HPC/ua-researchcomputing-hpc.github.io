@@ -2,9 +2,12 @@
 
 ## Overview
 
-Sometimes projects need to be split up into multiple steps where each is dependent on the completion of the previous step. SLURM dependencies are a way to automate this process. In this example, we'll create a number of three-dimensional plots using Python and will combine them into a gif as the last step. A job dependency is optimal in this case since the job that creates the gif is dependent on all the images being present.
+Sometimes projects need to be split up into multiple parts where each step is dependent on the one (or several) that came before it. SLURM dependencies are a way to automate this process. In this example, we'll create a number of three-dimensional plots using Python and will combine them into a gif as the last step. A job dependency is optimal in this case since the job that creates the gif is dependent on all the images being present.
 
 ## Data structure
+
+We'll try to keep things in order by partitioning our data, output, and images in distinct directories.
+
 ```console
 (elgato) [user@wentletrap volcano]$ tree
 .
@@ -19,10 +22,13 @@ Sometimes projects need to be split up into multiple steps where each is depende
 ├── submit-video-job
 └── volcano.py
 ```
+
 # Scripts
 
 ## Python script
 The Python example script was pulled and modified from the [Python graph gallery](https://www.python-graph-gallery.com/3d/) and the CSV file used to generate the image was pulled from https://raw.githubusercontent.com/holtzy/The-Python-Graph-Gallery/master/static/data/volcano.csv
+
+Below you'll notice one modification: ```n = int(sys.argv[1])```. We're going to execute this script in an array job and will be importing the array indices (an integer ```n``` where ```1 ≤ n ≤ 360```) into this script to determine the viewing angle (```ax.view_init(30, 45 + n)```). Each frame will be slightly different and, when combined into a gif, will allow us to create a full rotation of the 3D volcano plot. 
 
 ```python
 #!/usr/bin/env python3
@@ -56,7 +62,7 @@ plt.savefig('images/image%s.png'%n,format='png',transparent=False)
 ```
 
 ## SLURM script to generate frames (```generate_frames.slurm```)
-
+This is the component of the job where we will generate all of our images. In each step, we will pass our array index to our python script to determine the viewing angle of our plot. 
 
 ```bash
 #!/bin/bash
@@ -76,6 +82,9 @@ python3 volcano.py $SLURM_ARRAY_TASK_ID
 ```
 
 ## SLURM script to combine frames into gif (```create_gif.slurm```)
+
+Once each frame has been generated, we'll use ffmpeg to combine our images into a gif and will clean up our workspace. The bash script shown below is what will ensure that this script isn't run until the array has completed. 
+
 ```bash
 #!/bin/bash
 
@@ -98,7 +107,11 @@ tar czvf volcano-images-${DATE_FORMAT}.tar.gz image*.png
 mv *tar.gz ../output/archives
 rm -rf ./*.png
 ```
+
+
 ## Script to automate job submissions
+
+This simple bash script is what implements the SLURM job dependency magic. 
 
 ```bash
 #!/bin/bash
@@ -112,6 +125,29 @@ printf "Submitting job dependency. Combines images into a video file\n"
 sbatch --dependency=afterany:$jobid create_gif.slurm 
 ```
 
+#### Step-by-step:
+1) ```jobid=$(sbatch --parsable generate_frames.slurm)```
+
+In this case, we're capturing the job ID output from our array submission. Typically, when you submit a SLURM job without arguments, you get back something that looks like: 
+```
+(elgato) [user@wentletrap ~]$ sbatch example.slurm 
+Submitted batch job 448243
+```
+The parsable option is what reduces this to simply the job ID and allows us to easily capture it:
+```
+(elgato) [user@wentletrap ~]$ sbatch --parsable example.slurm 
+448244
+```
+As a general comment, when you run something like:
+```
+VAR=$(command)
+```
+You are running ```command``` and setting the variable ```VAR``` to the output. In the specifc case of our bash script, we've set ```jobid``` to the output of our ```sbatch --parsable``` command. 
+
+2) ```sbatch --dependency=afterany:$jobid create_gif.slurm```
+
+Now that we have the Job ID, we'll submit the next job with a dependency flag: ```--dependency=afterany:$jobid```. The ```dependecy``` option tells the scheduler that this job should not be run until the job with ```$jobid``` has completed. The ```afterany``` specifies that the exit status of the previous job does not matter. Other options might be ```afterok``` (meaning only execute the dependent job if the previous job ended successfully) or ```afternotok``` (meaning only execute if the previous job terminated abnormally, e.g. was cancelled or failed). You 
+
 # Submitting the jobs
 
 ```console
@@ -121,9 +157,7 @@ Job submitted with ID: 447878
 
 Submitting job dependency. Combines images into a video file
 Submitted batch job 447879
-```
 
-```console
 (elgato) [user@wentletrap volcano]$ squeue --user user
              JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
     447878_[9-360]  standard generate     user PD       0:00      1 (None)
@@ -138,6 +172,7 @@ Submitted batch job 447879
           447878_8  standard generate     user  R       0:02      1 cpu37
 ```
 
+Once the job has completed, you should see something that looks like the following structure and output files:
 ```console
 (elgato) [user@wentletrap volcano]$ tree
 .
