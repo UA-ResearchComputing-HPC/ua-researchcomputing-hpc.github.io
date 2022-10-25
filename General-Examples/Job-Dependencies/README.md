@@ -4,7 +4,9 @@
 
 ## Overview
 
-Sometimes projects need to be split up into multiple parts where each step is dependent on the step (or several steps) that came before. SLURM dependencies are a way to automate this process. In this example, we'll create a number of three-dimensional plots using Python and will combine them into a gif as the last step. A job dependency is a good solution in this case since the job that creates the gif is dependent on all the images being present.
+Sometimes projects need to be split up into multiple parts where each step is dependent on the step (or several steps) that came before. SLURM dependencies are a way to automate this process. 
+
+In this example, we'll create a number of three-dimensional plots using Python and will combine them into a gif as the last step. A job dependency is a good solution in this case since the job that creates the gif is dependent on all the images being present.
 
 ## Data structure
 
@@ -150,15 +152,18 @@ As a general comment, when you run something like:
 ```
 VAR=$(command)
 ```
-You are running ```command``` and setting the variable ```VAR``` to the output. In the specifc case of our bash script, we've set ```jobid``` to the output of our ```sbatch --parsable``` command. 
+You are running ```command``` and setting the variable ```VAR``` to the output. In the specifc case of our bash script, we've set the bash variable ```jobid``` to the output of our ```sbatch --parsable``` command. 
+
 
 2) ```sbatch --dependency=afterany:$jobid create_gif.slurm```
 
-Now that we have the Job ID, we'll submit the next job with a dependency flag: ```--dependency=afterany:$jobid```. The ```dependency``` option tells the scheduler that this job should not be run until the job with ```$jobid``` has completed. The ```afterany``` specifies that the exit status of the previous job does not matter. Other options might be ```afterok``` (meaning only execute the dependent job if the previous job ended successfully) or ```afternotok``` (meaning only execute if the previous job terminated abnormally, e.g. was cancelled or failed). You might even consider setting up multiple job dependencies that are executed depending on the previous job's exit status. 
+Now that we have the Job ID, we'll submit the next job with a dependency flag: ```--dependency=afterany:$jobid```. 
+
+The ```dependency``` option tells the scheduler that this job should not be run until the job with Job ID ```$jobid``` has completed. The ```afterany``` specifies that the exit status of the previous job does not matter. Other options are ```afterok``` (meaning only execute the dependent job if the previous job ended successfully) or ```afternotok``` (meaning only execute if the previous job terminated abnormally, e.g. was cancelled or failed). You might consider setting up multiple job dependencies that depend on the previous job's exit status. 
 
 # Submitting the jobs
 
-Once we've gotten everything set up, it's time to execute our workflow. We can check our jobs once we've run our bash script. In this case, while the array job used to generate the different image frames is running, the make_gif job will sit in queue with the reason ```(Dependency)``` indicating that it is waiting to run until its dependency has been satisfied. 
+Once we've gotten everything set up, it's time to execute our workflow. We can check our jobs once we've run our bash script. In this case, while the array job used to generate the different image frames is running, the ```make_gif``` job will sit in queue with the reason ```(Dependency)``` indicating that it is waiting to run until its dependency has been satisfied. 
 
 ```console
 (elgato) [user@wentletrap volcano]$ bash submit-gif-job 
@@ -182,7 +187,7 @@ Submitted batch job 447879
           447878_8  standard generate     user  R       0:02      1 cpu37
 ```
 
-Once the job has completed, you should see something that looks like the following structure and output files:
+Once the job has completed, you should see something that looks like the following structure with output files:
 ```console
 (elgato) [user@wentletrap volcano]$ tree
 .
