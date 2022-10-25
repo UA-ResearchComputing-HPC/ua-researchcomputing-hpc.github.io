@@ -27,6 +27,8 @@ We'll try to keep things in order by partitioning our data, output, and images i
 └── volcano.py
 ```
 
+*****
+
 # Scripts
 
 ## Python script
@@ -161,6 +163,8 @@ Now that we have the Job ID, we'll submit the next job with a dependency flag: `
 
 The ```dependency``` option tells the scheduler that this job should not be run until the job with Job ID ```$jobid``` has completed. The ```afterany``` specifies that the exit status of the previous job does not matter. Other options are ```afterok``` (meaning only execute the dependent job if the previous job ended successfully) or ```afternotok``` (meaning only execute if the previous job terminated abnormally, e.g. was cancelled or failed). You might consider setting up multiple job dependencies that depend on the previous job's exit status. 
 
+*****
+
 # Submitting the jobs
 
 Once we've gotten everything set up, it's time to execute our workflow. We can check our jobs once we've run our bash script. In this case, while the array job used to generate the different image frames is running, the ```make_gif``` job will sit in queue with the reason ```(Dependency)``` indicating that it is waiting to run until its dependency has been satisfied. 
@@ -216,3 +220,9 @@ Once the job has completed, you should see something that looks like the followi
 If everything is successful, there should be a gif of a rotating volcano in the directory ```output/gifs/```
 
 ![](volcano.gif)
+
+
+
+*****
+[![](/Images/home.png)](https://ua-researchcomputing-hpc.github.io/) 
+[![](/Images/back.png)](../)
