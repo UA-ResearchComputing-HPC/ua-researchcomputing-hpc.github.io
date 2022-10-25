@@ -75,7 +75,7 @@ plt.savefig('images/image%s.png'%n,format='png',transparent=False)
 python3 volcano.py $SLURM_ARRAY_TASK_ID
 ```
 
-#SLURM script to combine frames into gif (```create_gif.slurm```)
+## SLURM script to combine frames into gif (```create_gif.slurm```)
 ```bash
 #!/bin/bash
 
