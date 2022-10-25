@@ -2,7 +2,7 @@
 
 ## Overview
 
-Sometimes projects need to be split up into multiple parts where each step is dependent on the one (or several) that came before it. SLURM dependencies are a way to automate this process. In this example, we'll create a number of three-dimensional plots using Python and will combine them into a gif as the last step. A job dependency is optimal in this case since the job that creates the gif is dependent on all the images being present.
+Sometimes projects need to be split up into multiple parts where each step is dependent on the step (or several steps) that came before it. SLURM dependencies are a way to automate this process. In this example, we'll create a number of three-dimensional plots using Python and will combine them into a gif as the last step. A job dependency is a good solution in this case since the job that creates the gif is dependent on all the images being present.
 
 ## Data structure
 
@@ -83,7 +83,7 @@ python3 volcano.py $SLURM_ARRAY_TASK_ID
 
 ## SLURM script to combine frames into gif (```create_gif.slurm```)
 
-Once each frame has been generated, we'll use ffmpeg to combine our images into a gif and will clean up our workspace. The bash script shown below is what will ensure that this script isn't run until the array has completed. 
+Once each frame has been generated, we'll use ffmpeg to combine our images into a gif and will clean up our workspace. The bash script shown in the next section is what will ensure that this script isn't run until the array has completed. 
 
 ```bash
 #!/bin/bash
@@ -93,7 +93,7 @@ Once each frame has been generated, we'll use ffmpeg to combine our images into 
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --time=00:10:00
-#SBATCH --job-name=make_video
+#SBATCH --job-name=make_gif
 #SBATCH -o output/slurm_files/%x-%j.out
 #SBATCH -e output/slurm_files/%x-%j.err
 
@@ -146,9 +146,11 @@ You are running ```command``` and setting the variable ```VAR``` to the output. 
 
 2) ```sbatch --dependency=afterany:$jobid create_gif.slurm```
 
-Now that we have the Job ID, we'll submit the next job with a dependency flag: ```--dependency=afterany:$jobid```. The ```dependecy``` option tells the scheduler that this job should not be run until the job with ```$jobid``` has completed. The ```afterany``` specifies that the exit status of the previous job does not matter. Other options might be ```afterok``` (meaning only execute the dependent job if the previous job ended successfully) or ```afternotok``` (meaning only execute if the previous job terminated abnormally, e.g. was cancelled or failed). You 
+Now that we have the Job ID, we'll submit the next job with a dependency flag: ```--dependency=afterany:$jobid```. The ```dependecy``` option tells the scheduler that this job should not be run until the job with ```$jobid``` has completed. The ```afterany``` specifies that the exit status of the previous job does not matter. Other options might be ```afterok``` (meaning only execute the dependent job if the previous job ended successfully) or ```afternotok``` (meaning only execute if the previous job terminated abnormally, e.g. was cancelled or failed). You might even consider setting up multiple job dependencies that are executed depending on the previous job's exit status. 
 
 # Submitting the jobs
+
+Once we've gotten everything set up, it's time to execute our workflow. We can check our jobs once we've run our bash script. In this case, while the array job used to generate the different image frames is running, the make_video job will sit in queue with the reason ```(Dependency)``` indicating that it is waiting to run until its dependency has been satisfied. 
 
 ```console
 (elgato) [user@wentletrap volcano]$ bash submit-video-job 
@@ -161,7 +163,7 @@ Submitted batch job 447879
 (elgato) [user@wentletrap volcano]$ squeue --user user
              JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
     447878_[9-360]  standard generate     user PD       0:00      1 (None)
-            447879  standard make_vid     user PD       0:00      1 (Dependency)
+            447879  standard make_gif     user PD       0:00      1 (Dependency)
           447878_1  standard generate     user  R       0:02      1 cpu16
           447878_2  standard generate     user  R       0:02      1 cpu37
           447878_3  standard generate     user  R       0:02      1 cpu37
@@ -189,8 +191,8 @@ Once the job has completed, you should see something that looks like the followi
 │   └── slurm_files
 │       ├── generate_frames-447878.err
 │       ├── generate_frames-447878.out
-│       ├── make_video-447879.err
-│       └── make_video-447879.out
+│       ├── make_gif-447879.err
+│       └── make_gif-447879.out
 ├── submit-video-job
 └── volcano.py
 
