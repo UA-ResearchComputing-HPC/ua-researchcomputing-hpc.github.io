@@ -28,7 +28,7 @@ We'll try to keep things in order by partitioning our data, output, and images i
 # Scripts
 
 ## Python script
-The Python example script was pulled and modified from the [Python graph gallery](https://www.python-graph-gallery.com/3d/) and the CSV file used to generate the image was pulled from https://raw.githubusercontent.com/holtzy/The-Python-Graph-Gallery/master/static/data/volcano.csv
+The Python example script was pulled and modified from the [Python graph gallery](https://www.python-graph-gallery.com/3d/) and the CSV file used to generate the image was downloaded from: [https://raw.githubusercontent.com/holtzy/The-Python-Graph-Gallery/master/static/data/volcano.csv](https://raw.githubusercontent.com/holtzy/The-Python-Graph-Gallery/master/static/data/volcano.csv)
 
 Below you'll notice one modification: ```n = int(sys.argv[1])```. We're going to execute this script in an array job and will be importing the array indices (integers ```n``` where ```1 ≤ n ≤ 360```) into this script to determine the viewing angle (```ax.view_init(30, 45 + n)```). Each frame will be slightly different and, when combined into a gif, will allow us to execute a full rotation of the 3D volcano plot. 
 
