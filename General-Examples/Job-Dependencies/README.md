@@ -1,12 +1,14 @@
 # SLURM Job Dependencies Example
 
+[![](/Images/Download-Button.png)](volcano.tar.gz)
+
 ## Overview
 
-Sometimes projects need to be split up into multiple parts where each step is dependent on the step (or several steps) that came before it. SLURM dependencies are a way to automate this process. In this example, we'll create a number of three-dimensional plots using Python and will combine them into a gif as the last step. A job dependency is a good solution in this case since the job that creates the gif is dependent on all the images being present.
+Sometimes projects need to be split up into multiple parts where each step is dependent on the step (or several steps) that came before. SLURM dependencies are a way to automate this process. In this example, we'll create a number of three-dimensional plots using Python and will combine them into a gif as the last step. A job dependency is a good solution in this case since the job that creates the gif is dependent on all the images being present.
 
 ## Data structure
 
-We'll try to keep things in order by partitioning our data, output, and images in distinct directories.
+We'll try to keep things in order by partitioning our data, output, and images in distinct directories. These directories and files can be downloaded by clicking the button at the top of the page.
 
 ```console
 (elgato) [user@wentletrap volcano]$ tree
@@ -28,7 +30,7 @@ We'll try to keep things in order by partitioning our data, output, and images i
 ## Python script
 The Python example script was pulled and modified from the [Python graph gallery](https://www.python-graph-gallery.com/3d/) and the CSV file used to generate the image was pulled from https://raw.githubusercontent.com/holtzy/The-Python-Graph-Gallery/master/static/data/volcano.csv
 
-Below you'll notice one modification: ```n = int(sys.argv[1])```. We're going to execute this script in an array job and will be importing the array indices (an integer ```n``` where ```1 ≤ n ≤ 360```) into this script to determine the viewing angle (```ax.view_init(30, 45 + n)```). Each frame will be slightly different and, when combined into a gif, will allow us to execute a full rotation of the 3D volcano plot. 
+Below you'll notice one modification: ```n = int(sys.argv[1])```. We're going to execute this script in an array job and will be importing the array indices (integers ```n``` where ```1 ≤ n ≤ 360```) into this script to determine the viewing angle (```ax.view_init(30, 45 + n)```). Each frame will be slightly different and, when combined into a gif, will allow us to execute a full rotation of the 3D volcano plot. 
 
 ```python
 #!/usr/bin/env python3
@@ -62,7 +64,7 @@ plt.savefig('images/image%s.png'%n,format='png',transparent=False)
 ```
 
 ## SLURM script to generate images
-This is the component of the job where we will generate all of our images. In each step, we will pass our array index to our python script to determine the viewing angle of our plot. 
+This is the job where we will generate all of our images. In each step, we will pass our array index to our python script to determine the viewing angle of our plot. 
 
 Script: ```generate_frames.slurm```
 
@@ -115,7 +117,7 @@ rm -rf ./*.png
 
 ## Script to automate job submissions
 
-This simple bash script is what implements the SLURM job dependency magic. 
+This simple bash script is what implements the SLURM job dependency magic. Each step is described in detail below.
 
 Script: submit-gif-job
 
