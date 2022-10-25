@@ -217,7 +217,7 @@ Once the job has completed, you should see something that looks like the followi
 ```
 
 # Output
-If everything is successful, there should be a gif of a rotating volcano in the directory ```output/gifs/```
+If everything is successful, there should be a gif of a rotating volcano under ```./output/gifs/volcano.gif```
 
 ![](volcano.gif)
 
