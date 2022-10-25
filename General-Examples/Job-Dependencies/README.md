@@ -164,4 +164,5 @@ Submitted batch job 447879
 
 # Output
 If everything is successful, there should be a gif of a rotating volcano in the directory ```output/gifs/```
-~[](volcano.gif)
+
+![](volcano.gif)
