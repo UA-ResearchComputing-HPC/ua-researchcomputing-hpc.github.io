@@ -28,7 +28,7 @@ We'll try to keep things in order by partitioning our data, output, and images i
 ## Python script
 The Python example script was pulled and modified from the [Python graph gallery](https://www.python-graph-gallery.com/3d/) and the CSV file used to generate the image was pulled from https://raw.githubusercontent.com/holtzy/The-Python-Graph-Gallery/master/static/data/volcano.csv
 
-Below you'll notice one modification: ```n = int(sys.argv[1])```. We're going to execute this script in an array job and will be importing the array indices (an integer ```n``` where ```1 ≤ n ≤ 360```) into this script to determine the viewing angle (```ax.view_init(30, 45 + n)```). Each frame will be slightly different and, when combined into a gif, will allow us to create a full rotation of the 3D volcano plot. 
+Below you'll notice one modification: ```n = int(sys.argv[1])```. We're going to execute this script in an array job and will be importing the array indices (an integer ```n``` where ```1 ≤ n ≤ 360```) into this script to determine the viewing angle (```ax.view_init(30, 45 + n)```). Each frame will be slightly different and, when combined into a gif, will allow us to execute a full rotation of the 3D volcano plot. 
 
 ```python
 #!/usr/bin/env python3
@@ -152,7 +152,7 @@ You are running ```command``` and setting the variable ```VAR``` to the output. 
 
 2) ```sbatch --dependency=afterany:$jobid create_gif.slurm```
 
-Now that we have the Job ID, we'll submit the next job with a dependency flag: ```--dependency=afterany:$jobid```. The ```dependecy``` option tells the scheduler that this job should not be run until the job with ```$jobid``` has completed. The ```afterany``` specifies that the exit status of the previous job does not matter. Other options might be ```afterok``` (meaning only execute the dependent job if the previous job ended successfully) or ```afternotok``` (meaning only execute if the previous job terminated abnormally, e.g. was cancelled or failed). You might even consider setting up multiple job dependencies that are executed depending on the previous job's exit status. 
+Now that we have the Job ID, we'll submit the next job with a dependency flag: ```--dependency=afterany:$jobid```. The ```dependency``` option tells the scheduler that this job should not be run until the job with ```$jobid``` has completed. The ```afterany``` specifies that the exit status of the previous job does not matter. Other options might be ```afterok``` (meaning only execute the dependent job if the previous job ended successfully) or ```afternotok``` (meaning only execute if the previous job terminated abnormally, e.g. was cancelled or failed). You might even consider setting up multiple job dependencies that are executed depending on the previous job's exit status. 
 
 # Submitting the jobs
 
