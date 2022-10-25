@@ -19,7 +19,7 @@ We'll try to keep things in order by partitioning our data, output, and images i
 ├── output
 │   ├── archives
 │   └── slurm_files
-├── submit-video-job
+├── submit-gif-job
 └── volcano.py
 ```
 
@@ -61,8 +61,10 @@ ax.view_init(30, 45 + n)
 plt.savefig('images/image%s.png'%n,format='png',transparent=False)
 ```
 
-## SLURM script to generate frames (```generate_frames.slurm```)
+## SLURM script to generate images
 This is the component of the job where we will generate all of our images. In each step, we will pass our array index to our python script to determine the viewing angle of our plot. 
+
+Script: ```generate_frames.slurm```
 
 ```bash
 #!/bin/bash
@@ -81,9 +83,11 @@ This is the component of the job where we will generate all of our images. In ea
 python3 volcano.py $SLURM_ARRAY_TASK_ID
 ```
 
-## SLURM script to combine frames into gif (```create_gif.slurm```)
+## SLURM script to combine frames into gif
 
 Once each frame has been generated, we'll use ffmpeg to combine our images into a gif and will clean up our workspace. The bash script shown in the next section is what will ensure that this script isn't run until the array has completed. 
+
+Script: ```create_gif.slurm```
 
 ```bash
 #!/bin/bash
@@ -113,6 +117,8 @@ rm -rf ./*.png
 
 This simple bash script is what implements the SLURM job dependency magic. 
 
+Script: submit-gif-job
+
 ```bash
 #!/bin/bash
 
@@ -121,7 +127,7 @@ jobid=$(sbatch --parsable generate_frames.slurm)
 
 printf "Job submitted with ID: $jobid\n\n"
 
-printf "Submitting job dependency. Combines images into a video file\n"
+printf "Submitting job dependency. Combines images into a gif\n"
 sbatch --dependency=afterany:$jobid create_gif.slurm 
 ```
 
@@ -150,14 +156,14 @@ Now that we have the Job ID, we'll submit the next job with a dependency flag: `
 
 # Submitting the jobs
 
-Once we've gotten everything set up, it's time to execute our workflow. We can check our jobs once we've run our bash script. In this case, while the array job used to generate the different image frames is running, the make_video job will sit in queue with the reason ```(Dependency)``` indicating that it is waiting to run until its dependency has been satisfied. 
+Once we've gotten everything set up, it's time to execute our workflow. We can check our jobs once we've run our bash script. In this case, while the array job used to generate the different image frames is running, the make_gif job will sit in queue with the reason ```(Dependency)``` indicating that it is waiting to run until its dependency has been satisfied. 
 
 ```console
-(elgato) [user@wentletrap volcano]$ bash submit-video-job 
+(elgato) [user@wentletrap volcano]$ bash submit-gif-job 
 Submitting job to generate images
 Job submitted with ID: 447878
 
-Submitting job dependency. Combines images into a video file
+Submitting job dependency. Combines images into a gif file
 Submitted batch job 447879
 
 (elgato) [user@wentletrap volcano]$ squeue --user user
@@ -193,7 +199,7 @@ Once the job has completed, you should see something that looks like the followi
 │       ├── generate_frames-447878.out
 │       ├── make_gif-447879.err
 │       └── make_gif-447879.out
-├── submit-video-job
+├── submit-gif-job
 └── volcano.py
 
 6 directories, 11 files
