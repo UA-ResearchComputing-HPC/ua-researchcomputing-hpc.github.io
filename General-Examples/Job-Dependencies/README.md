@@ -119,7 +119,7 @@ rm -rf ./*.png
 
 This simple bash script is what implements the SLURM job dependency magic. Each step is described in detail below.
 
-Script: submit-gif-job
+Script: ```submit-gif-job```
 
 ```bash
 #!/bin/bash
