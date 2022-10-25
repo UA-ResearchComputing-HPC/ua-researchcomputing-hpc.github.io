@@ -19,6 +19,9 @@ Sometimes when applications crash, they will save a snapshot of the working memo
 ### [Retrieving Scratch Files](Cleanup-Tmp-Files)
 Example of using a compute node's local storage, or scratch space, during a job's execution and retrieving the output before the job's walltime limit is reached.
 
+### [Using Job Dependencies](Job-Dependencies)
+Sometimes projects need to be split up into multiple parts where each step is dependent on the step (or several steps) that came before. SLURM dependencies are a way to automate this process.
+
 
 
 *****
