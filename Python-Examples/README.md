@@ -37,6 +37,15 @@ The python ```multiprocessing``` package is a popular way to spread a workflow o
 ### [MPI4PY](MPI4PY)
 The package ```mpi4py``` provides a Python interface to MPI that can be used to parallelize and utilize more than one node in a single workflow. 
 
+---------
+## Singularity/Apptainer Examples
+
+### [Simple Tensorflow Example](../Singularity-Examples/Tensorflow-Example)
+A machine learning example that shows how to run a Tensorflow script on an GPU node.
+
+### [Custom Tensorflow Build](../Singularity-Examples/Creating-Your-Own-Tensorflow)
+An example of how to build your own Tensorflow image.
+
 *****
 [![](/Images/home.png)](https://ua-researchcomputing-hpc.github.io/) 
 [![](/Images/back.png)](../)
