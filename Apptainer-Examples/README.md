@@ -4,6 +4,8 @@
 
 > ⚠️This examples repository is being actively updated to reflect the apptainer changes. Pardon our mess.⚠️
 
+All examples using ```apptainer``` directly on the command line need to be done in [an interactive session on a compute node](https://public.confluence.arizona.edu/display/UAHPC/Running+Jobs+with+SLURM#RunningJobswithSLURM-interactive-jobsInteractiveJobs). If you get an error saying ```apptainer: command not found```, you're likely on a login node. 
+
 ## Pulls
 
 ### [Hello World](Hello-World)
@@ -13,8 +15,9 @@ A basic example of how to pull and run prebuilt images from Singularity Hub.
 A basic example of how to use apptainer to pull and run Docker images.
 
 ## Builds
-### Basic Build Example
-> Coming Soon
+### [Basic Build Example](Apptainer-Build)
+
+Example showing how to create and build an image locally on a compute node.
 
 An example of how to build a simple container on HPC.
 
