@@ -21,7 +21,7 @@ INFO:    Creating SIF file...
 
 ```bash
 #!/bin/bash
-#SBATCH --job-name=Singularity_Docker_Pull
+#SBATCH --job-name=Apptainer_Docker_Pull
 #SBATCH --ntasks=1
 #SBATCH --nodes=1             
 #SBATCH --mem=1gb                    
@@ -35,7 +35,7 @@ apptainer run lolcow.sif
 ## Job Submission
 ```console
 [netid@cpu37 ~]$ sbatch apptainer-docker-pull.slurm 
-Submitted batch job 514774
+Submitted batch job 514776
 ```
 
 ## Output
