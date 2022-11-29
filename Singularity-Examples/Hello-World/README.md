@@ -1,4 +1,4 @@
-# Singularity Hello World
+# Apptainer Hello World
 
 [![](/Images/Download-Button.png)](Hello-World.tar.gz)
 
@@ -6,11 +6,12 @@
 You can use the pull or build commands to download pre-built images from resources like Singularity Hub or Docker Hub. In this example, we'll pull a container from Singularity Hub and execute it in a SLURM script.
 
 ## Command Line Container Pull
-To retrieve the singularity image, you can pull it using ```singularity pull```. This will save it locally to the filename and path provided (in this case, your working directory as hello-world.sif. Singularity is available on every HPC compute node and does not need to be loaded with a module statement. On a compute node:
+To retrieve the singularity image, you can pull it using ```apptainer pull```. This will save it locally to the filename and path provided (in this case, your working directory as hello-world.sif. Apptainer is available on every HPC compute node and does not need to be loaded with a module statement. On a compute node:
 ```console
-[netid@r1u03n2 ~]$ singularity pull ./hello-world.sif shub://vsoch/hello-world
+[netid@cpu37 ~]$ apptainer pull ./hello-world.sif shub://vsoch/hello-world
 INFO:    Downloading shub image
-59.8MiB / 59.8MiB [========================================] 100 % 14.0 MiB/s 0s
+59.8MiB / 59.8MiB [========================================] 100 % 36.6 MiB/s 0s
+[netid@cpu37 ~]$ 
 ```
 
 ## Submission Script
@@ -25,18 +26,18 @@ INFO:    Downloading shub image
 #SBATCH --partition=standard
 #SBATCH --account=YOUR_GROUP
 
-singularity run hello-world.sif
+apptainer run hello-world.sif
 ```
 
 ## Job Submission
 ```console
-[netid@r1u03n2 ~]$ sbatch hello-world.slurm 
-Submitted batch job 1996576
+[netid@cpu37 ~]$ sbatch hello-world.slurm 
+Submitted batch job 514773
 ```
 
 ## Output
 ```console
-[netid@r1u03n2 ~]$ cat slurm-1996576.out 
+[netid@cpu37 ~]$ cat slurm-514773.out 
 RaawwWWWWWRRRR!! Avocado!
 ```
 
