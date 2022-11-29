@@ -19,8 +19,6 @@ A basic example of how to use apptainer to pull and run Docker images.
 
 Example showing how to create and build an image locally on a compute node.
 
-An example of how to build a simple container on HPC.
-
 ### Nvidia Tensorflow Example
 > Coming Soon 
 
