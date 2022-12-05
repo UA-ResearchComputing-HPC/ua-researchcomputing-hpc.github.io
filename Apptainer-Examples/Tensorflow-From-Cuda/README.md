@@ -18,3 +18,6 @@ One of the difficulties with installing Tensorflow natively on HPC is library ve
 To find the Cuda you need for your image, see [Tensorflow's documentation on version compatabilities](https://www.tensorflow.org/install/source#tested_build_configurations). In this case, because we want to install Tensorflow 2.0.0, we will need to use Cuda 10.0.
 
 To build an image using Cuda 10.0, we will go to [Nvidia's Docker Hub repository](https://hub.docker.com/r/nvidia/cuda), go to the Tags tab, and search 10.0:
+
+<img src="dockerhub-tags.png" alt="dockerhub-tags" width="800"/>
+
