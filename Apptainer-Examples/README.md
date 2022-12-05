@@ -24,8 +24,9 @@ Example showing how to create and build an image locally on a compute node.
 
 An example of modifying a tensorflow image from the Nvidia repository.
 
-### Tensorflow from Scratch
-> Coming Soon
+### [Tensorflow from Cuda](Tensorflow-From-Cuda)
+
+One option for running Tensorflow on HPC is to pull pre-built images from Nvidia's NGC repository. Another option is building your own container. This example shows how to build a Tensorflow image bootstrapping off a Cuda Docker image.
 
 An example of how to build a Tensorflow image from scratch.
 
