@@ -32,10 +32,9 @@ An example of how to build a Tensorflow image from scratch.
 
 ## Usage
 
-### Simple Tensorflow Example
-> Coming Soon 
+### [Tensorflow Example Using a System Module](Tensorflow-Module-Job)
 
-A machine learning example that shows how to run a Tensorflow script on a GPU node.
+This example makes use of a Tensorflow image available as a module on HPC to execute a batch workflow on a GPU node.
 
 ## GUIs
 
