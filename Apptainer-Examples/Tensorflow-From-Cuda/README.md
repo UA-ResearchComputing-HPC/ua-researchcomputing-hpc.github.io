@@ -32,7 +32,7 @@ The specific command for this tag is ```docker pull nvidia/cuda:10.0-cudnn7-runt
 
 # Creating Your Recipe
 
-> For more detailed information on writing your own Singularity recipes, see [Singularity's definition files](https://sylabs.io/guides/3.0/user-guide/definition_files.html) documentation. 
+> For more detailed information on writing your own Apptainer recipes, see [Singularity's definition files](https://sylabs.io/guides/3.0/user-guide/definition_files.html) documentation. 
 
 To create your definition file, navigate to your preferred directory on HPC and open a plain text document. Name it something descriptive, e.g. ```tensorflow-2.0.0-py36.recipe```. This is where we'll write out the blueprints that will be used to create our image.
 
