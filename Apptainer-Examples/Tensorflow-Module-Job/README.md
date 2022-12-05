@@ -19,7 +19,7 @@ tensorflow is aliased to `singularity exec --nv /contrib/singularity/nvidia/nvid
 ```
 
 ## Using Tensorflow in a Batch Job
-To run tensorflow in a batch script, you can either execute the ```apptainer```/```singularity``` exec statement directly, or you can use the shortcut ```tensorflow```. For example:
+To run tensorflow in a batch script, you can either execute the ```apptainer```/```singularity exec``` statement directly, or you can use the shortcut ```tensorflow```. For example:
 
 ```bash
 #!/bin/bash
