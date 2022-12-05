@@ -30,7 +30,7 @@ One option for running Tensorflow on HPC is to pull pre-built images from Nvidia
 
 An example of how to build a Tensorflow image from scratch.
 
-## Usage
+## System Modules
 
 ### [Tensorflow Example Using a System Module](Tensorflow-Module-Job)
 
