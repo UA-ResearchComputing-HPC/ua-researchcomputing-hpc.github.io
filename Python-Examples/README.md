@@ -40,11 +40,16 @@ The package ```mpi4py``` provides a Python interface to MPI that can be used to 
 ---------
 ## Singularity/Apptainer Examples
 
-### [Simple Tensorflow Example](../Singularity-Examples/Tensorflow-Example)
+### [Simple Tensorflow Example](../Apptainer-Examples/Tensorflow-Module Job)
 A machine learning example that shows how to run a Tensorflow script on an GPU node.
 
-### [Custom Tensorflow Build](../Singularity-Examples/Creating-Your-Own-Tensorflow)
-An example of how to build your own Tensorflow image.
+### [Nvidia Tensorflow Build](../Apptainer-Examples/Nvidia-Tensorflow-Build)
+An example of how to build your own Tensorflow image using an Nvidia registry image as a base.
+
+### [Tensorflow Build from Cuda](../Apptainer-Examples/Tensorflow-From-Cuda)
+One option for running Tensorflow on HPC is to pull pre-built images from Nvidia's NGC repository. Another option is building your own container. This example shows how to build a Tensorflow image bootstrapping off a Cuda Docker image.
+
+
 
 *****
 [![](/Images/home.png)](https://ua-researchcomputing-hpc.github.io/) 
