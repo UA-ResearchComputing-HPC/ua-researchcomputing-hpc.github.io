@@ -40,7 +40,7 @@ The package ```mpi4py``` provides a Python interface to MPI that can be used to 
 ---------
 ## Singularity/Apptainer Examples
 
-### [Simple Tensorflow Example](../Apptainer-Examples/Tensorflow-Module Job)
+### [Simple Tensorflow Example](../Apptainer-Examples/Tensorflow-Module-Job)
 A machine learning example that shows how to run a Tensorflow script on an GPU node.
 
 ### [Nvidia Tensorflow Build](../Apptainer-Examples/Nvidia-Tensorflow-Build)
