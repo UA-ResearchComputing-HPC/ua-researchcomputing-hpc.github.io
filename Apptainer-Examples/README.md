@@ -28,8 +28,6 @@ An example of modifying a tensorflow image from the Nvidia repository.
 
 One option for running Tensorflow on HPC is to pull pre-built images from Nvidia's NGC repository. Another option is building your own container. This example shows how to build a Tensorflow image bootstrapping off a Cuda Docker image.
 
-An example of how to build a Tensorflow image from scratch.
-
 ## System Modules
 
 ### [Tensorflow Example Using a System Module](Tensorflow-Module-Job)
