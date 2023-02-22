@@ -62,7 +62,7 @@ Once you log in using your university credentials, click the **Interactive Apps*
 |Cluster|ElGato Cluter|
 |Run Time | 2|
 |Core count on a single node | 1 |
-|Memory per core|6|
+|Memory per core|4|
 |GPUs required|0|
 |PI Group | your group**|
 |Queue | standard|
