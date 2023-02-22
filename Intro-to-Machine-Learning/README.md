@@ -41,7 +41,7 @@ To begin, start a terminal to log into the system and copy the necessary files i
 ```console
 ssh your_netid@hpc.arizona.edu
 shell
-ocelote
+elgato
 ```
 Now, to download the example, use:
 ```console
@@ -59,7 +59,7 @@ Once you log in using your university credentials, click the **Interactive Apps*
 
 |Option|Value|
 |------|-----|
-|Cluster|Ocelote Cluter|
+|Cluster|ElGato Cluter|
 |Run Time | 2|
 |Core count on a single node | 1 |
 |Memory per core|6|
