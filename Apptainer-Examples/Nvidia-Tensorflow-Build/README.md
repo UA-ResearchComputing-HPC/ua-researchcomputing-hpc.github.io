@@ -17,33 +17,82 @@ Start by navigating to the [Nvidia Registry](https://catalog.ngc.nvidia.com/). T
 
 <img src="nvidia-catalog-search.png" alt="nvidia-catalog-search" width="500"/> 
 
-Once you find and click the image repository you're looking for, go to the Tags tab. In this example, we'll use the latest (as of this writing) image that uses Python 3. The information needed to bootstrap off this image is the image path. Click the ellipses (```...```) in the top right of the relevant tag's tile and click "Copy Image Path":
+Once you find and click the image repository you're looking for, go to the Tags tab. In this example, we'll use the latest (as of this writing) image that uses Python 3. The information needed to bootstrap off this image is the image path. Click the clipboard in the top right of the relevant tag to copy the path:
 
-<img src="tensorflow-tags.png" alt="tensorflow-tags" width="500"/> 
+<img src="tags.png" alt="tags" width="500"/> 
 
-We'll now use this to create our recipe.
+This should give you something like ```nvcr.io/nvidia/tensorflow:23.06-tf2-py3```. We'll use this to create our recipe.
 
 ### Recipe
+
+Now, take the image path you got from the NGC site and add it to the image's header under ```FROM```. Under ```%post```
+
+```
+Bootstrap: docker
+FROM: nvcr.io/nvidia/tensorflow:23.06-tf2-py3
+
+%post
+  pip install astropy
+```
 
 
 ### Build
 
 ```
-[netid@cpu1 ~]$ apptainer build nvidia-tensorflow.sif nvidia-tensorflow.recipe 
+[netid@cpu6 ~]$ singularity build nvidia-tf23.06.astro.sif nvidia-tf23.06.astro.recipe 
 INFO:    User not listed in /etc/subuid, trying root-mapped namespace
 INFO:    The %post section will be run under fakeroot
 INFO:    Starting build...
 . . .
+INFO:    Creating SIF file...
+INFO:    Build complete: nvidia-tf23.06.astro.sif
 ```
 
 ## Job Example
 
+### Python Script
+
+```python
+#!/usr/bin/env python3 
+
+import tensorflow as tf
+import astropy
+
+print("Num GPUs Available: ", len(tf.config.list_physical_devices('GPU')))
+```
+
 ### Batch Script
 
+```bash
+#!/bin/bash
+
+#SBATCH --account=YOUR_GROUP_HERE
+#SBATCH --partition=standard
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --gres=gpu:1
+#SBATCH --time=00:05:00
+
+singularity exec --nv nvidia-tf23.06.astro.sif python3 nvidia-test.py
+```
+
 ### Submission
+```terminal
+[netid@wentletrap ~]$ sbatch nvidia-test.slurm 
+Submitted batch job 2067225
+```
 
 ### Output
-
+```terminal
+[netid@wentletrap ~]$ cat slurm-2067225.out 
+INFO:    underlay of /etc/localtime required more than 50 (91) bind mounts
+INFO:    underlay of /usr/bin/nvidia-smi required more than 50 (523) bind mounts
+13:4: not a valid test operator: (
+13:4: not a valid test operator: 530.30.02
+2023-07-18 14:38:09.613020: I tensorflow/core/platform/cpu_feature_guard.cc:183] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE3 SSE4.1 SSE4.2 AVX, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Num GPUs Available:  1
+```
 
 -----
 [![](/Images/home.png)](https://ua-researchcomputing-hpc.github.io/) 
