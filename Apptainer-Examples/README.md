@@ -2,8 +2,6 @@
 
 > During the October 26, 2022 maintenance window, Singularity was removed and replaced with [Apptainer](https://apptainer.org/). The commands ```singularity``` (now a link pointing to Apptainer) and ```apptainer``` may be used to perform all the same operations you're used to and you can still run your existing images. However, remote builds via SyLabs are no longer supported. 
 
-> ⚠️This examples repository is being actively updated to reflect the apptainer changes. Pardon our mess.⚠️
-
 All examples using ```apptainer``` directly on the command line need to be done in [an interactive session on a compute node](https://public.confluence.arizona.edu/display/UAHPC/Running+Jobs+with+SLURM#RunningJobswithSLURM-interactive-jobsInteractiveJobs). If you get an error saying ```apptainer: command not found```, you're likely on a login node. 
 
 ## Pulls
@@ -20,7 +18,6 @@ A basic example of how to use apptainer to pull and run Docker images.
 Example showing how to create and build an image locally on a compute node.
 
 ### [Nvidia Tensorflow Example](Nvidia-Tensorflow-Build)
-> Coming Soon 
 
 An example of modifying a tensorflow image from the Nvidia repository.
 
