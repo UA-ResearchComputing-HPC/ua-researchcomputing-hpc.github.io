@@ -15,7 +15,7 @@ Our clusters use the scheduling software SLURM. Below are some helpful guides fo
 [![](/Images/life-sciences-button.png)](Life-Sciences)[![](/Images/apptainer-button.png)](Apptainer-Examples)
 [![](/Images/Matlab-button.png)](Matlab-Examples)[![](/Images/mpi-button.png)](MPI-Examples)
 [![](/Images/python_button.png)](Python-Examples) [![](/Images/r-button.png)](R-Examples)
-
+[![](/Images/ml-button.png)](Machine-Learning-Examples)
 
 # Workshops
 [![](/Images/intro-to-HPC-button.png)](Intro-to-HPC)[![](/Images/intro-to-ML-button.png)](Intro-to-Machine-Learning)
