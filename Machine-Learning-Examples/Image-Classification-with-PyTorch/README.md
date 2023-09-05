@@ -40,6 +40,7 @@ The following example shows how the data looks:
 ![fashion-mnist-data-example](fashion-mnist-sprite.png)
 
 The labels are:
+
 | Label | Description |
 |-------|-------------|
 | 0     | T-shirt/top |
