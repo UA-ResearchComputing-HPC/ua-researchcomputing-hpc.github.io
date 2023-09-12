@@ -343,7 +343,7 @@ print('Predicted: %s (class=%d)' % (yhat, argmax(yhat)))
 
 # Image Classification with PyTorch
 
-For a more in depth Neural Network example, see this page:
+For a more in-depth Neural Network example that is run as a batch submission instead of through Jupyter, see this page:
 
 [Image Classification](https://ua-researchcomputing-hpc.github.io/Machine-Learning-Examples/Image-Classification-with-PyTorch/)
 
