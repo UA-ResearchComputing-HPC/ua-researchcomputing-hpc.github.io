@@ -9,10 +9,10 @@
 3. [Linear Regression Example](#linear-regression-example)
 4. [Clustering Model Example](#clustering-model-example)
 5. [Neural Network Classification Example](#neural-network-classification-example)
+6. [Image Classification with Pytorch](#image-classification-with-pytorch)
 
 ## Get the Files
 [![](/Images/Download-Button.png)](intro-to-ML.tar.gz)
-
 
 --------------
 
@@ -339,6 +339,17 @@ print('Predicted: %s (class=%d)' % (yhat, argmax(yhat)))
 ### Try making changes and see how it affects the classification accuracy.
 
 
+--------------
+
+# Image Classification with PyTorch
+
+For a more in depth Neural Network example, see this page:
+
+[Image Classification](https://ua-researchcomputing-hpc.github.io/Machine-Learning-Examples/Image-Classification-with-PyTorch/)
+
+
 [![](/Images/home.png)](https://ua-researchcomputing-hpc.github.io/) 
 [![](/Images/back.png)](../)
+
+
 
