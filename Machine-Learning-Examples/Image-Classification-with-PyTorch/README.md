@@ -2,6 +2,13 @@
 
 [![](/Images/Download-Button.png)](Image-Classification-with-PyTorch.tar.gz)
 
+You can download the files onto cluster and prepare for the example with these commands:
+```
+wget https://ua-researchcomputing-hpc.github.io/Machine-Learning-Examples/Image-Classification-with-PyTorch/Image-Classification-with-PyTorch.tar.gz
+tar xzf Image-Classification-with-PyTorch.tar.gz
+cd Image-Classification-with-PyTorch
+```
+
 This examples runs a Python script for image classification with PyTorch. The following sections explain the parts of the script, `fmnist.py`.
 
 # Prerequisites #
