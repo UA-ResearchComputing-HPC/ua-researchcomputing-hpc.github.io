@@ -8,7 +8,8 @@ This examples runs a Python script for image classification with PyTorch. The fo
 
 To run this script you should have PyTorch and other associated packages installed. We recommend that you set up a Python virtual environment in which you can install the packages. For an in-depth information on how to set up a virtual environment for Python 3.8+ see our [our online documentation](https://public.confluence.arizona.edu/display/UAHPC/Using+and+Installing+Python). You will also want to load the CUDA modules before you install PyTorch, so that PyTorch can use GPUs.
 
-From an interactive session on El Gato:
+From an interactive session on El Gato: 
+(to allocate enough memory for the install of pytorch you may need to request 2 processor cores, i.e., execute "interactive -n 2")
 ``` console
 [netid@gpu70 ~]$ module load python/3.8
 [netid@gpu70 ~]$ module load cuda11/11.8 cuda11-dnn/8.9.2 cuda11-sdk/22.11
@@ -208,6 +209,7 @@ python3 -u fmnist.py
 Submit the job on Ocelote.
 
 ``` console
+[netid@junonia ~] ocelote
 [netid@junonia ~] sbatch fmnist.slurm
 Submitted batch 2418647
 ```
