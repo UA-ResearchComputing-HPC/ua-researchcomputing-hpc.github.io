@@ -41,10 +41,10 @@ First start an interactive session
 ```console
 [laptop ~]$ ssh netid@hpc.arizona.edu
 [netid@gatekeeper ~]$ shell
-(puma) [netid@wentletrap ~]$ ocelote
-(ocelote) [netid@wentletrap ~]$ interactive
-[netid@i16n2 ~]$ apptainer help
-[netid@i16n2 ~]$ apptainer help build
+(puma) [netid@wentletrap ~]$ elgato
+(elgato) [netid@wentletrap ~]$ interactive
+[netid@cpu37 ~]$ apptainer help
+[netid@cpu37 ~]$ apptainer help build
 ```
 
 ## Creating a Container
@@ -62,7 +62,7 @@ apptainer pull library://sylabsed/examples/lolcow
 ```
 
 ### Build from Docker registry
-> More options, converts to latest format, & needs a name
+> More optionsconverts to latest format, & needs a name
 ```console
 apptainer build lolcow.sif docker://godlovedc/lolcow
 ```
