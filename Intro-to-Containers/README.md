@@ -27,7 +27,7 @@
 
 <h3 style="color:#FBFCFC; background-color:#34495E;"> <a href="#references" style="text-decoration=none; color:#FBFCFC;"> References </a> </h3>
 
-<br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br>
 
 
 # Apptainer
