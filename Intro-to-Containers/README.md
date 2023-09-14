@@ -149,11 +149,11 @@ $ export APPTAINER_BINDPATH=/data
 ```
 
 # GPUs and Containers
-We show four ways to run tensorflow containers on HPC. We just use Tensorflow as an example
-1. Containers as modules: caffe, pytorch, rapids, tensorflow, and theano
-2. [Tensorflow example using a system module](https://ua-researchcomputing-hpc.github.io/Apptainer-Examples/Tensorflow-Module-Job)
-3. [Tensorflow using a custom image pulled from Nvidia](https://ua-researchcomputing-hpc.github.io/Apptainer-Examples/Nvidia-Tensorflow-Build)
-4. [Tensorflow from DockerHub](https://ua-researchcomputing-hpc.github.io/Apptainer-Examples/Tensorflow-From-Cuda)
+We show three ways to use tensorflow containers on HPC. We just use Tensorflow as an example
+1. [Tensorflow example using a system module*](https://ua-researchcomputing-hpc.github.io/Apptainer-Examples/Tensorflow-Module-Job)
+2. [Tensorflow using a custom image pulled from Nvidia](https://ua-researchcomputing-hpc.github.io/Apptainer-Examples/Nvidia-Tensorflow-Build)
+3. [Tensorflow from DockerHub](https://ua-researchcomputing-hpc.github.io/Apptainer-Examples/Tensorflow-From-Cuda)
+> *Containers as modules: caffe, pytorch, rapids, tensorflow, and theano
 
 # References
 
