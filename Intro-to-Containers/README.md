@@ -18,11 +18,6 @@
 * [Logging In](#logging-in)
 * [Working on the Command Line](#working-on-the-command-line)
 
-<h3 style="color:#FBFCFC; background-color:#34495E;"> <a href="#apptainer-on-hpc-as-a-batch-job" style="text-decoration=none; color:#FBFCFC;"> Running Apptainer in Batch on HPC </a> </h3>
-* [Logging In](#logging-in)
-* [Working on the Command Line](#working-on-the-command-line)
-
-
 <br><br><br><br><br><br><br><br><br><br><br>
 
 
