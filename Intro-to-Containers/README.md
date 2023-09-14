@@ -1,4 +1,4 @@
-# Intro to Containers (Under Construction)
+# Intro to Containers
 
 <br>
 
@@ -14,7 +14,6 @@
 * [Build from Docker registry](#build-from-docker-registry)
 
 
-<h3 style="color:#FBFCFC; background-color:#34495E;"> <a href="#build-remotely-using-sylabs" style="text-decoration=none; color:#FBFCFC;"> Build remotely using Sylabs </a> </h3>
 
 * [Logging In](#logging-in)
 * [Working on the Command Line](#working-on-the-command-line)
@@ -24,17 +23,17 @@
 <br><br><br><br><br><br><br><br><br><br><br><br>
 
 
-# Singularity
+# Apptainer
 
-> Note: look in .singularity for working files 
+> Note: look in .Apptainer for working files 
 
 ```console
 [laptop ~]$ ssh netid@hpc.arizona.edu
 [netid@gatekeeper ~]$ shell
 (puma) [netid@wentletrap ~]$ ocelote
 (ocelote) [netid@wentletrap ~]$ interactive
-[netid@i16n2 ~]$ singularity help
-[netid@i16n2 ~]$ singularity help build
+[netid@i16n2 ~]$ Apptainer help
+[netid@i16n2 ~]$ Apptainer help build
 ```
 
 ## Creating a Container
@@ -42,49 +41,38 @@
 ### Pull from Docker registry 
 > Less reproducible -- image can change
 ```console
-[netid@i16n2 ~]$ singularity pull docker://godlovedc/lolcow
+Apptainer pull docker://godlovedc/lolcow
 ```
 
 ### Pull from container library 
 > More reproducible
 ```console
-[netid@i16n2 ~]$ singularity pull library://sylabsed/examples/lolcow
+Apptainer pull library://sylabsed/examples/lolcow
 ```
 
 ### Build from Docker registry
 > More options, converts to latest format, & needs a name
 ```console
-[netid@i16n2 ~]$ singularity build lolcow.sif docker://godlovedc/lolcow
+Apptainer build lolcow.sif docker://godlovedc/lolcow
 ```
 
-## Build remotely using Sylabs
-### Steps:
 
-1. Log into [https://cloud.sylabs.io](https://cloud.sylabs.io)
-2. Generate an access token (API key)
-3. Start an interactive session:
-```console
-[netid@i16n2 ~]$ singularity remote login
-[netid@i16n2 ~]$ singularity build --remote nersc.sif nersc.recipe
-[netid@i16n2 ~]$ singularity run nersc.sif
-```
-
-# Running Singularity on HPC
+## Running Apptainer on HPC
 
 ```console
-[netid@i16n2 ~]$ singularity shell lolcow_latest.sif
-Singularity> 
-Singularity> exit
+[netid@i16n2 ~]$ Apptainer shell lolcow_latest.sif
+Apptainer> 
+Apptainer> exit
 ```
 
 ```console
-[netid@i16n2 ~]$ singularity run lolcow_latest.sif
+[netid@i16n2 ~]$ Apptainer run lolcow_latest.sif
 [netid@i16n2 ~]$ # Or
 [netid@i16n2 ~]$ ./lolcow_latest.sif
 ```
 
 ```console
-[netid@i16n2 ~]$ singularity run library://sylabsed/examples/lolcow
+[netid@i16n2 ~]$ Apptainer run library://sylabsed/examples/lolcow
 INFO:    Using cached image
  _______________________________________
 / Wrinkles should merely indicate where \
@@ -99,7 +87,7 @@ INFO:    Using cached image
                 ||     ||
 ```
 
-# Singularity on HPC - Running Batch
+# Apptainer on HPC - Running Batch
 ```sh
 #!/bin/bash
 #SBATCH --job-name=lolcow
@@ -112,19 +100,19 @@ INFO:    Using cached image
 
 
 cd /path/to/container
-singularity run lolcow_latest.sif
+Apptainer run lolcow_latest.sif
 ```
 
-# Singularity on HPC - Creating and Running
+# Apptainer on HPC - Creating and Running
 This example does not run cleanly, demonstrating that the container needs compatibility with the kernel on the compute node.
 
-1. Copy the ```TFlow_example.py``` file from ```/contrib/singularity/nvidia```
+1. Copy the ```TFlow_example.py``` file from ```/contrib/Apptainer/nvidia```
 ```console
-[netid@i16n8 ~]$ cp /contrib/singularity/nvidia/TFlow_example.py ./
+[netid@i16n8 ~]$ cp /contrib/Apptainer/nvidia/TFlow_example.py ./
 ```
 
 ```
-[netid@i16n8 ~]$ singularity exec docker://tensorflow/tensorflow python -m TFlow_example.py
+[netid@i16n8 ~]$ Apptainer exec docker://tensorflow/tensorflow python -m TFlow_example.py
 INFO:    Converting OCI blobs to SIF format
 INFO:    Starting build...
 Getting image source signatures
@@ -156,26 +144,26 @@ step: 1000, loss: 0.082219, W: 0.292872, b: 0.506447
 [netid@i16n8 ~]$ 
 ```
 
-# Singularity on HPC - File Paths
+# Apptainer on HPC - File Paths
 Access to your files outside the container: Binding
 You automatically get ```/home```, ```/tmp```, ```/xdisk```, ```/groups```, and ```$PWD```
 ```console
 [netid@i16n8 ~]$ echo "Hello from inside the container" > $HOME/hostfile.txt
-[netid@i16n8 ~]$ singularity exec lolcow_latest.sif cat $HOME/hostfile.txt
+[netid@i16n8 ~]$ Apptainer exec lolcow_latest.sif cat $HOME/hostfile.txt
 Hello from inside the container
 ```
 
 ```console
 [netid@i16n8 ~]$ echo "Drink milk (and never eat hamburgers)." > data/cow_advice.txt
-[netid@i16n8 ~]$ singularity exec --bind $PWD/data:/mnt lolcow_latest.sif cat /mnt/cow_advice.txt
+[netid@i16n8 ~]$ Apptainer exec --bind $PWD/data:/mnt lolcow_latest.sif cat /mnt/cow_advice.txt
 Drink milk (and never eat hamburgers).
 ```
 Alternatives:
 ```console
-$ singularity shell --bind /data my-container.sif
+$ Apptainer shell --bind /data my-container.sif
 ```
 ```console
-$ export SINGULARITY_BINDPATH=/data
+$ export Apptainer_BINDPATH=/data
 ```
 
 # GPUs and Containers
@@ -190,7 +178,7 @@ We show four ways to run tensorflow containers on HPC. We just use Tensorflow as
 | ----------| ---- |
 | UA HPC Containers Documentation | https://public.confluence.arizona.edu/display/UAHPC/Containers |
 | UA HPC Examples Github | https://ua-researchcomputing-hpc.github.io |
-| NIH Containers Documentation | https://hpc.nih.gov/apps/singularity.html |
+| NIH Containers Documentation | https://hpc.nih.gov/apps/Apptainer.html |
 | Sylabs User Guide | https://sylabs.io/guides/3.5/user-guide/introduction.html |
 | Sylabs Examples | https://github.com/sylabs/examples |
 | TACC Container Basics | https://containers-at-tacc.readthedocs.io/en/latest/ |
