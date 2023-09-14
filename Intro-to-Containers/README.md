@@ -18,6 +18,9 @@
 * [Logging In](#logging-in)
 * [Working on the Command Line](#working-on-the-command-line)
 
+<h3 style="color:#FBFCFC; background-color:#34495E;"> <a href="#apptainer-on-hpc-as-a-batch-job" style="text-decoration=none; color:#FBFCFC;"> Running Apptainer in Batch on HPC </a> </h3>
+* [Logging In](#logging-in)
+* [Working on the Command Line](#working-on-the-command-line)
 
 
 <br><br><br><br><br><br><br><br><br><br><br>
@@ -97,7 +100,7 @@ INFO:    Using cached image
                 ||     ||
 ```
 
-# Apptainer on HPC - Running Batch
+## Apptainer on HPC as a Batch Job
 No modules need to be loaded to execute a container in 
 a Slurm batch submission.
 ```sh
@@ -115,7 +118,7 @@ cd /path/to/container
 apptainer run lolcow_latest.sif
 ```
 
-# Apptainer on HPC - File Paths
+## Apptainer on HPC - File Paths
 Access to your files outside the container: Binding 
 You automatically get ```/home```, ```/tmp```, ```/xdisk```, ```/groups```, and ```$PWD```
 ```console
@@ -145,6 +148,7 @@ We show four ways to run tensorflow containers on HPC. We just use Tensorflow as
 4. Tensorflow from DockerHub
 
 # References
+
 | Reference | Link |
 | ----------| ---- |
 | UA HPC Containers Documentation | https://public.confluence.arizona.edu/display/UAHPC/Containers |
