@@ -31,14 +31,6 @@ One option for running Tensorflow on HPC is to pull pre-built images from Nvidia
 
 This example makes use of a Tensorflow image available as a module on HPC to execute a batch workflow on a GPU node.
 
-## GUIs
-
-### Building and Using an RStudio Server
-> Coming Soon 
-
-An example of how to build and use an RStudio server in an Open OnDemand Desktop session using a container. 
-
-
 *****
 [![](/Images/home.png)](https://ua-researchcomputing-hpc.github.io/) 
 [![](/Images/back.png)](../)
