@@ -1,13 +1,13 @@
 ![](Images/BlackHoleMashup_TextOverlap.png)
 
-This repository contains script examples for University of Arizona’s three HPC clusters: Ocelote, ElGato, and Puma. For information on using the system, see our [online documentation](https://public.confluence.arizona.edu/display/UAHPC/HPC+Documentation)
+This repository contains script examples for University of Arizona’s three HPC clusters: Ocelote, ElGato, and Puma. For information on using the system, see our [online documentation](https://uarizona.atlassian.net/wiki/spaces/UAHPC/overview)
 
 # References
 Our clusters use the scheduling software SLURM. Below are some helpful guides for writing, submitting, monitoring, or deleting jobs.
-* [Introduction to Puma](https://public.confluence.arizona.edu/display/UAHPC/Puma+Quick+Start)
-* [SLURM Information](https://public.confluence.arizona.edu/pages/viewpage.action?pageId=93160866)
-* [Software on HPC](https://public.confluence.arizona.edu/display/UAHPC/Accessing+Software)
-* [Compute resources](https://public.confluence.arizona.edu/display/UAHPC/Compute+Resources)
+* [HPC Quick Start](https://uarizona.atlassian.net/wiki/spaces/UAHPC/pages/75989999/HPC+Quick+Start)
+* [SLURM Information](https://uarizona.atlassian.net/wiki/spaces/UAHPC/pages/75989875/Running+Jobs+with+Slurm)
+* [Software on HPC](https://uarizona.atlassian.net/wiki/spaces/UAHPC/pages/75990663/Accessing+Software)
+* [Compute resources](https://uarizona.atlassian.net/wiki/spaces/UAHPC/pages/75990208/Compute+Resources)
 
 # Example Scripts
 
