@@ -2,7 +2,7 @@
 
 [![](/Images/Download-Button.png)](High-Memory-Node-Example.tar.gz)
 
-The clusters Puma and Ocelote both have high memory nodes available that offer more memory per CPU than standard nodes. For more information, see [our system documentation](https://public.confluence.arizona.edu/display/UAHPC/Compute+Resources).
+The clusters Puma and Ocelote both have high memory nodes available that offer more memory per CPU than standard nodes. For more information, see [our system documentation](https://uarizona.atlassian.net/wiki/spaces/UAHPC/pages/75990208/Compute+Resources).
 
 # Submission Script
 
