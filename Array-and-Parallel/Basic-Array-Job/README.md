@@ -47,7 +47,7 @@ Each of the subjobs in the array will produce its own output file of the form ``
 slurm-73958_1.out  slurm-73958_2.out      slurm-73958_3.out  slurm-73958_4.out
 slurm-73958_5.out  basic_array_job.slurm
 ```
-For more information on naming SLURM files, see our [online documentation](https://public.confluence.arizona.edu/display/UAHPC/Running+Jobs+with+SLURM#RunningJobswithSLURM-SLURMOutputFilenamePatterns)
+For more information on naming SLURM files, see our [online documentation](https://uarizona.atlassian.net/wiki/spaces/UAHPC/pages/75989875/Running+Jobs+with+Slurm#RunningJobswithSlurm-SlurmOutputFilenamePatterns)
 
 ## File Contents:
 Below is a concatenation of the job's output files. Notice how the array indices function to differentiate the input files in the sample command:
